@@ -1,0 +1,32 @@
+[
+{
+  "directory": "F:/VSCodeWorkspace/slimeballGraphicLib/build",
+  "command": "F:\\msys64\\ucrt64\\bin\\g++.exe -DNOMINMAX @CMakeFiles/slimeGraphics.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -Werror -pedantic -o CMakeFiles\\slimeGraphics.dir\\src\\core\\Color.cpp.obj -c F:\\VSCodeWorkspace\\slimeballGraphicLib\\src\\core\\Color.cpp",
+  "file": "F:/VSCodeWorkspace/slimeballGraphicLib/src/core/Color.cpp",
+  "output": "CMakeFiles/slimeGraphics.dir/src/core/Color.cpp.obj"
+},
+{
+  "directory": "F:/VSCodeWorkspace/slimeballGraphicLib/build",
+  "command": "F:\\msys64\\ucrt64\\bin\\g++.exe -DNOMINMAX @CMakeFiles/slimeGraphics.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -Werror -pedantic -o CMakeFiles\\slimeGraphics.dir\\src\\core\\Canvas.cpp.obj -c F:\\VSCodeWorkspace\\slimeballGraphicLib\\src\\core\\Canvas.cpp",
+  "file": "F:/VSCodeWorkspace/slimeballGraphicLib/src/core/Canvas.cpp",
+  "output": "CMakeFiles/slimeGraphics.dir/src/core/Canvas.cpp.obj"
+},
+{
+  "directory": "F:/VSCodeWorkspace/slimeballGraphicLib/build",
+  "command": "F:\\msys64\\ucrt64\\bin\\g++.exe -DNOMINMAX @CMakeFiles/slimeGraphics.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -Werror -pedantic -o CMakeFiles\\slimeGraphics.dir\\src\\window\\Window.cpp.obj -c F:\\VSCodeWorkspace\\slimeballGraphicLib\\src\\window\\Window.cpp",
+  "file": "F:/VSCodeWorkspace/slimeballGraphicLib/src/window/Window.cpp",
+  "output": "CMakeFiles/slimeGraphics.dir/src/window/Window.cpp.obj"
+},
+{
+  "directory": "F:/VSCodeWorkspace/slimeballGraphicLib/build",
+  "command": "F:\\msys64\\ucrt64\\bin\\g++.exe -DNOMINMAX @CMakeFiles/slimeGraphics.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -Werror -pedantic -o CMakeFiles\\slimeGraphics.dir\\src\\core\\Logger.cpp.obj -c F:\\VSCodeWorkspace\\slimeballGraphicLib\\src\\core\\Logger.cpp",
+  "file": "F:/VSCodeWorkspace/slimeballGraphicLib/src/core/Logger.cpp",
+  "output": "CMakeFiles/slimeGraphics.dir/src/core/Logger.cpp.obj"
+},
+{
+  "directory": "F:/VSCodeWorkspace/slimeballGraphicLib/build/examples",
+  "command": "F:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/eg1.exe.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -Werror -pedantic -o CMakeFiles\\eg1.exe.dir\\eg1.cpp.obj -c F:\\VSCodeWorkspace\\slimeballGraphicLib\\examples\\eg1.cpp",
+  "file": "F:/VSCodeWorkspace/slimeballGraphicLib/examples/eg1.cpp",
+  "output": "examples/CMakeFiles/eg1.exe.dir/eg1.cpp.obj"
+}
+]

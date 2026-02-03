@@ -1,0 +1,8 @@
+{
+	"InstallScripts" : 
+	[
+		"F:/VSCodeWorkspace/slimeballGraphicLib/build/cmake_install.cmake",
+		"F:/VSCodeWorkspace/slimeballGraphicLib/build/examples/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

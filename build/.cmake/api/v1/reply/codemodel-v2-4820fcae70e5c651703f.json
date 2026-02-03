@@ -1,0 +1,89 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-8db05d369ec6ad93511c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "examples",
+					"jsonFile" : "directory-examples-Debug-2e8964349ffea94e1580.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "examples",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "slimeGraphics",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 1,
+					"id" : "eg1.exe::@714eac15f71a94114fdf",
+					"jsonFile" : "target-eg1.exe-Debug-94ae2a4bf50d1a8e1857.json",
+					"name" : "eg1.exe",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "slimeGraphics::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-slimeGraphics-Debug-1d95d6470df6d96cc35a.json",
+					"name" : "slimeGraphics",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "F:/VSCodeWorkspace/slimeballGraphicLib/build",
+		"source" : "F:/VSCodeWorkspace/slimeballGraphicLib"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 8
+	}
+}
