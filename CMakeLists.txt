@@ -21,6 +21,7 @@ add_library(slimeGraphics STATIC
     src/core/Canvas.cpp
     src/window/Window.cpp
     src/core/Logger.cpp
+    src/utils/Utils.cpp
 )
 
 target_include_directories(slimeGraphics PUBLIC

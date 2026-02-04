@@ -84,11 +84,11 @@ clean: examples/clean
 # Directory level rules for directory examples
 
 # Recursive "all" directory target.
-examples/all: examples/CMakeFiles/eg1.exe.dir/all
+examples/all: examples/CMakeFiles/eg3.exe.dir/all
 .PHONY : examples/all
 
 # Recursive "codegen" directory target.
-examples/codegen: examples/CMakeFiles/eg1.exe.dir/codegen
+examples/codegen: examples/CMakeFiles/eg3.exe.dir/codegen
 .PHONY : examples/codegen
 
 # Recursive "preinstall" directory target.
@@ -96,7 +96,7 @@ examples/preinstall:
 .PHONY : examples/preinstall
 
 # Recursive "clean" directory target.
-examples/clean: examples/CMakeFiles/eg1.exe.dir/clean
+examples/clean: examples/CMakeFiles/eg3.exe.dir/clean
 .PHONY : examples/clean
 
 #=============================================================================
@@ -106,12 +106,12 @@ examples/clean: examples/CMakeFiles/eg1.exe.dir/clean
 CMakeFiles/slimeGraphics.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\slimeGraphics.dir\build.make CMakeFiles/slimeGraphics.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\slimeGraphics.dir\build.make CMakeFiles/slimeGraphics.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=F:\VSCodeWorkspace\slimeballGraphicLib\build\CMakeFiles --progress-num=3,4,5,6,7 "Built target slimeGraphics"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=F:\VSCodeWorkspace\slimeballGraphicLib\build\CMakeFiles --progress-num=3,4,5,6,7,8 "Built target slimeGraphics"
 .PHONY : CMakeFiles/slimeGraphics.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/slimeGraphics.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start F:\VSCodeWorkspace\slimeballGraphicLib\build\CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start F:\VSCodeWorkspace\slimeballGraphicLib\build\CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/slimeGraphics.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start F:\VSCodeWorkspace\slimeballGraphicLib\build\CMakeFiles 0
 .PHONY : CMakeFiles/slimeGraphics.dir/rule
@@ -123,7 +123,7 @@ slimeGraphics: CMakeFiles/slimeGraphics.dir/rule
 # codegen rule for target.
 CMakeFiles/slimeGraphics.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\slimeGraphics.dir\build.make CMakeFiles/slimeGraphics.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=F:\VSCodeWorkspace\slimeballGraphicLib\build\CMakeFiles --progress-num=3,4,5,6,7 "Finished codegen for target slimeGraphics"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=F:\VSCodeWorkspace\slimeballGraphicLib\build\CMakeFiles --progress-num=3,4,5,6,7,8 "Finished codegen for target slimeGraphics"
 .PHONY : CMakeFiles/slimeGraphics.dir/codegen
 
 # clean rule for target.
@@ -132,36 +132,36 @@ CMakeFiles/slimeGraphics.dir/clean:
 .PHONY : CMakeFiles/slimeGraphics.dir/clean
 
 #=============================================================================
-# Target rules for target examples/CMakeFiles/eg1.exe.dir
+# Target rules for target examples/CMakeFiles/eg3.exe.dir
 
 # All Build rule for target.
-examples/CMakeFiles/eg1.exe.dir/all: CMakeFiles/slimeGraphics.dir/all
-	$(MAKE) $(MAKESILENT) -f examples\CMakeFiles\eg1.exe.dir\build.make examples/CMakeFiles/eg1.exe.dir/depend
-	$(MAKE) $(MAKESILENT) -f examples\CMakeFiles\eg1.exe.dir\build.make examples/CMakeFiles/eg1.exe.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=F:\VSCodeWorkspace\slimeballGraphicLib\build\CMakeFiles --progress-num=1,2 "Built target eg1.exe"
-.PHONY : examples/CMakeFiles/eg1.exe.dir/all
+examples/CMakeFiles/eg3.exe.dir/all: CMakeFiles/slimeGraphics.dir/all
+	$(MAKE) $(MAKESILENT) -f examples\CMakeFiles\eg3.exe.dir\build.make examples/CMakeFiles/eg3.exe.dir/depend
+	$(MAKE) $(MAKESILENT) -f examples\CMakeFiles\eg3.exe.dir\build.make examples/CMakeFiles/eg3.exe.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=F:\VSCodeWorkspace\slimeballGraphicLib\build\CMakeFiles --progress-num=1,2 "Built target eg3.exe"
+.PHONY : examples/CMakeFiles/eg3.exe.dir/all
 
 # Build rule for subdir invocation for target.
-examples/CMakeFiles/eg1.exe.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start F:\VSCodeWorkspace\slimeballGraphicLib\build\CMakeFiles 7
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 examples/CMakeFiles/eg1.exe.dir/all
+examples/CMakeFiles/eg3.exe.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start F:\VSCodeWorkspace\slimeballGraphicLib\build\CMakeFiles 8
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 examples/CMakeFiles/eg3.exe.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start F:\VSCodeWorkspace\slimeballGraphicLib\build\CMakeFiles 0
-.PHONY : examples/CMakeFiles/eg1.exe.dir/rule
+.PHONY : examples/CMakeFiles/eg3.exe.dir/rule
 
 # Convenience name for target.
-eg1.exe: examples/CMakeFiles/eg1.exe.dir/rule
-.PHONY : eg1.exe
+eg3.exe: examples/CMakeFiles/eg3.exe.dir/rule
+.PHONY : eg3.exe
 
 # codegen rule for target.
-examples/CMakeFiles/eg1.exe.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f examples\CMakeFiles\eg1.exe.dir\build.make examples/CMakeFiles/eg1.exe.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=F:\VSCodeWorkspace\slimeballGraphicLib\build\CMakeFiles --progress-num=1,2 "Finished codegen for target eg1.exe"
-.PHONY : examples/CMakeFiles/eg1.exe.dir/codegen
+examples/CMakeFiles/eg3.exe.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f examples\CMakeFiles\eg3.exe.dir\build.make examples/CMakeFiles/eg3.exe.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=F:\VSCodeWorkspace\slimeballGraphicLib\build\CMakeFiles --progress-num=1,2 "Finished codegen for target eg3.exe"
+.PHONY : examples/CMakeFiles/eg3.exe.dir/codegen
 
 # clean rule for target.
-examples/CMakeFiles/eg1.exe.dir/clean:
-	$(MAKE) $(MAKESILENT) -f examples\CMakeFiles\eg1.exe.dir\build.make examples/CMakeFiles/eg1.exe.dir/clean
-.PHONY : examples/CMakeFiles/eg1.exe.dir/clean
+examples/CMakeFiles/eg3.exe.dir/clean:
+	$(MAKE) $(MAKESILENT) -f examples\CMakeFiles\eg3.exe.dir\build.make examples/CMakeFiles/eg3.exe.dir/clean
+.PHONY : examples/CMakeFiles/eg3.exe.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

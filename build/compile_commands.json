@@ -24,9 +24,15 @@
   "output": "CMakeFiles/slimeGraphics.dir/src/core/Logger.cpp.obj"
 },
 {
+  "directory": "F:/VSCodeWorkspace/slimeballGraphicLib/build",
+  "command": "F:\\msys64\\ucrt64\\bin\\g++.exe -DNOMINMAX @CMakeFiles/slimeGraphics.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -Werror -pedantic -o CMakeFiles\\slimeGraphics.dir\\src\\utils\\Utils.cpp.obj -c F:\\VSCodeWorkspace\\slimeballGraphicLib\\src\\utils\\Utils.cpp",
+  "file": "F:/VSCodeWorkspace/slimeballGraphicLib/src/utils/Utils.cpp",
+  "output": "CMakeFiles/slimeGraphics.dir/src/utils/Utils.cpp.obj"
+},
+{
   "directory": "F:/VSCodeWorkspace/slimeballGraphicLib/build/examples",
-  "command": "F:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/eg1.exe.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -Werror -pedantic -o CMakeFiles\\eg1.exe.dir\\eg1.cpp.obj -c F:\\VSCodeWorkspace\\slimeballGraphicLib\\examples\\eg1.cpp",
-  "file": "F:/VSCodeWorkspace/slimeballGraphicLib/examples/eg1.cpp",
-  "output": "examples/CMakeFiles/eg1.exe.dir/eg1.cpp.obj"
+  "command": "F:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/eg3.exe.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -Werror -pedantic -o CMakeFiles\\eg3.exe.dir\\eg3_multiple_window.cpp.obj -c F:\\VSCodeWorkspace\\slimeballGraphicLib\\examples\\eg3_multiple_window.cpp",
+  "file": "F:/VSCodeWorkspace/slimeballGraphicLib/examples/eg3_multiple_window.cpp",
+  "output": "examples/CMakeFiles/eg3.exe.dir/eg3_multiple_window.cpp.obj"
 }
 ]

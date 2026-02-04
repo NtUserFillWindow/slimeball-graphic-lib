@@ -1,2 +1,2 @@
-add_executable(eg1.exe eg1.cpp)
-target_link_libraries(eg1.exe slimeGraphics)
+add_executable(eg3.exe eg3_multiple_window.cpp)
+target_link_libraries(eg3.exe slimeGraphics)

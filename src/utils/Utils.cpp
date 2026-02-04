@@ -5,7 +5,9 @@
 #include "Utils.hpp"
 #include <windows.h>
 
-BOOL classIsRegistered(const wchar_t *CLASSNAME){
-    WNDCLASSEX wc={};
-    return GetClassInfoEx(NULL,CLASSNAME,&wc);//艹
+namespace Utils{
+    BOOL classIsRegistered(const wchar_t *CLASSNAME){
+        WNDCLASSEX wc={};
+        return GetClassInfoEx(NULL,CLASSNAME,&wc);//艹
+    }
 }

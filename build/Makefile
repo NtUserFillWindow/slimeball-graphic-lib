@@ -174,17 +174,17 @@ slimeGraphics/fast:
 .PHONY : slimeGraphics/fast
 
 #=============================================================================
-# Target rules for targets named eg1.exe
+# Target rules for targets named eg3.exe
 
 # Build rule for target.
-eg1.exe: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 eg1.exe
-.PHONY : eg1.exe
+eg3.exe: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 eg3.exe
+.PHONY : eg3.exe
 
 # fast build rule for target.
-eg1.exe/fast:
-	$(MAKE) $(MAKESILENT) -f examples\CMakeFiles\eg1.exe.dir\build.make examples/CMakeFiles/eg1.exe.dir/build
-.PHONY : eg1.exe/fast
+eg3.exe/fast:
+	$(MAKE) $(MAKESILENT) -f examples\CMakeFiles\eg3.exe.dir\build.make examples/CMakeFiles/eg3.exe.dir/build
+.PHONY : eg3.exe/fast
 
 src/core/Canvas.obj: src/core/Canvas.cpp.obj
 .PHONY : src/core/Canvas.obj
@@ -258,6 +258,30 @@ src/core/Logger.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\slimeGraphics.dir\build.make CMakeFiles/slimeGraphics.dir/src/core/Logger.cpp.s
 .PHONY : src/core/Logger.cpp.s
 
+src/utils/Utils.obj: src/utils/Utils.cpp.obj
+.PHONY : src/utils/Utils.obj
+
+# target to build an object file
+src/utils/Utils.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\slimeGraphics.dir\build.make CMakeFiles/slimeGraphics.dir/src/utils/Utils.cpp.obj
+.PHONY : src/utils/Utils.cpp.obj
+
+src/utils/Utils.i: src/utils/Utils.cpp.i
+.PHONY : src/utils/Utils.i
+
+# target to preprocess a source file
+src/utils/Utils.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\slimeGraphics.dir\build.make CMakeFiles/slimeGraphics.dir/src/utils/Utils.cpp.i
+.PHONY : src/utils/Utils.cpp.i
+
+src/utils/Utils.s: src/utils/Utils.cpp.s
+.PHONY : src/utils/Utils.s
+
+# target to generate assembly for a file
+src/utils/Utils.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\slimeGraphics.dir\build.make CMakeFiles/slimeGraphics.dir/src/utils/Utils.cpp.s
+.PHONY : src/utils/Utils.cpp.s
+
 src/window/Window.obj: src/window/Window.cpp.obj
 .PHONY : src/window/Window.obj
 
@@ -294,7 +318,7 @@ help:
 	@echo ... install/strip
 	@echo ... list_install_components
 	@echo ... rebuild_cache
-	@echo ... eg1.exe
+	@echo ... eg3.exe
 	@echo ... slimeGraphics
 	@echo ... src/core/Canvas.obj
 	@echo ... src/core/Canvas.i
@@ -305,6 +329,9 @@ help:
 	@echo ... src/core/Logger.obj
 	@echo ... src/core/Logger.i
 	@echo ... src/core/Logger.s
+	@echo ... src/utils/Utils.obj
+	@echo ... src/utils/Utils.i
+	@echo ... src/utils/Utils.s
 	@echo ... src/window/Window.obj
 	@echo ... src/window/Window.i
 	@echo ... src/window/Window.s

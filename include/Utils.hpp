@@ -13,6 +13,8 @@
 #include <windows.h>
 #include <string>
 
-BOOL classIsRegistered(const wchar_t *CLASSNAME);
+namespace Utils{
+    BOOL classIsRegistered(wchar_t const*CLASSNAME);//艹我把const加在wchar_t前面了（
+}
 
 #endif

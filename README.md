@@ -8,10 +8,14 @@ basic structs(complete)
 
 log system(complete)
 
-window system(learning WinAPI)
+window system(complete)
 
 control systems(not yet)
 
 drawer system(not yet)
 
 multi-window(not yet)
+
+btw, I hide many interesting comments in the code, if you speak Chinese, you could try to find them(or some are in English naturally)
+
+\[INFO] 第一个窗口创建成功，时间：26/02/04 7:20

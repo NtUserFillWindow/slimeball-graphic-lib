@@ -16,6 +16,7 @@ namespace Graphics{
     using Core::Canvas;
     using Core::Color;
     using Core::logger;
-    using Window::Handle;
+    using Window::Handle; 
+    using Window::globalHandleManager;
 }
 Core::logger globalLogger;

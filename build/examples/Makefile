@@ -161,42 +161,42 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-examples/CMakeFiles/eg1.exe.dir/rule:
-	cd /d F:\VSCodeWorkspace\slimeballGraphicLib\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 examples/CMakeFiles/eg1.exe.dir/rule
-.PHONY : examples/CMakeFiles/eg1.exe.dir/rule
+examples/CMakeFiles/eg3.exe.dir/rule:
+	cd /d F:\VSCodeWorkspace\slimeballGraphicLib\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 examples/CMakeFiles/eg3.exe.dir/rule
+.PHONY : examples/CMakeFiles/eg3.exe.dir/rule
 
 # Convenience name for target.
-eg1.exe: examples/CMakeFiles/eg1.exe.dir/rule
-.PHONY : eg1.exe
+eg3.exe: examples/CMakeFiles/eg3.exe.dir/rule
+.PHONY : eg3.exe
 
 # fast build rule for target.
-eg1.exe/fast:
-	cd /d F:\VSCodeWorkspace\slimeballGraphicLib\build && $(MAKE) $(MAKESILENT) -f examples\CMakeFiles\eg1.exe.dir\build.make examples/CMakeFiles/eg1.exe.dir/build
-.PHONY : eg1.exe/fast
+eg3.exe/fast:
+	cd /d F:\VSCodeWorkspace\slimeballGraphicLib\build && $(MAKE) $(MAKESILENT) -f examples\CMakeFiles\eg3.exe.dir\build.make examples/CMakeFiles/eg3.exe.dir/build
+.PHONY : eg3.exe/fast
 
-eg1.obj: eg1.cpp.obj
-.PHONY : eg1.obj
+eg3_multiple_window.obj: eg3_multiple_window.cpp.obj
+.PHONY : eg3_multiple_window.obj
 
 # target to build an object file
-eg1.cpp.obj:
-	cd /d F:\VSCodeWorkspace\slimeballGraphicLib\build && $(MAKE) $(MAKESILENT) -f examples\CMakeFiles\eg1.exe.dir\build.make examples/CMakeFiles/eg1.exe.dir/eg1.cpp.obj
-.PHONY : eg1.cpp.obj
+eg3_multiple_window.cpp.obj:
+	cd /d F:\VSCodeWorkspace\slimeballGraphicLib\build && $(MAKE) $(MAKESILENT) -f examples\CMakeFiles\eg3.exe.dir\build.make examples/CMakeFiles/eg3.exe.dir/eg3_multiple_window.cpp.obj
+.PHONY : eg3_multiple_window.cpp.obj
 
-eg1.i: eg1.cpp.i
-.PHONY : eg1.i
+eg3_multiple_window.i: eg3_multiple_window.cpp.i
+.PHONY : eg3_multiple_window.i
 
 # target to preprocess a source file
-eg1.cpp.i:
-	cd /d F:\VSCodeWorkspace\slimeballGraphicLib\build && $(MAKE) $(MAKESILENT) -f examples\CMakeFiles\eg1.exe.dir\build.make examples/CMakeFiles/eg1.exe.dir/eg1.cpp.i
-.PHONY : eg1.cpp.i
+eg3_multiple_window.cpp.i:
+	cd /d F:\VSCodeWorkspace\slimeballGraphicLib\build && $(MAKE) $(MAKESILENT) -f examples\CMakeFiles\eg3.exe.dir\build.make examples/CMakeFiles/eg3.exe.dir/eg3_multiple_window.cpp.i
+.PHONY : eg3_multiple_window.cpp.i
 
-eg1.s: eg1.cpp.s
-.PHONY : eg1.s
+eg3_multiple_window.s: eg3_multiple_window.cpp.s
+.PHONY : eg3_multiple_window.s
 
 # target to generate assembly for a file
-eg1.cpp.s:
-	cd /d F:\VSCodeWorkspace\slimeballGraphicLib\build && $(MAKE) $(MAKESILENT) -f examples\CMakeFiles\eg1.exe.dir\build.make examples/CMakeFiles/eg1.exe.dir/eg1.cpp.s
-.PHONY : eg1.cpp.s
+eg3_multiple_window.cpp.s:
+	cd /d F:\VSCodeWorkspace\slimeballGraphicLib\build && $(MAKE) $(MAKESILENT) -f examples\CMakeFiles\eg3.exe.dir\build.make examples/CMakeFiles/eg3.exe.dir/eg3_multiple_window.cpp.s
+.PHONY : eg3_multiple_window.cpp.s
 
 # Help Target
 help:
@@ -210,10 +210,10 @@ help:
 	@echo ... install/strip
 	@echo ... list_install_components
 	@echo ... rebuild_cache
-	@echo ... eg1.exe
-	@echo ... eg1.obj
-	@echo ... eg1.i
-	@echo ... eg1.s
+	@echo ... eg3.exe
+	@echo ... eg3_multiple_window.obj
+	@echo ... eg3_multiple_window.i
+	@echo ... eg3_multiple_window.s
 .PHONY : help
 
 
