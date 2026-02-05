@@ -10,6 +10,7 @@
 #ifndef _UNICODE
 #define _UNICODE
 #endif
+#include "Window.hpp"
 #include <windows.h>
 #include <string>
 

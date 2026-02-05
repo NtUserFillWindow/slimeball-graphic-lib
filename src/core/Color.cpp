@@ -4,6 +4,7 @@
 
 #include "Color.hpp"
 #include <cmath>
+#include <windows.h>
 
 Core::Color::Color(float hue,float saturation,float lightness,unsigned char alpha)
 {

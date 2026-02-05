@@ -1,38 +1,50 @@
 [
 {
   "directory": "F:/VSCodeWorkspace/slimeballGraphicLib/build",
-  "command": "F:\\msys64\\ucrt64\\bin\\g++.exe -DNOMINMAX @CMakeFiles/slimeGraphics.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -Werror -pedantic -o CMakeFiles\\slimeGraphics.dir\\src\\core\\Color.cpp.obj -c F:\\VSCodeWorkspace\\slimeballGraphicLib\\src\\core\\Color.cpp",
+  "command": "F:\\msys64\\ucrt64\\bin\\g++.exe -DNOMINMAX @CMakeFiles/slimeballGraphicsLib.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -pedantic -o CMakeFiles\\slimeballGraphicsLib.dir\\src\\core\\Color.cpp.obj -c F:\\VSCodeWorkspace\\slimeballGraphicLib\\src\\core\\Color.cpp",
   "file": "F:/VSCodeWorkspace/slimeballGraphicLib/src/core/Color.cpp",
-  "output": "CMakeFiles/slimeGraphics.dir/src/core/Color.cpp.obj"
+  "output": "CMakeFiles/slimeballGraphicsLib.dir/src/core/Color.cpp.obj"
 },
 {
   "directory": "F:/VSCodeWorkspace/slimeballGraphicLib/build",
-  "command": "F:\\msys64\\ucrt64\\bin\\g++.exe -DNOMINMAX @CMakeFiles/slimeGraphics.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -Werror -pedantic -o CMakeFiles\\slimeGraphics.dir\\src\\core\\Canvas.cpp.obj -c F:\\VSCodeWorkspace\\slimeballGraphicLib\\src\\core\\Canvas.cpp",
+  "command": "F:\\msys64\\ucrt64\\bin\\g++.exe -DNOMINMAX @CMakeFiles/slimeballGraphicsLib.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -pedantic -o CMakeFiles\\slimeballGraphicsLib.dir\\src\\core\\Canvas.cpp.obj -c F:\\VSCodeWorkspace\\slimeballGraphicLib\\src\\core\\Canvas.cpp",
   "file": "F:/VSCodeWorkspace/slimeballGraphicLib/src/core/Canvas.cpp",
-  "output": "CMakeFiles/slimeGraphics.dir/src/core/Canvas.cpp.obj"
+  "output": "CMakeFiles/slimeballGraphicsLib.dir/src/core/Canvas.cpp.obj"
 },
 {
   "directory": "F:/VSCodeWorkspace/slimeballGraphicLib/build",
-  "command": "F:\\msys64\\ucrt64\\bin\\g++.exe -DNOMINMAX @CMakeFiles/slimeGraphics.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -Werror -pedantic -o CMakeFiles\\slimeGraphics.dir\\src\\window\\Window.cpp.obj -c F:\\VSCodeWorkspace\\slimeballGraphicLib\\src\\window\\Window.cpp",
+  "command": "F:\\msys64\\ucrt64\\bin\\g++.exe -DNOMINMAX @CMakeFiles/slimeballGraphicsLib.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -pedantic -o CMakeFiles\\slimeballGraphicsLib.dir\\src\\window\\Window.cpp.obj -c F:\\VSCodeWorkspace\\slimeballGraphicLib\\src\\window\\Window.cpp",
   "file": "F:/VSCodeWorkspace/slimeballGraphicLib/src/window/Window.cpp",
-  "output": "CMakeFiles/slimeGraphics.dir/src/window/Window.cpp.obj"
+  "output": "CMakeFiles/slimeballGraphicsLib.dir/src/window/Window.cpp.obj"
 },
 {
   "directory": "F:/VSCodeWorkspace/slimeballGraphicLib/build",
-  "command": "F:\\msys64\\ucrt64\\bin\\g++.exe -DNOMINMAX @CMakeFiles/slimeGraphics.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -Werror -pedantic -o CMakeFiles\\slimeGraphics.dir\\src\\core\\Logger.cpp.obj -c F:\\VSCodeWorkspace\\slimeballGraphicLib\\src\\core\\Logger.cpp",
+  "command": "F:\\msys64\\ucrt64\\bin\\g++.exe -DNOMINMAX @CMakeFiles/slimeballGraphicsLib.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -pedantic -o CMakeFiles\\slimeballGraphicsLib.dir\\src\\core\\Logger.cpp.obj -c F:\\VSCodeWorkspace\\slimeballGraphicLib\\src\\core\\Logger.cpp",
   "file": "F:/VSCodeWorkspace/slimeballGraphicLib/src/core/Logger.cpp",
-  "output": "CMakeFiles/slimeGraphics.dir/src/core/Logger.cpp.obj"
+  "output": "CMakeFiles/slimeballGraphicsLib.dir/src/core/Logger.cpp.obj"
 },
 {
   "directory": "F:/VSCodeWorkspace/slimeballGraphicLib/build",
-  "command": "F:\\msys64\\ucrt64\\bin\\g++.exe -DNOMINMAX @CMakeFiles/slimeGraphics.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -Werror -pedantic -o CMakeFiles\\slimeGraphics.dir\\src\\utils\\Utils.cpp.obj -c F:\\VSCodeWorkspace\\slimeballGraphicLib\\src\\utils\\Utils.cpp",
+  "command": "F:\\msys64\\ucrt64\\bin\\g++.exe -DNOMINMAX @CMakeFiles/slimeballGraphicsLib.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -pedantic -o CMakeFiles\\slimeballGraphicsLib.dir\\src\\utils\\Utils.cpp.obj -c F:\\VSCodeWorkspace\\slimeballGraphicLib\\src\\utils\\Utils.cpp",
   "file": "F:/VSCodeWorkspace/slimeballGraphicLib/src/utils/Utils.cpp",
-  "output": "CMakeFiles/slimeGraphics.dir/src/utils/Utils.cpp.obj"
+  "output": "CMakeFiles/slimeballGraphicsLib.dir/src/utils/Utils.cpp.obj"
+},
+{
+  "directory": "F:/VSCodeWorkspace/slimeballGraphicLib/build",
+  "command": "F:\\msys64\\ucrt64\\bin\\g++.exe -DNOMINMAX @CMakeFiles/slimeballGraphicsLib.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -pedantic -o CMakeFiles\\slimeballGraphicsLib.dir\\src\\painter\\Painter.cpp.obj -c F:\\VSCodeWorkspace\\slimeballGraphicLib\\src\\painter\\Painter.cpp",
+  "file": "F:/VSCodeWorkspace/slimeballGraphicLib/src/painter/Painter.cpp",
+  "output": "CMakeFiles/slimeballGraphicsLib.dir/src/painter/Painter.cpp.obj"
+},
+{
+  "directory": "F:/VSCodeWorkspace/slimeballGraphicLib/build",
+  "command": "F:\\msys64\\ucrt64\\bin\\g++.exe -DNOMINMAX @CMakeFiles/slimeballGraphicsLib.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -pedantic -o CMakeFiles\\slimeballGraphicsLib.dir\\src\\core\\EntryPoint.cpp.obj -c F:\\VSCodeWorkspace\\slimeballGraphicLib\\src\\core\\EntryPoint.cpp",
+  "file": "F:/VSCodeWorkspace/slimeballGraphicLib/src/core/EntryPoint.cpp",
+  "output": "CMakeFiles/slimeballGraphicsLib.dir/src/core/EntryPoint.cpp.obj"
 },
 {
   "directory": "F:/VSCodeWorkspace/slimeballGraphicLib/build/examples",
-  "command": "F:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/eg3.exe.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -Werror -pedantic -o CMakeFiles\\eg3.exe.dir\\eg3_multiple_window.cpp.obj -c F:\\VSCodeWorkspace\\slimeballGraphicLib\\examples\\eg3_multiple_window.cpp",
-  "file": "F:/VSCodeWorkspace/slimeballGraphicLib/examples/eg3_multiple_window.cpp",
-  "output": "examples/CMakeFiles/eg3.exe.dir/eg3_multiple_window.cpp.obj"
+  "command": "F:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/eg5.exe.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -pedantic -o CMakeFiles\\eg5.exe.dir\\eg5_alphablend.cpp.obj -c F:\\VSCodeWorkspace\\slimeballGraphicLib\\examples\\eg5_alphablend.cpp",
+  "file": "F:/VSCodeWorkspace/slimeballGraphicLib/examples/eg5_alphablend.cpp",
+  "output": "examples/CMakeFiles/eg5.exe.dir/eg5_alphablend.cpp.obj"
 }
 ]

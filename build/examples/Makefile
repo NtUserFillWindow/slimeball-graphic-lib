@@ -161,42 +161,42 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-examples/CMakeFiles/eg3.exe.dir/rule:
-	cd /d F:\VSCodeWorkspace\slimeballGraphicLib\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 examples/CMakeFiles/eg3.exe.dir/rule
-.PHONY : examples/CMakeFiles/eg3.exe.dir/rule
+examples/CMakeFiles/eg5.exe.dir/rule:
+	cd /d F:\VSCodeWorkspace\slimeballGraphicLib\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 examples/CMakeFiles/eg5.exe.dir/rule
+.PHONY : examples/CMakeFiles/eg5.exe.dir/rule
 
 # Convenience name for target.
-eg3.exe: examples/CMakeFiles/eg3.exe.dir/rule
-.PHONY : eg3.exe
+eg5.exe: examples/CMakeFiles/eg5.exe.dir/rule
+.PHONY : eg5.exe
 
 # fast build rule for target.
-eg3.exe/fast:
-	cd /d F:\VSCodeWorkspace\slimeballGraphicLib\build && $(MAKE) $(MAKESILENT) -f examples\CMakeFiles\eg3.exe.dir\build.make examples/CMakeFiles/eg3.exe.dir/build
-.PHONY : eg3.exe/fast
+eg5.exe/fast:
+	cd /d F:\VSCodeWorkspace\slimeballGraphicLib\build && $(MAKE) $(MAKESILENT) -f examples\CMakeFiles\eg5.exe.dir\build.make examples/CMakeFiles/eg5.exe.dir/build
+.PHONY : eg5.exe/fast
 
-eg3_multiple_window.obj: eg3_multiple_window.cpp.obj
-.PHONY : eg3_multiple_window.obj
+eg5_alphablend.obj: eg5_alphablend.cpp.obj
+.PHONY : eg5_alphablend.obj
 
 # target to build an object file
-eg3_multiple_window.cpp.obj:
-	cd /d F:\VSCodeWorkspace\slimeballGraphicLib\build && $(MAKE) $(MAKESILENT) -f examples\CMakeFiles\eg3.exe.dir\build.make examples/CMakeFiles/eg3.exe.dir/eg3_multiple_window.cpp.obj
-.PHONY : eg3_multiple_window.cpp.obj
+eg5_alphablend.cpp.obj:
+	cd /d F:\VSCodeWorkspace\slimeballGraphicLib\build && $(MAKE) $(MAKESILENT) -f examples\CMakeFiles\eg5.exe.dir\build.make examples/CMakeFiles/eg5.exe.dir/eg5_alphablend.cpp.obj
+.PHONY : eg5_alphablend.cpp.obj
 
-eg3_multiple_window.i: eg3_multiple_window.cpp.i
-.PHONY : eg3_multiple_window.i
+eg5_alphablend.i: eg5_alphablend.cpp.i
+.PHONY : eg5_alphablend.i
 
 # target to preprocess a source file
-eg3_multiple_window.cpp.i:
-	cd /d F:\VSCodeWorkspace\slimeballGraphicLib\build && $(MAKE) $(MAKESILENT) -f examples\CMakeFiles\eg3.exe.dir\build.make examples/CMakeFiles/eg3.exe.dir/eg3_multiple_window.cpp.i
-.PHONY : eg3_multiple_window.cpp.i
+eg5_alphablend.cpp.i:
+	cd /d F:\VSCodeWorkspace\slimeballGraphicLib\build && $(MAKE) $(MAKESILENT) -f examples\CMakeFiles\eg5.exe.dir\build.make examples/CMakeFiles/eg5.exe.dir/eg5_alphablend.cpp.i
+.PHONY : eg5_alphablend.cpp.i
 
-eg3_multiple_window.s: eg3_multiple_window.cpp.s
-.PHONY : eg3_multiple_window.s
+eg5_alphablend.s: eg5_alphablend.cpp.s
+.PHONY : eg5_alphablend.s
 
 # target to generate assembly for a file
-eg3_multiple_window.cpp.s:
-	cd /d F:\VSCodeWorkspace\slimeballGraphicLib\build && $(MAKE) $(MAKESILENT) -f examples\CMakeFiles\eg3.exe.dir\build.make examples/CMakeFiles/eg3.exe.dir/eg3_multiple_window.cpp.s
-.PHONY : eg3_multiple_window.cpp.s
+eg5_alphablend.cpp.s:
+	cd /d F:\VSCodeWorkspace\slimeballGraphicLib\build && $(MAKE) $(MAKESILENT) -f examples\CMakeFiles\eg5.exe.dir\build.make examples/CMakeFiles/eg5.exe.dir/eg5_alphablend.cpp.s
+.PHONY : eg5_alphablend.cpp.s
 
 # Help Target
 help:
@@ -210,10 +210,10 @@ help:
 	@echo ... install/strip
 	@echo ... list_install_components
 	@echo ... rebuild_cache
-	@echo ... eg3.exe
-	@echo ... eg3_multiple_window.obj
-	@echo ... eg3_multiple_window.i
-	@echo ... eg3_multiple_window.s
+	@echo ... eg5.exe
+	@echo ... eg5_alphablend.obj
+	@echo ... eg5_alphablend.i
+	@echo ... eg5_alphablend.s
 .PHONY : help
 
 

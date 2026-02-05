@@ -4,6 +4,8 @@
 #ifndef COLOR_HPP
 #define COLOR_HPP
 
+#include <windows.h>
+
 namespace Core{
     struct Color{
         unsigned char r;
@@ -16,6 +18,9 @@ namespace Core{
         Color(const Color& other)=default;
         Color& operator=(const Color& other)=default;
         Color(float hue,float saturation,float lightness,unsigned char alpha=255);
+        constexpr COLORREF toCOLORREF() const noexcept{
+            return RGB(r,g,b);
+        }
     };
 }
 #endif // COLOR_HPP

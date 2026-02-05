@@ -146,13 +146,45 @@ CMakeFiles/slimeGraphics.dir/src/utils/Utils.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/slimeGraphics.dir/src/utils/Utils.cpp.s"
 	F:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S F:\VSCodeWorkspace\slimeballGraphicLib\src\utils\Utils.cpp -o CMakeFiles\slimeGraphics.dir\src\utils\Utils.cpp.s
 
+CMakeFiles/slimeGraphics.dir/src/painter/Painter.cpp.obj: CMakeFiles/slimeGraphics.dir/flags.make
+CMakeFiles/slimeGraphics.dir/src/painter/Painter.cpp.obj: CMakeFiles/slimeGraphics.dir/includes_CXX.rsp
+CMakeFiles/slimeGraphics.dir/src/painter/Painter.cpp.obj: F:/VSCodeWorkspace/slimeballGraphicLib/src/painter/Painter.cpp
+CMakeFiles/slimeGraphics.dir/src/painter/Painter.cpp.obj: CMakeFiles/slimeGraphics.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=F:\VSCodeWorkspace\slimeballGraphicLib\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/slimeGraphics.dir/src/painter/Painter.cpp.obj"
+	F:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/slimeGraphics.dir/src/painter/Painter.cpp.obj -MF CMakeFiles\slimeGraphics.dir\src\painter\Painter.cpp.obj.d -o CMakeFiles\slimeGraphics.dir\src\painter\Painter.cpp.obj -c F:\VSCodeWorkspace\slimeballGraphicLib\src\painter\Painter.cpp
+
+CMakeFiles/slimeGraphics.dir/src/painter/Painter.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/slimeGraphics.dir/src/painter/Painter.cpp.i"
+	F:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E F:\VSCodeWorkspace\slimeballGraphicLib\src\painter\Painter.cpp > CMakeFiles\slimeGraphics.dir\src\painter\Painter.cpp.i
+
+CMakeFiles/slimeGraphics.dir/src/painter/Painter.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/slimeGraphics.dir/src/painter/Painter.cpp.s"
+	F:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S F:\VSCodeWorkspace\slimeballGraphicLib\src\painter\Painter.cpp -o CMakeFiles\slimeGraphics.dir\src\painter\Painter.cpp.s
+
+CMakeFiles/slimeGraphics.dir/src/core/EntryPoint.cpp.obj: CMakeFiles/slimeGraphics.dir/flags.make
+CMakeFiles/slimeGraphics.dir/src/core/EntryPoint.cpp.obj: CMakeFiles/slimeGraphics.dir/includes_CXX.rsp
+CMakeFiles/slimeGraphics.dir/src/core/EntryPoint.cpp.obj: F:/VSCodeWorkspace/slimeballGraphicLib/src/core/EntryPoint.cpp
+CMakeFiles/slimeGraphics.dir/src/core/EntryPoint.cpp.obj: CMakeFiles/slimeGraphics.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=F:\VSCodeWorkspace\slimeballGraphicLib\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/slimeGraphics.dir/src/core/EntryPoint.cpp.obj"
+	F:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/slimeGraphics.dir/src/core/EntryPoint.cpp.obj -MF CMakeFiles\slimeGraphics.dir\src\core\EntryPoint.cpp.obj.d -o CMakeFiles\slimeGraphics.dir\src\core\EntryPoint.cpp.obj -c F:\VSCodeWorkspace\slimeballGraphicLib\src\core\EntryPoint.cpp
+
+CMakeFiles/slimeGraphics.dir/src/core/EntryPoint.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/slimeGraphics.dir/src/core/EntryPoint.cpp.i"
+	F:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E F:\VSCodeWorkspace\slimeballGraphicLib\src\core\EntryPoint.cpp > CMakeFiles\slimeGraphics.dir\src\core\EntryPoint.cpp.i
+
+CMakeFiles/slimeGraphics.dir/src/core/EntryPoint.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/slimeGraphics.dir/src/core/EntryPoint.cpp.s"
+	F:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S F:\VSCodeWorkspace\slimeballGraphicLib\src\core\EntryPoint.cpp -o CMakeFiles\slimeGraphics.dir\src\core\EntryPoint.cpp.s
+
 # Object files for target slimeGraphics
 slimeGraphics_OBJECTS = \
 "CMakeFiles/slimeGraphics.dir/src/core/Color.cpp.obj" \
 "CMakeFiles/slimeGraphics.dir/src/core/Canvas.cpp.obj" \
 "CMakeFiles/slimeGraphics.dir/src/window/Window.cpp.obj" \
 "CMakeFiles/slimeGraphics.dir/src/core/Logger.cpp.obj" \
-"CMakeFiles/slimeGraphics.dir/src/utils/Utils.cpp.obj"
+"CMakeFiles/slimeGraphics.dir/src/utils/Utils.cpp.obj" \
+"CMakeFiles/slimeGraphics.dir/src/painter/Painter.cpp.obj" \
+"CMakeFiles/slimeGraphics.dir/src/core/EntryPoint.cpp.obj"
 
 # External object files for target slimeGraphics
 slimeGraphics_EXTERNAL_OBJECTS =
@@ -162,9 +194,11 @@ lib/libslimeGraphics.a: CMakeFiles/slimeGraphics.dir/src/core/Canvas.cpp.obj
 lib/libslimeGraphics.a: CMakeFiles/slimeGraphics.dir/src/window/Window.cpp.obj
 lib/libslimeGraphics.a: CMakeFiles/slimeGraphics.dir/src/core/Logger.cpp.obj
 lib/libslimeGraphics.a: CMakeFiles/slimeGraphics.dir/src/utils/Utils.cpp.obj
+lib/libslimeGraphics.a: CMakeFiles/slimeGraphics.dir/src/painter/Painter.cpp.obj
+lib/libslimeGraphics.a: CMakeFiles/slimeGraphics.dir/src/core/EntryPoint.cpp.obj
 lib/libslimeGraphics.a: CMakeFiles/slimeGraphics.dir/build.make
 lib/libslimeGraphics.a: CMakeFiles/slimeGraphics.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=F:\VSCodeWorkspace\slimeballGraphicLib\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX static library lib\libslimeGraphics.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=F:\VSCodeWorkspace\slimeballGraphicLib\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX static library lib\libslimeGraphics.a"
 	$(CMAKE_COMMAND) -P CMakeFiles\slimeGraphics.dir\cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\slimeGraphics.dir\link.txt --verbose=$(VERBOSE)
 

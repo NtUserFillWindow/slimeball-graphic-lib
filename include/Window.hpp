@@ -15,7 +15,7 @@
 #include <memory>
 #include "Canvas.hpp"
 #include "Utils.hpp"
-
+#include "Painter.hpp"
 namespace Window{
     struct Handle:public std::enable_shared_from_this<Handle>{
         private:
@@ -28,8 +28,11 @@ namespace Window{
             long long mID;
             static std::unordered_map<HWND,Handle*> mHWndMap;
             bool isActive=true;
+            Buffer mBuffer;
         public:
             std::function<long long(HWND,UINT,WPARAM,LPARAM)> thisDestroy;
+            std::function<bool(HWND,UINT,WPARAM,LPARAM)> thisOnClose;//return true to close,false to not close
+            std::function<long long(HWND,UINT,WPARAM,LPARAM,Window::Painter&)> thisPaint;
             static LRESULT CALLBACK thisWindowProc(HWND hWnd,UINT uMsg,WPARAM wParam,LPARAM lParam);
             HWND initWindow(const wchar_t* className,HINSTANCE hInstance);
             Handle()=default;
@@ -38,6 +41,15 @@ namespace Window{
             ~Handle();
             void destroy();
             void registerToManager();
+            static Handle* queryWindow(HWND hWnd);
+            RECT getRect();
+            HWND getHWnd();
+            bool initBuffer();
+            HDC getBufferHDC();
+            void update();
+            void clearBuffer();
+            void resizeBuffer();
+            Buffer& getBuffer();
     };
     struct HandleManager{
         private:
@@ -50,6 +62,7 @@ namespace Window{
             void push(std::shared_ptr<Handle> handle);
             void pop(long long id);
             long long getCnt();
+            void updateAll();
             HandleManager()=default;
             ~HandleManager();
     };

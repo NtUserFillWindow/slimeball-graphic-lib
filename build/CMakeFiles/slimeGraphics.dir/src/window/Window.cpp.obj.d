@@ -412,8 +412,11 @@ CMakeFiles/slimeGraphics.dir/src/window/Window.cpp.obj: \
  F:/msys64/ucrt64/include/c++/15.2.0/bits/unique_lock.h \
  F:/msys64/ucrt64/include/c++/15.2.0/chrono \
  F:/VSCodeWorkspace/slimeballGraphicLib/include/Utils.hpp \
+ F:/VSCodeWorkspace/slimeballGraphicLib/include/Window.hpp \
+ F:/VSCodeWorkspace/slimeballGraphicLib/include/Painter.hpp \
  F:/VSCodeWorkspace/slimeballGraphicLib/include/Logger.hpp \
  F:/VSCodeWorkspace/slimeballGraphicLib/include/Utils.hpp \
+ F:/VSCodeWorkspace/slimeballGraphicLib/include/Painter.hpp \
  F:/msys64/ucrt64/include/c++/15.2.0/algorithm \
  F:/msys64/ucrt64/include/c++/15.2.0/bits/stl_algo.h \
  F:/msys64/ucrt64/include/c++/15.2.0/bits/algorithmfwd.h \

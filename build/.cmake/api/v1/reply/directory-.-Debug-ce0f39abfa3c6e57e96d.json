@@ -17,13 +17,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 37,
+				"line" : 45,
 				"parent" : 0
 			},
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 43,
+				"line" : 51,
 				"parent" : 0
 			}
 		]
@@ -36,9 +36,9 @@
 			"destination" : "lib",
 			"paths" : 
 			[
-				"lib/libslimeGraphics.a"
+				"lib/libslimeballGraphicsLib.a"
 			],
-			"targetId" : "slimeGraphics::@6890427a1f51a3e7e1df",
+			"targetId" : "slimeballGraphicsLib::@6890427a1f51a3e7e1df",
 			"targetIndex" : 1,
 			"type" : "target"
 		},

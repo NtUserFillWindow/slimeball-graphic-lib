@@ -13,28 +13,36 @@ if(MSVC)
     add_compile_options(/W4 /WX /EHsc)
     add_definitions(-D_CRT_SECURE_NO_WARNINGS)
 else()
-    add_compile_options(-Wall -Wextra -Werror -pedantic)
+    add_compile_options(-Wall -Wextra -pedantic)
 endif()
 
-add_library(slimeGraphics STATIC
+add_library(slimeballGraphicsLib STATIC
     src/core/Color.cpp
     src/core/Canvas.cpp
     src/window/Window.cpp
     src/core/Logger.cpp
     src/utils/Utils.cpp
+    src/painter/Painter.cpp
+    src/core/EntryPoint.cpp
 )
 
-target_include_directories(slimeGraphics PUBLIC
+target_link_libraries(slimeballGraphicsLib PRIVATE
+    msimg32
+    gdi32
+    user32
+)
+
+target_include_directories(slimeballGraphicsLib PUBLIC
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
     $<INSTALL_INTERFACE:include>
 )
 
 if(WIN32)
-    target_compile_definitions(slimeGraphics PRIVATE NOMINMAX)
-    target_link_libraries(slimeGraphics PRIVATE gdi32 user32)
+    target_compile_definitions(slimeballGraphicsLib PRIVATE NOMINMAX)
+    target_link_libraries(slimeballGraphicsLib PRIVATE gdi32 user32)
 endif()
 
-install(TARGETS slimeGraphics
+install(TARGETS slimeballGraphicsLib
     ARCHIVE DESTINATION lib
     LIBRARY DESTINATION lib
     RUNTIME DESTINATION bin

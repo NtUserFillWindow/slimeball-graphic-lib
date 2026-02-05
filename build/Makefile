@@ -161,37 +161,37 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named slimeGraphics
+# Target rules for targets named slimeballGraphicsLib
 
 # Build rule for target.
-slimeGraphics: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 slimeGraphics
-.PHONY : slimeGraphics
+slimeballGraphicsLib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 slimeballGraphicsLib
+.PHONY : slimeballGraphicsLib
 
 # fast build rule for target.
-slimeGraphics/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\slimeGraphics.dir\build.make CMakeFiles/slimeGraphics.dir/build
-.PHONY : slimeGraphics/fast
+slimeballGraphicsLib/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\slimeballGraphicsLib.dir\build.make CMakeFiles/slimeballGraphicsLib.dir/build
+.PHONY : slimeballGraphicsLib/fast
 
 #=============================================================================
-# Target rules for targets named eg3.exe
+# Target rules for targets named eg5.exe
 
 # Build rule for target.
-eg3.exe: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 eg3.exe
-.PHONY : eg3.exe
+eg5.exe: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 eg5.exe
+.PHONY : eg5.exe
 
 # fast build rule for target.
-eg3.exe/fast:
-	$(MAKE) $(MAKESILENT) -f examples\CMakeFiles\eg3.exe.dir\build.make examples/CMakeFiles/eg3.exe.dir/build
-.PHONY : eg3.exe/fast
+eg5.exe/fast:
+	$(MAKE) $(MAKESILENT) -f examples\CMakeFiles\eg5.exe.dir\build.make examples/CMakeFiles/eg5.exe.dir/build
+.PHONY : eg5.exe/fast
 
 src/core/Canvas.obj: src/core/Canvas.cpp.obj
 .PHONY : src/core/Canvas.obj
 
 # target to build an object file
 src/core/Canvas.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\slimeGraphics.dir\build.make CMakeFiles/slimeGraphics.dir/src/core/Canvas.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\slimeballGraphicsLib.dir\build.make CMakeFiles/slimeballGraphicsLib.dir/src/core/Canvas.cpp.obj
 .PHONY : src/core/Canvas.cpp.obj
 
 src/core/Canvas.i: src/core/Canvas.cpp.i
@@ -199,7 +199,7 @@ src/core/Canvas.i: src/core/Canvas.cpp.i
 
 # target to preprocess a source file
 src/core/Canvas.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\slimeGraphics.dir\build.make CMakeFiles/slimeGraphics.dir/src/core/Canvas.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\slimeballGraphicsLib.dir\build.make CMakeFiles/slimeballGraphicsLib.dir/src/core/Canvas.cpp.i
 .PHONY : src/core/Canvas.cpp.i
 
 src/core/Canvas.s: src/core/Canvas.cpp.s
@@ -207,7 +207,7 @@ src/core/Canvas.s: src/core/Canvas.cpp.s
 
 # target to generate assembly for a file
 src/core/Canvas.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\slimeGraphics.dir\build.make CMakeFiles/slimeGraphics.dir/src/core/Canvas.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\slimeballGraphicsLib.dir\build.make CMakeFiles/slimeballGraphicsLib.dir/src/core/Canvas.cpp.s
 .PHONY : src/core/Canvas.cpp.s
 
 src/core/Color.obj: src/core/Color.cpp.obj
@@ -215,7 +215,7 @@ src/core/Color.obj: src/core/Color.cpp.obj
 
 # target to build an object file
 src/core/Color.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\slimeGraphics.dir\build.make CMakeFiles/slimeGraphics.dir/src/core/Color.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\slimeballGraphicsLib.dir\build.make CMakeFiles/slimeballGraphicsLib.dir/src/core/Color.cpp.obj
 .PHONY : src/core/Color.cpp.obj
 
 src/core/Color.i: src/core/Color.cpp.i
@@ -223,7 +223,7 @@ src/core/Color.i: src/core/Color.cpp.i
 
 # target to preprocess a source file
 src/core/Color.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\slimeGraphics.dir\build.make CMakeFiles/slimeGraphics.dir/src/core/Color.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\slimeballGraphicsLib.dir\build.make CMakeFiles/slimeballGraphicsLib.dir/src/core/Color.cpp.i
 .PHONY : src/core/Color.cpp.i
 
 src/core/Color.s: src/core/Color.cpp.s
@@ -231,15 +231,39 @@ src/core/Color.s: src/core/Color.cpp.s
 
 # target to generate assembly for a file
 src/core/Color.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\slimeGraphics.dir\build.make CMakeFiles/slimeGraphics.dir/src/core/Color.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\slimeballGraphicsLib.dir\build.make CMakeFiles/slimeballGraphicsLib.dir/src/core/Color.cpp.s
 .PHONY : src/core/Color.cpp.s
+
+src/core/EntryPoint.obj: src/core/EntryPoint.cpp.obj
+.PHONY : src/core/EntryPoint.obj
+
+# target to build an object file
+src/core/EntryPoint.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\slimeballGraphicsLib.dir\build.make CMakeFiles/slimeballGraphicsLib.dir/src/core/EntryPoint.cpp.obj
+.PHONY : src/core/EntryPoint.cpp.obj
+
+src/core/EntryPoint.i: src/core/EntryPoint.cpp.i
+.PHONY : src/core/EntryPoint.i
+
+# target to preprocess a source file
+src/core/EntryPoint.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\slimeballGraphicsLib.dir\build.make CMakeFiles/slimeballGraphicsLib.dir/src/core/EntryPoint.cpp.i
+.PHONY : src/core/EntryPoint.cpp.i
+
+src/core/EntryPoint.s: src/core/EntryPoint.cpp.s
+.PHONY : src/core/EntryPoint.s
+
+# target to generate assembly for a file
+src/core/EntryPoint.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\slimeballGraphicsLib.dir\build.make CMakeFiles/slimeballGraphicsLib.dir/src/core/EntryPoint.cpp.s
+.PHONY : src/core/EntryPoint.cpp.s
 
 src/core/Logger.obj: src/core/Logger.cpp.obj
 .PHONY : src/core/Logger.obj
 
 # target to build an object file
 src/core/Logger.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\slimeGraphics.dir\build.make CMakeFiles/slimeGraphics.dir/src/core/Logger.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\slimeballGraphicsLib.dir\build.make CMakeFiles/slimeballGraphicsLib.dir/src/core/Logger.cpp.obj
 .PHONY : src/core/Logger.cpp.obj
 
 src/core/Logger.i: src/core/Logger.cpp.i
@@ -247,7 +271,7 @@ src/core/Logger.i: src/core/Logger.cpp.i
 
 # target to preprocess a source file
 src/core/Logger.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\slimeGraphics.dir\build.make CMakeFiles/slimeGraphics.dir/src/core/Logger.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\slimeballGraphicsLib.dir\build.make CMakeFiles/slimeballGraphicsLib.dir/src/core/Logger.cpp.i
 .PHONY : src/core/Logger.cpp.i
 
 src/core/Logger.s: src/core/Logger.cpp.s
@@ -255,15 +279,39 @@ src/core/Logger.s: src/core/Logger.cpp.s
 
 # target to generate assembly for a file
 src/core/Logger.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\slimeGraphics.dir\build.make CMakeFiles/slimeGraphics.dir/src/core/Logger.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\slimeballGraphicsLib.dir\build.make CMakeFiles/slimeballGraphicsLib.dir/src/core/Logger.cpp.s
 .PHONY : src/core/Logger.cpp.s
+
+src/painter/Painter.obj: src/painter/Painter.cpp.obj
+.PHONY : src/painter/Painter.obj
+
+# target to build an object file
+src/painter/Painter.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\slimeballGraphicsLib.dir\build.make CMakeFiles/slimeballGraphicsLib.dir/src/painter/Painter.cpp.obj
+.PHONY : src/painter/Painter.cpp.obj
+
+src/painter/Painter.i: src/painter/Painter.cpp.i
+.PHONY : src/painter/Painter.i
+
+# target to preprocess a source file
+src/painter/Painter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\slimeballGraphicsLib.dir\build.make CMakeFiles/slimeballGraphicsLib.dir/src/painter/Painter.cpp.i
+.PHONY : src/painter/Painter.cpp.i
+
+src/painter/Painter.s: src/painter/Painter.cpp.s
+.PHONY : src/painter/Painter.s
+
+# target to generate assembly for a file
+src/painter/Painter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\slimeballGraphicsLib.dir\build.make CMakeFiles/slimeballGraphicsLib.dir/src/painter/Painter.cpp.s
+.PHONY : src/painter/Painter.cpp.s
 
 src/utils/Utils.obj: src/utils/Utils.cpp.obj
 .PHONY : src/utils/Utils.obj
 
 # target to build an object file
 src/utils/Utils.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\slimeGraphics.dir\build.make CMakeFiles/slimeGraphics.dir/src/utils/Utils.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\slimeballGraphicsLib.dir\build.make CMakeFiles/slimeballGraphicsLib.dir/src/utils/Utils.cpp.obj
 .PHONY : src/utils/Utils.cpp.obj
 
 src/utils/Utils.i: src/utils/Utils.cpp.i
@@ -271,7 +319,7 @@ src/utils/Utils.i: src/utils/Utils.cpp.i
 
 # target to preprocess a source file
 src/utils/Utils.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\slimeGraphics.dir\build.make CMakeFiles/slimeGraphics.dir/src/utils/Utils.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\slimeballGraphicsLib.dir\build.make CMakeFiles/slimeballGraphicsLib.dir/src/utils/Utils.cpp.i
 .PHONY : src/utils/Utils.cpp.i
 
 src/utils/Utils.s: src/utils/Utils.cpp.s
@@ -279,7 +327,7 @@ src/utils/Utils.s: src/utils/Utils.cpp.s
 
 # target to generate assembly for a file
 src/utils/Utils.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\slimeGraphics.dir\build.make CMakeFiles/slimeGraphics.dir/src/utils/Utils.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\slimeballGraphicsLib.dir\build.make CMakeFiles/slimeballGraphicsLib.dir/src/utils/Utils.cpp.s
 .PHONY : src/utils/Utils.cpp.s
 
 src/window/Window.obj: src/window/Window.cpp.obj
@@ -287,7 +335,7 @@ src/window/Window.obj: src/window/Window.cpp.obj
 
 # target to build an object file
 src/window/Window.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\slimeGraphics.dir\build.make CMakeFiles/slimeGraphics.dir/src/window/Window.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\slimeballGraphicsLib.dir\build.make CMakeFiles/slimeballGraphicsLib.dir/src/window/Window.cpp.obj
 .PHONY : src/window/Window.cpp.obj
 
 src/window/Window.i: src/window/Window.cpp.i
@@ -295,7 +343,7 @@ src/window/Window.i: src/window/Window.cpp.i
 
 # target to preprocess a source file
 src/window/Window.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\slimeGraphics.dir\build.make CMakeFiles/slimeGraphics.dir/src/window/Window.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\slimeballGraphicsLib.dir\build.make CMakeFiles/slimeballGraphicsLib.dir/src/window/Window.cpp.i
 .PHONY : src/window/Window.cpp.i
 
 src/window/Window.s: src/window/Window.cpp.s
@@ -303,7 +351,7 @@ src/window/Window.s: src/window/Window.cpp.s
 
 # target to generate assembly for a file
 src/window/Window.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\slimeGraphics.dir\build.make CMakeFiles/slimeGraphics.dir/src/window/Window.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\slimeballGraphicsLib.dir\build.make CMakeFiles/slimeballGraphicsLib.dir/src/window/Window.cpp.s
 .PHONY : src/window/Window.cpp.s
 
 # Help Target
@@ -318,17 +366,23 @@ help:
 	@echo ... install/strip
 	@echo ... list_install_components
 	@echo ... rebuild_cache
-	@echo ... eg3.exe
-	@echo ... slimeGraphics
+	@echo ... eg5.exe
+	@echo ... slimeballGraphicsLib
 	@echo ... src/core/Canvas.obj
 	@echo ... src/core/Canvas.i
 	@echo ... src/core/Canvas.s
 	@echo ... src/core/Color.obj
 	@echo ... src/core/Color.i
 	@echo ... src/core/Color.s
+	@echo ... src/core/EntryPoint.obj
+	@echo ... src/core/EntryPoint.i
+	@echo ... src/core/EntryPoint.s
 	@echo ... src/core/Logger.obj
 	@echo ... src/core/Logger.i
 	@echo ... src/core/Logger.s
+	@echo ... src/painter/Painter.obj
+	@echo ... src/painter/Painter.i
+	@echo ... src/painter/Painter.s
 	@echo ... src/utils/Utils.obj
 	@echo ... src/utils/Utils.i
 	@echo ... src/utils/Utils.s

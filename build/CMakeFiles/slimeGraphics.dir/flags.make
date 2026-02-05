@@ -6,5 +6,5 @@ CXX_DEFINES = -DNOMINMAX
 
 CXX_INCLUDES = @CMakeFiles/slimeGraphics.dir/includes_CXX.rsp
 
-CXX_FLAGS = -g -std=c++17 -Wall -Wextra -Werror -pedantic
+CXX_FLAGS = -g -std=c++17 -Wall -Wextra -pedantic
 
