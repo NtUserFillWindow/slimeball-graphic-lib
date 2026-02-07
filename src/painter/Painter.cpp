@@ -156,12 +156,10 @@ bool Window::Painter::floodFill(Window::Point source,const Core::Color& color){
     std::vector<std::pair<int,int>> stack;
     stack.push_back({source.x,source.y});
     visited[getIndex(source.x,source.y)]=true;
-
     while(!stack.empty()){
         auto p=stack.back(); stack.pop_back();
         int x=p.first;
         int y=p.second;
-        // find left boundary of span
         int left=x;
         while(left>=0){
             Core::Color c=Core::Color::FromCOLORREF(GetPixel(this->thisBindHandle->getBuffer().memHDC,left,y));
@@ -169,14 +167,12 @@ bool Window::Painter::floodFill(Window::Point source,const Core::Color& color){
             left--;
         }
         left++;
-        // find right boundary of span
         int right=x;
         while(right<width){
             Core::Color c=Core::Color::FromCOLORREF(GetPixel(this->thisBindHandle->getBuffer().memHDC,right,y));
             if(!(c==srcColor)) break;
             right++;
         }
-        // fill the span [left, right)
         for(int xi=left;xi<right;++xi){
             if(!putUnitPixel(xi,y,color)){
                 PainterLogger.traceLog(Core::logger::LOG_ERROR,"Failed to put pixel at ("+
@@ -185,13 +181,11 @@ bool Window::Painter::floodFill(Window::Point source,const Core::Color& color){
             }
             visited[getIndex(xi,y)]=true;
         }
-        // check spans above and below; push runs of srcColor
         for(int dir=-1;dir<=1;dir+=2){
             int ny=y+dir;
             if(ny<0||ny>=height) continue;
             int xi=left;
             while(xi<right){
-                // skip pixels that are not srcColor or already visited
                 bool found=false;
                 while(xi<right){
                     Core::Color c=Core::Color::FromCOLORREF(GetPixel(this->thisBindHandle->getBuffer().memHDC,xi,ny));
@@ -206,7 +200,6 @@ bool Window::Painter::floodFill(Window::Point source,const Core::Color& color){
                     visited[getIndex(xi,ny)]=true;
                     xi++;
                 }
-                // push the start of the run
                 stack.push_back({runStart,ny});
             }
         }

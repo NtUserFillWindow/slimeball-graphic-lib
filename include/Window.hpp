@@ -34,6 +34,7 @@ namespace Window{
             std::function<long long(HWND,UINT,WPARAM,LPARAM)> thisDestroy;
             std::function<bool(HWND,UINT,WPARAM,LPARAM)> thisOnClose;//return true to close,false to not close
             std::function<long long(HWND,UINT,WPARAM,LPARAM,Window::Painter&)> thisPaint;
+            std::function<long long(HWND,UINT,WPARAM,LPARAM,Window::Painter&)> thisRefresh;
             static LRESULT CALLBACK thisWindowProc(HWND hWnd,UINT uMsg,WPARAM wParam,LPARAM lParam);
             HWND initWindow(const wchar_t* className,HINSTANCE hInstance);
             Handle()=default;
@@ -66,6 +67,7 @@ namespace Window{
             void updateAll();
             HandleManager()=default;
             ~HandleManager();
+            void refreshAll(WPARAM,LPARAM);
     };
     extern HandleManager globalHandleManager;
 }
