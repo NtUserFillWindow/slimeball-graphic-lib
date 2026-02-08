@@ -1,3 +1,6 @@
+//MIT License
+
+//Copyright (c) 2026 wzxTheSlimeball
 #include "Painter.hpp"
 #include "Logger.hpp"
 #include "Color.hpp"

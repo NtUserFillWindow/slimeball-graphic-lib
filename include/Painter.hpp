@@ -1,3 +1,6 @@
+//MIT License
+
+//Copyright (c) 2026 wzxTheSlimeball
 #ifndef PAINTER_HPP
 #define PAINTER_HPP
 
