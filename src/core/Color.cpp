@@ -30,3 +30,9 @@ Core::Color::Color(float hue,float saturation,float lightness,unsigned char alph
     b=static_cast<unsigned char>((b1+m)*255.0f);
     a=alpha;
 }
+Core::Color::Color(unsigned int src){
+    this->a=(src>>24)&0xff;
+    this->r=(src>>16)&0xff;
+    this->g=(src>>8)&0xff;
+    this->b=src&0xff;
+}

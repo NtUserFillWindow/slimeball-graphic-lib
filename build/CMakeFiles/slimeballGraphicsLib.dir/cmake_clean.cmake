@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/slimeballGraphicsLib.dir/src/core/EntryPoint.cpp.obj.d"
   "CMakeFiles/slimeballGraphicsLib.dir/src/core/Logger.cpp.obj"
   "CMakeFiles/slimeballGraphicsLib.dir/src/core/Logger.cpp.obj.d"
+  "CMakeFiles/slimeballGraphicsLib.dir/src/image/Image.cpp.obj"
+  "CMakeFiles/slimeballGraphicsLib.dir/src/image/Image.cpp.obj.d"
   "CMakeFiles/slimeballGraphicsLib.dir/src/painter/Painter.cpp.obj"
   "CMakeFiles/slimeballGraphicsLib.dir/src/painter/Painter.cpp.obj.d"
   "CMakeFiles/slimeballGraphicsLib.dir/src/utils/Utils.cpp.obj"

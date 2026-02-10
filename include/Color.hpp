@@ -26,6 +26,7 @@ namespace Core{
                          static_cast<unsigned char>((source>>8)&0xff),
                          static_cast<unsigned char>((source>>16)&0xff));
         }
+        Color(unsigned int);
         bool operator==(const Color& other){
             return this->r==other.r&&this->g==other.g&&this->b==other.b&&this->a==other.a;
         }

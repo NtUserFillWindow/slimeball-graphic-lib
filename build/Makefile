@@ -174,17 +174,17 @@ slimeballGraphicsLib/fast:
 .PHONY : slimeballGraphicsLib/fast
 
 #=============================================================================
-# Target rules for targets named eg10.exe
+# Target rules for targets named eg12.exe
 
 # Build rule for target.
-eg10.exe: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 eg10.exe
-.PHONY : eg10.exe
+eg12.exe: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 eg12.exe
+.PHONY : eg12.exe
 
 # fast build rule for target.
-eg10.exe/fast:
-	$(MAKE) $(MAKESILENT) -f examples\CMakeFiles\eg10.exe.dir\build.make examples/CMakeFiles/eg10.exe.dir/build
-.PHONY : eg10.exe/fast
+eg12.exe/fast:
+	$(MAKE) $(MAKESILENT) -f examples\CMakeFiles\eg12.exe.dir\build.make examples/CMakeFiles/eg12.exe.dir/build
+.PHONY : eg12.exe/fast
 
 src/core/Canvas.obj: src/core/Canvas.cpp.obj
 .PHONY : src/core/Canvas.obj
@@ -282,6 +282,30 @@ src/core/Logger.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\slimeballGraphicsLib.dir\build.make CMakeFiles/slimeballGraphicsLib.dir/src/core/Logger.cpp.s
 .PHONY : src/core/Logger.cpp.s
 
+src/image/Image.obj: src/image/Image.cpp.obj
+.PHONY : src/image/Image.obj
+
+# target to build an object file
+src/image/Image.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\slimeballGraphicsLib.dir\build.make CMakeFiles/slimeballGraphicsLib.dir/src/image/Image.cpp.obj
+.PHONY : src/image/Image.cpp.obj
+
+src/image/Image.i: src/image/Image.cpp.i
+.PHONY : src/image/Image.i
+
+# target to preprocess a source file
+src/image/Image.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\slimeballGraphicsLib.dir\build.make CMakeFiles/slimeballGraphicsLib.dir/src/image/Image.cpp.i
+.PHONY : src/image/Image.cpp.i
+
+src/image/Image.s: src/image/Image.cpp.s
+.PHONY : src/image/Image.s
+
+# target to generate assembly for a file
+src/image/Image.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\slimeballGraphicsLib.dir\build.make CMakeFiles/slimeballGraphicsLib.dir/src/image/Image.cpp.s
+.PHONY : src/image/Image.cpp.s
+
 src/painter/Painter.obj: src/painter/Painter.cpp.obj
 .PHONY : src/painter/Painter.obj
 
@@ -366,7 +390,7 @@ help:
 	@echo ... install/strip
 	@echo ... list_install_components
 	@echo ... rebuild_cache
-	@echo ... eg10.exe
+	@echo ... eg12.exe
 	@echo ... slimeballGraphicsLib
 	@echo ... src/core/Canvas.obj
 	@echo ... src/core/Canvas.i
@@ -380,6 +404,9 @@ help:
 	@echo ... src/core/Logger.obj
 	@echo ... src/core/Logger.i
 	@echo ... src/core/Logger.s
+	@echo ... src/image/Image.obj
+	@echo ... src/image/Image.i
+	@echo ... src/image/Image.s
 	@echo ... src/painter/Painter.obj
 	@echo ... src/painter/Painter.i
 	@echo ... src/painter/Painter.s

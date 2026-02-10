@@ -413,4 +413,49 @@ CMakeFiles/slimeballGraphicsLib.dir/src/utils/Utils.cpp.obj: \
  F:/msys64/ucrt64/include/c++/15.2.0/bits/unique_lock.h \
  F:/msys64/ucrt64/include/c++/15.2.0/chrono \
  F:/VSCodeWorkspace/slimeballGraphicLib/include/Utils.hpp \
- F:/VSCodeWorkspace/slimeballGraphicLib/include/Painter.hpp
+ F:/VSCodeWorkspace/slimeballGraphicLib/include/Painter.hpp \
+ F:/VSCodeWorkspace/slimeballGraphicLib/include/Image.hpp \
+ F:/msys64/ucrt64/include/gdiplus.h \
+ F:/msys64/ucrt64/include/gdiplus/gdiplus.h \
+ F:/msys64/ucrt64/include/c++/15.2.0/math.h \
+ F:/msys64/ucrt64/include/c++/15.2.0/cmath \
+ F:/msys64/ucrt64/include/math.h \
+ F:/msys64/ucrt64/include/c++/15.2.0/bits/specfun.h \
+ F:/msys64/ucrt64/include/c++/15.2.0/tr1/gamma.tcc \
+ F:/msys64/ucrt64/include/c++/15.2.0/tr1/special_function_util.h \
+ F:/msys64/ucrt64/include/c++/15.2.0/tr1/bessel_function.tcc \
+ F:/msys64/ucrt64/include/c++/15.2.0/tr1/beta_function.tcc \
+ F:/msys64/ucrt64/include/c++/15.2.0/tr1/ell_integral.tcc \
+ F:/msys64/ucrt64/include/c++/15.2.0/tr1/exp_integral.tcc \
+ F:/msys64/ucrt64/include/c++/15.2.0/tr1/hypergeometric.tcc \
+ F:/msys64/ucrt64/include/c++/15.2.0/tr1/legendre_function.tcc \
+ F:/msys64/ucrt64/include/c++/15.2.0/tr1/modified_bessel_func.tcc \
+ F:/msys64/ucrt64/include/c++/15.2.0/tr1/poly_hermite.tcc \
+ F:/msys64/ucrt64/include/c++/15.2.0/tr1/poly_laguerre.tcc \
+ F:/msys64/ucrt64/include/c++/15.2.0/tr1/riemann_zeta.tcc \
+ F:/msys64/ucrt64/include/basetyps.h \
+ F:/msys64/ucrt64/include/gdiplus/gdiplusenums.h \
+ F:/msys64/ucrt64/include/gdiplus/gdiplustypes.h \
+ F:/msys64/ucrt64/include/gdiplus/gdiplusgpstubs.h \
+ F:/msys64/ucrt64/include/gdiplus/gdiplusimaging.h \
+ F:/msys64/ucrt64/include/gdiplus/gdiplusinit.h \
+ F:/msys64/ucrt64/include/gdiplus/gdiplusmem.h \
+ F:/msys64/ucrt64/include/gdiplus/gdiplusmetaheader.h \
+ F:/msys64/ucrt64/include/gdiplus/gdipluspixelformats.h \
+ F:/msys64/ucrt64/include/gdiplus/gdipluscolor.h \
+ F:/msys64/ucrt64/include/gdiplus/gdipluscolormatrix.h \
+ F:/msys64/ucrt64/include/gdiplus/gdiplusflat.h \
+ F:/msys64/ucrt64/include/gdiplus/gdipluseffects.h \
+ F:/msys64/ucrt64/include/gdiplus/gdiplusimagecodec.h \
+ F:/msys64/ucrt64/include/gdiplus/gdiplusbase.h \
+ F:/msys64/ucrt64/include/gdiplus/gdiplusheaders.h \
+ F:/msys64/ucrt64/include/gdiplus/gdiplusimageattributes.h \
+ F:/msys64/ucrt64/include/gdiplus/gdiplusmatrix.h \
+ F:/msys64/ucrt64/include/gdiplus/gdiplusbrush.h \
+ F:/msys64/ucrt64/include/gdiplus/gdiplusmetafile.h \
+ F:/msys64/ucrt64/include/gdiplus/gdipluspen.h \
+ F:/msys64/ucrt64/include/gdiplus/gdiplusstringformat.h \
+ F:/msys64/ucrt64/include/gdiplus/gdipluspath.h \
+ F:/msys64/ucrt64/include/gdiplus/gdiplusgraphics.h \
+ F:/msys64/ucrt64/include/gdiplus/gdipluslinecaps.h \
+ F:/msys64/ucrt64/include/gdiplus/gdiplusimpl.h

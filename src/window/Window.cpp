@@ -6,6 +6,7 @@
 #include "Logger.hpp"
 #include "Utils.hpp"
 #include "Painter.hpp"
+#include <winuser.h>
 #include <memory>
 #include <algorithm>
 #include <thread>
@@ -40,10 +41,10 @@ namespace Window{
                 pThis->destroy();
                 globalHandleManager.checkAndQuit();
                 if(!pThis->thisDestroy){
-                    WindowLogger.traceLog(Core::logger::LOG_WARNING,"The function\"thisDestroy\" is not defined yet,Skipping.");
+                    WindowLogger.traceLog(Core::logger::LOG_WARNING,"The function \"thisDestroy\" is not defined yet,Skipping.");
                 }
                 else{
-                    pThis->thisDestroy(hWnd,uMsg,wParam,lParam);
+                    return pThis->thisDestroy(hWnd,uMsg,wParam,lParam);
                 }
                 break;
             }
@@ -51,17 +52,16 @@ namespace Window{
                 Window::Painter thisPainter(hWnd,pThis);
                 thisPainter.switchHDC();
                 if(!pThis->thisPaint){
-                    WindowLogger.traceLog(Core::logger::LOG_WARNING,"The function\"thisPaint\" is not defined yet,Skipping.");
+                    WindowLogger.traceLog(Core::logger::LOG_WARNING,"The function \"thisPaint\" is not defined yet,Skipping.");
                 }
                 else{
-                    pThis->thisPaint(hWnd,uMsg,wParam,lParam,thisPainter);
-                    return 0;
+                    return pThis->thisPaint(hWnd,uMsg,wParam,lParam,thisPainter);
                 }
                 break;
             }
             case WM_CLOSE:{
                 if(!pThis->thisOnClose){
-                    WindowLogger.traceLog(Core::logger::LOG_WARNING,"The function\"thisOnClose\" is not defined yet,Skipping.");
+                    WindowLogger.traceLog(Core::logger::LOG_WARNING,"The function \"thisOnClose\" is not defined yet,Skipping.");
                 }
                 else{
                     if(pThis->thisOnClose(hWnd,uMsg,wParam,lParam)){
@@ -71,6 +71,312 @@ namespace Window{
                     else{
                         return 0;
                     }
+                }
+                break;
+            }
+            case WM_LBUTTONDOWN:{
+                int x=LOWORD(lParam);
+                int y=HIWORD(lParam);
+                pThis->lbuttonDownTime=std::chrono::high_resolution_clock::now();
+                SetCapture(pThis->mHWnd);
+                pThis->isCaptured=true;
+                if(!pThis->thisInstantLeftClick){
+                    WindowLogger.traceLog(Core::logger::LOG_WARNING,"Left instant activity undefined");
+                }
+                else{
+                    return pThis->thisInstantLeftClick(hWnd,uMsg,wParam,lParam,x,y);
+                }
+                break;
+            }
+            case WM_LBUTTONUP:{
+                int x=LOWORD(lParam);
+                int y=HIWORD(lParam);
+                auto end=std::chrono::high_resolution_clock::now();
+                auto duration=std::chrono::duration_cast<std::chrono::nanoseconds>(end-pThis->lbuttonDownTime);
+                if(pThis->isCaptured){
+                    ReleaseCapture();
+                    pThis->isCaptured=false;
+                }
+                if(duration.count()<=500000000){
+                    if(!pThis->thisLeftClick){
+                        WindowLogger.traceLog(Core::logger::LOG_WARNING,"Left click activity undefined");
+                    }
+                    else{
+                        return pThis->thisLeftClick(hWnd,uMsg,wParam,lParam,x,y);
+                    }
+                }
+                else{
+                    if(!pThis->thisLeftHeld){
+                        WindowLogger.traceLog(Core::logger::LOG_WARNING,"Left held activity undefined");
+                    }
+                    else{
+                        return pThis->thisLeftHeld(hWnd,uMsg,wParam,lParam,x,y,duration.count());
+                    }
+                }
+                break;
+            }
+            case WM_LBUTTONDBLCLK:{
+                int x=LOWORD(lParam);
+                int y=HIWORD(lParam);
+                if(!pThis->thisLeftDoubleClick){
+                    WindowLogger.traceLog(Core::logger::LOG_WARNING,"Left dblclick activity undefined");
+                }
+                else{
+                    return pThis->thisLeftDoubleClick(hWnd,uMsg,wParam,lParam,x,y);
+                }
+                break;
+            }
+            case WM_RBUTTONDOWN:{
+                int x=LOWORD(lParam);
+                int y=HIWORD(lParam);
+                pThis->rbuttonDownTime=std::chrono::high_resolution_clock::now();
+                SetCapture(pThis->mHWnd);
+                pThis->isCaptured=true;
+                if(!pThis->thisInstantRightClick){
+                    WindowLogger.traceLog(Core::logger::LOG_WARNING,"Right instant activity undefined");
+                }
+                else{
+                    return pThis->thisInstantRightClick(hWnd,uMsg,wParam,lParam,x,y);
+                }
+                break;
+            }
+            case WM_RBUTTONUP:{
+                int x=LOWORD(lParam);
+                int y=HIWORD(lParam);
+                auto end=std::chrono::high_resolution_clock::now();
+                auto duration=std::chrono::duration_cast<std::chrono::nanoseconds>(end-pThis->rbuttonDownTime);
+                if(pThis->isCaptured){
+                    ReleaseCapture();
+                    pThis->isCaptured=false;
+                }
+                if(duration.count()<=500000000){
+                    if(!pThis->thisRightClick){
+                        WindowLogger.traceLog(Core::logger::LOG_WARNING,"Right click activity undefined");
+                    }
+                    else{
+                        return pThis->thisRightClick(hWnd,uMsg,wParam,lParam,x,y);
+                    }
+                }
+                else{
+                    if(!pThis->thisRightHeld){
+                        WindowLogger.traceLog(Core::logger::LOG_WARNING,"Right held activity undefined");
+                    }
+                    else{
+                        return pThis->thisRightHeld(hWnd,uMsg,wParam,lParam,x,y,duration.count());
+                    }
+                }
+                break;
+            }
+            case WM_RBUTTONDBLCLK:{
+                int x=LOWORD(lParam);
+                int y=HIWORD(lParam);
+                if(!pThis->thisRightDoubleClick){
+                    WindowLogger.traceLog(Core::logger::LOG_WARNING,"Right dblclick activity undefined");
+                }
+                else{
+                    return pThis->thisRightDoubleClick(hWnd,uMsg,wParam,lParam,x,y);
+                }
+                break;
+            }
+            case WM_MOUSEWHEEL:{
+                int delta=GET_WHEEL_DELTA_WPARAM(wParam);
+                int x=LOWORD(lParam);
+                int y=HIWORD(lParam);
+                if(!pThis->thisMouseWheel){
+                    WindowLogger.traceLog(Core::logger::LOG_WARNING,"Mouse wheel activity undefined");
+                }
+                else{
+                    return pThis->thisMouseWheel(hWnd,uMsg,wParam,lParam,x,y,delta);
+                }
+                break;
+            }
+            case WM_MOUSEMOVE:{
+                int x=LOWORD(lParam);
+                int y=HIWORD(lParam);
+                if(!pThis->thisMouseMove){
+                    WindowLogger.traceLog(Core::logger::LOG_WARNING,"Mouse moving activity undefined");
+                }
+                else{
+                    return pThis->thisMouseMove(hWnd,uMsg,wParam,lParam,x,y);
+                }
+                break;
+            }
+            case WM_MOUSEHWHEEL:{
+                int delta=GET_WHEEL_DELTA_WPARAM(wParam);
+                int x=LOWORD(lParam);
+                int y=HIWORD(lParam);
+                if(!pThis->thisMouseHWheel){
+                    WindowLogger.traceLog(Core::logger::LOG_WARNING,"Mouse wheel activity undefined");
+                }
+                else{
+                    return pThis->thisMouseHWheel(hWnd,uMsg,wParam,lParam,x,y,delta);
+                }
+                break;
+            }
+            case WM_MOUSEHOVER:{
+                int x=LOWORD(lParam);
+                int y=HIWORD(lParam);
+                if(!pThis->thisOnHover){
+                    WindowLogger.traceLog(Core::logger::LOG_WARNING,"Mouse hover activity undefined");
+                }
+                else{
+                    return pThis->thisOnHover(hWnd,uMsg,wParam,lParam,x,y);
+                }
+                break;
+            }
+            case WM_MOUSELEAVE:{
+                if(!pThis->thisMouseLeave){
+                    WindowLogger.traceLog(Core::logger::LOG_WARNING,"Mouse leave activity undefined");
+                }
+                else{
+                    return pThis->thisMouseLeave(hWnd,uMsg,wParam,lParam);
+                }
+                break;
+            }
+            case WM_CHAR:{
+                wchar_t ch=static_cast<wchar_t>(wParam);
+                int repeat=LOWORD(lParam);
+                bool isExtra=HIWORD(lParam)&0x0100;
+                bool isAltPressed=HIWORD(lParam)&0x2000;
+                bool wasHeldBefore=HIWORD(lParam)&0x4000;
+                if(!pThis->thisGetChar){
+                    WindowLogger.traceLog(Core::logger::LOG_WARNING,"Get char activity undefined");
+                }
+                else{
+                    return pThis->thisGetChar(hWnd,uMsg,wParam,lParam,ch,wasHeldBefore,repeat,isExtra,isAltPressed);
+                }
+                break;
+            }
+            case WM_KEYDOWN:{
+                UINT ch=static_cast<UINT>(wParam);
+                int repeat=LOWORD(lParam);
+                bool isExtra=HIWORD(lParam)&0x0100;
+                bool isAltPressed=HIWORD(lParam)&0x2000;
+                bool wasHeldBefore=HIWORD(lParam)&0x4000;
+                if(!pThis->thisGetOtherKey){
+                    WindowLogger.traceLog(Core::logger::LOG_WARNING,"Get key activity undefined");
+                }
+                else{
+                    return pThis->thisGetOtherKey(hWnd,uMsg,wParam,lParam,ch,wasHeldBefore,repeat,isExtra,isAltPressed);
+                }
+                break;
+            }
+            case WM_SYSKEYDOWN:{
+                UINT ch=static_cast<UINT>(wParam);
+                int repeat=LOWORD(lParam);
+                bool isExtra=HIWORD(lParam)&0x0100;
+                bool isAltPressed=HIWORD(lParam)&0x2000;
+                bool wasHeldBefore=HIWORD(lParam)&0x4000;
+                if(!pThis->thisGetSyskey){
+                    WindowLogger.traceLog(Core::logger::LOG_WARNING,"Get syskey activity undefined");
+                }
+                else{
+                    return pThis->thisGetSyskey(hWnd,uMsg,wParam,lParam,ch,wasHeldBefore,repeat,isExtra,isAltPressed);
+                }
+                break;
+            }
+            case WM_DEADCHAR:{
+                wchar_t ch=static_cast<wchar_t>(wParam);
+                int repeat=LOWORD(lParam);
+                bool isExtra=HIWORD(lParam)&0x0100;
+                bool isAltPressed=HIWORD(lParam)&0x2000;
+                bool wasHeldBefore=HIWORD(lParam)&0x4000;
+                if(!pThis->thisGetDeadChar){
+                    WindowLogger.traceLog(Core::logger::LOG_WARNING,"Get deadchar activity undefined");
+                }
+                else{
+                    return pThis->thisGetDeadChar(hWnd,uMsg,wParam,lParam,ch,wasHeldBefore,repeat,isExtra,isAltPressed);
+                }
+                break;
+            }
+            case WM_IME_CHAR:{
+                UINT ch=static_cast<UINT>(wParam);
+                bool isExtra=HIWORD(lParam)&0x0100;
+                bool isAltPressed=HIWORD(lParam)&0x2000;
+                if(!pThis->thisGetCharacter){
+                    WindowLogger.traceLog(Core::logger::LOG_WARNING,"Get imekey activity undefined");
+                }
+                else{
+                    return pThis->thisGetCharacter(hWnd,uMsg,wParam,lParam,ch,isExtra,isAltPressed);
+                }
+                break;
+            }
+            case WM_SIZE:{
+                pThis->resizeBuffer();
+                int newWidth=LOWORD(lParam);
+                int newHeight=HIWORD(lParam);
+                if(!pThis->thisResize){
+                    WindowLogger.traceLog(Core::logger::LOG_WARNING,"The function \"thisResize\" is not defined yet,Skipping.");
+                }
+                else{
+                    return pThis->thisResize(hWnd,uMsg,wParam,lParam,newWidth,newHeight);
+                }
+                break;
+            }
+            case WM_MOVE:{
+                int newX=LOWORD(lParam);
+                int newY=HIWORD(lParam);
+                if(!pThis->thisMove){
+                    WindowLogger.traceLog(Core::logger::LOG_WARNING,"The function \"thisMove\" is not defined yet,Skipping.");
+                }
+                else{
+                    return pThis->thisMove(hWnd,uMsg,wParam,lParam,newX,newY);
+                }
+                break;
+            }
+            case WM_ACTIVATE:{
+                bool isActive=(LOWORD(wParam)!=WA_INACTIVE);
+                if(!pThis->thisActivate){
+                    WindowLogger.traceLog(Core::logger::LOG_WARNING,"The function \"thisActivate\" is not defined yet,Skipping.");
+                }
+                else{
+                    return pThis->thisActivate(hWnd,uMsg,wParam,lParam,isActive);
+                }
+                break;
+            }
+            case WM_NCCREATE:{
+                if(!pThis->thisBeforeCreate){
+                    WindowLogger.traceLog(Core::logger::LOG_WARNING,"The function \"thisBeforeCreate\" is not defined yet,Skipping.");
+                }
+                else{
+                    return pThis->thisBeforeCreate(hWnd,uMsg,wParam,lParam);
+                }
+                break;
+            }
+            case WM_SETFOCUS:{
+                if(!pThis->thisFocused){
+                    WindowLogger.traceLog(Core::logger::LOG_WARNING,"The function \"thisFocused\" is not defined yet,Skipping.");
+                }
+                else{
+                    return pThis->thisFocused(hWnd,uMsg,wParam,lParam);
+                }
+                break;
+            }
+            case WM_KILLFOCUS:{
+                if(!pThis->thisUnFocused){
+                    WindowLogger.traceLog(Core::logger::LOG_WARNING,"The function \"thisUnFocused\" is not defined yet,Skipping.");
+                }
+                else{
+                    return pThis->thisUnFocused(hWnd,uMsg,wParam,lParam);
+                }
+                break;
+            }
+            case WM_DROPFILES:{
+                HDROP hDrop=reinterpret_cast<HDROP>(wParam);
+                if(!pThis->thisDropFile){
+                    WindowLogger.traceLog(Core::logger::LOG_WARNING,"The function \"thisDropFile\" is not defined yet,Skipping.");
+                }
+                else{
+                    return pThis->thisDropFile(hWnd,uMsg,wParam,lParam,hDrop);
+                }
+                break;
+            }
+            case WM_CREATE:{
+                if(!pThis->thisCreate){
+                    WindowLogger.traceLog(Core::logger::LOG_WARNING,"The function\"thisCreate\" is not defined yet,Skipping.");
+                }
+                else{
+                    return pThis->thisCreate(hWnd,uMsg,wParam,lParam);
                 }
                 break;
             }

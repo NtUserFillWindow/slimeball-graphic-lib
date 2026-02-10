@@ -4,9 +4,16 @@
 #ifndef PAINTER_HPP
 #define PAINTER_HPP
 
+#define LOCATEMODE_CENTER 0x00
+#define LOCATEMODE_LEFTUPCORNER 0x01
+#define LOCATEMODE_RIGHTUPCORNER 0x02
+#define LOCATEMODE_LEFTBOTTOMCORNER 0x03
+#define LOCATEMODE_RIGHTBOTTOMCORNER 0x04
+
 #include "Color.hpp"
 #include "Canvas.hpp"
 #include "Logger.hpp"
+#include "Image.hpp"
 
 namespace Window{
     struct Handle;
@@ -87,6 +94,8 @@ namespace Window{
             bool hollowPolygon(const vector<Point>& points,const Core::Color& color);
             bool solidPolygon(const vector<Point>& points,const Core::Color& color);
             bool hollowCircle(const Point& origin,int radius,const Core::Color& color);
+            bool solidCircle(const Point& origin,int radius,const Core::Color& color);
+            bool putImage(char locateMode,const Point& locator,const Assets::Image& src,unsigned char alpha);
     };
 }
 #endif//PAINTER_HPP

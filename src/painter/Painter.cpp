@@ -5,6 +5,7 @@
 #include "Logger.hpp"
 #include "Color.hpp"
 #include "Utils.hpp"
+#include "Image.hpp"
 #include <windows.h>
 #include <stack>
 #include <map>
@@ -374,4 +375,87 @@ bool Window::Painter::hollowCircle(const Window::Point& origin,int radius,const 
         x++;
     }
     return true;
+}
+bool Window::Painter::solidCircle(const Point& origin,int radius,const Core::Color& color){
+    if(radius<0) return false;
+    int ox=origin.x;
+    int oy=origin.y;
+    int width=this->thisBindHandle->getRect().right;
+    int height=this->thisBindHandle->getRect().bottom;
+    if(width<=0||height<=0) return false;
+    for(int dy=-radius;dy<=radius;++dy){
+        int y=oy+dy;
+        if(y<0||y>=height) continue;
+        int dx=static_cast<int>(std::floor(std::sqrt((double)radius*radius - (double)dy*dy)));
+        int xStart=ox-dx;
+        int xEnd=ox+dx;
+        if(xEnd<0||xStart>=width) continue;
+        if(xStart<0) xStart=0;
+        if(xEnd>=width) xEnd=width-1;
+        if(!alphaBlender(xStart,y,xEnd-xStart+1,1,color)) return false;
+    }
+    return hollowCircle(origin,radius,color);
+}
+Window::Point calculateDrawPosition(char locateMode,Window::Point locator,unsigned long long width,unsigned long long height){
+    Window::Point result={locator.x,locator.y};
+    switch(locateMode){
+        case LOCATEMODE_CENTER:{
+            result.x-=width/2;
+            result.y-=height/2;
+            break;
+        }
+        case LOCATEMODE_LEFTUPCORNER:{
+            break;
+        }
+        case LOCATEMODE_RIGHTUPCORNER:{
+            result.x-=width;
+            break;
+        }
+        case LOCATEMODE_LEFTBOTTOMCORNER:{
+            result.y-=height;
+            break;
+        }
+        case LOCATEMODE_RIGHTBOTTOMCORNER:{
+            result.x-=width;
+            result.y-=height;
+            break;
+        }
+        default:{
+            break;
+        }
+    }
+    return result;
+}
+bool Window::Painter::putImage(char locateMode,const Point& locator,const Assets::Image& src,unsigned char alpha){
+    if(!thisHDC){
+        PainterLogger.traceLog(Core::logger::LOG_WARNING,"This painter doesn't have an hdc yet");
+        return false;
+    }
+    HBITMAP hbmp=src.getHBITMAP();
+    if(!hbmp){
+        PainterLogger.traceLog(Core::logger::LOG_ERROR,"Source image has no valid bitmap");
+        return false;
+    }
+    HDC hdcMem=CreateCompatibleDC(thisHDC);
+    HBITMAP hOldBitmap=static_cast<HBITMAP>(SelectObject(hdcMem,hbmp));
+    ULONG_PTR width=src.getWidth();
+    ULONG_PTR height=src.getHeight();
+    Point drawPos=calculateDrawPosition(locateMode,locator,width,height);
+    BLENDFUNCTION bf={AC_SRC_OVER,0,alpha,0};
+    bf.BlendOp=AC_SRC_OVER;
+    bf.BlendFlags=0;
+    bf.SourceConstantAlpha=255;
+    bf.AlphaFormat=AC_SRC_ALPHA;
+    BOOL result=AlphaBlend(
+        thisHDC,
+        drawPos.x,drawPos.y,
+        width,height,
+        hdcMem,
+        0,0,
+        width,height,
+        bf
+    );
+    SelectObject(hdcMem, hOldBitmap);
+    DeleteDC(hdcMem);
+    return result != FALSE;
 }

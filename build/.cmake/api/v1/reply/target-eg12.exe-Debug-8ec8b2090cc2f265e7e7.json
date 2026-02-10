@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "bin/eg10.exe.exe"
+			"path" : "bin/eg12.exe.exe"
 		},
 		{
-			"path" : "bin/eg10.exe.pdb"
+			"path" : "bin/eg12.exe.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -45,7 +45,7 @@
 			{
 				"command" : 1,
 				"file" : 1,
-				"line" : 29,
+				"line" : 30,
 				"parent" : 3
 			},
 			{
@@ -106,7 +106,7 @@
 			"id" : "slimeballGraphicsLib::@6890427a1f51a3e7e1df"
 		}
 	],
-	"id" : "eg10.exe::@714eac15f71a94114fdf",
+	"id" : "eg12.exe::@714eac15f71a94114fdf",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -137,6 +137,11 @@
 			},
 			{
 				"backtrace" : 4,
+				"fragment" : "-lgdiplus",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
 				"fragment" : "-lgdi32",
 				"role" : "libraries"
 			},
@@ -146,14 +151,19 @@
 				"role" : "libraries"
 			},
 			{
+				"backtrace" : 4,
+				"fragment" : "-lgdiplus",
+				"role" : "libraries"
+			},
+			{
 				"fragment" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32",
 				"role" : "libraries"
 			}
 		],
 		"language" : "CXX"
 	},
-	"name" : "eg10.exe",
-	"nameOnDisk" : "eg10.exe.exe",
+	"name" : "eg12.exe",
+	"nameOnDisk" : "eg12.exe.exe",
 	"paths" : 
 	{
 		"build" : "examples",
@@ -174,7 +184,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "examples/eg10_circle.cpp",
+			"path" : "examples/eg12_load_picture.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

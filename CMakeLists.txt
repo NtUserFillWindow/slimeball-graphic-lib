@@ -24,12 +24,14 @@ add_library(slimeballGraphicsLib STATIC
     src/utils/Utils.cpp
     src/painter/Painter.cpp
     src/core/EntryPoint.cpp
+    src/image/Image.cpp
 )
 
 target_link_libraries(slimeballGraphicsLib PRIVATE
     msimg32
     gdi32
     user32
+    gdiplus
 )
 
 target_include_directories(slimeballGraphicsLib PUBLIC

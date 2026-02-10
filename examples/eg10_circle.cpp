@@ -1,9 +1,8 @@
 #include "Graphics.hpp"
 using namespace Graphics;
 long long mainWindowDrawer(HWND hWnd,UINT message,WPARAM wParam,LPARAM lParam,Painter& painter){
-    auto start=std::chrono::high_resolution_clock::now();
     painter.drawBackground(Color((unsigned char)255,255,255,255));
-    painter.hollowCircle({100,100},30,Color((unsigned char)0,0,0,255));
+    painter.solidCircle({100,100},30,Color((unsigned char)0,0,0,255));
     return 0;
 }//this is the window's "thisPaint" function
 int main(){
