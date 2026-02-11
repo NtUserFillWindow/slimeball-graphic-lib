@@ -161,42 +161,42 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-examples/CMakeFiles/eg12.exe.dir/rule:
-	cd /d F:\VSCodeWorkspace\slimeballGraphicLib\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 examples/CMakeFiles/eg12.exe.dir/rule
-.PHONY : examples/CMakeFiles/eg12.exe.dir/rule
+examples/CMakeFiles/eg13.exe.dir/rule:
+	cd /d F:\VSCodeWorkspace\slimeballGraphicLib\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 examples/CMakeFiles/eg13.exe.dir/rule
+.PHONY : examples/CMakeFiles/eg13.exe.dir/rule
 
 # Convenience name for target.
-eg12.exe: examples/CMakeFiles/eg12.exe.dir/rule
-.PHONY : eg12.exe
+eg13.exe: examples/CMakeFiles/eg13.exe.dir/rule
+.PHONY : eg13.exe
 
 # fast build rule for target.
-eg12.exe/fast:
-	cd /d F:\VSCodeWorkspace\slimeballGraphicLib\build && $(MAKE) $(MAKESILENT) -f examples\CMakeFiles\eg12.exe.dir\build.make examples/CMakeFiles/eg12.exe.dir/build
-.PHONY : eg12.exe/fast
+eg13.exe/fast:
+	cd /d F:\VSCodeWorkspace\slimeballGraphicLib\build && $(MAKE) $(MAKESILENT) -f examples\CMakeFiles\eg13.exe.dir\build.make examples/CMakeFiles/eg13.exe.dir/build
+.PHONY : eg13.exe/fast
 
-eg12_load_picture.obj: eg12_load_picture.cpp.obj
-.PHONY : eg12_load_picture.obj
+eg13_text.obj: eg13_text.cpp.obj
+.PHONY : eg13_text.obj
 
 # target to build an object file
-eg12_load_picture.cpp.obj:
-	cd /d F:\VSCodeWorkspace\slimeballGraphicLib\build && $(MAKE) $(MAKESILENT) -f examples\CMakeFiles\eg12.exe.dir\build.make examples/CMakeFiles/eg12.exe.dir/eg12_load_picture.cpp.obj
-.PHONY : eg12_load_picture.cpp.obj
+eg13_text.cpp.obj:
+	cd /d F:\VSCodeWorkspace\slimeballGraphicLib\build && $(MAKE) $(MAKESILENT) -f examples\CMakeFiles\eg13.exe.dir\build.make examples/CMakeFiles/eg13.exe.dir/eg13_text.cpp.obj
+.PHONY : eg13_text.cpp.obj
 
-eg12_load_picture.i: eg12_load_picture.cpp.i
-.PHONY : eg12_load_picture.i
+eg13_text.i: eg13_text.cpp.i
+.PHONY : eg13_text.i
 
 # target to preprocess a source file
-eg12_load_picture.cpp.i:
-	cd /d F:\VSCodeWorkspace\slimeballGraphicLib\build && $(MAKE) $(MAKESILENT) -f examples\CMakeFiles\eg12.exe.dir\build.make examples/CMakeFiles/eg12.exe.dir/eg12_load_picture.cpp.i
-.PHONY : eg12_load_picture.cpp.i
+eg13_text.cpp.i:
+	cd /d F:\VSCodeWorkspace\slimeballGraphicLib\build && $(MAKE) $(MAKESILENT) -f examples\CMakeFiles\eg13.exe.dir\build.make examples/CMakeFiles/eg13.exe.dir/eg13_text.cpp.i
+.PHONY : eg13_text.cpp.i
 
-eg12_load_picture.s: eg12_load_picture.cpp.s
-.PHONY : eg12_load_picture.s
+eg13_text.s: eg13_text.cpp.s
+.PHONY : eg13_text.s
 
 # target to generate assembly for a file
-eg12_load_picture.cpp.s:
-	cd /d F:\VSCodeWorkspace\slimeballGraphicLib\build && $(MAKE) $(MAKESILENT) -f examples\CMakeFiles\eg12.exe.dir\build.make examples/CMakeFiles/eg12.exe.dir/eg12_load_picture.cpp.s
-.PHONY : eg12_load_picture.cpp.s
+eg13_text.cpp.s:
+	cd /d F:\VSCodeWorkspace\slimeballGraphicLib\build && $(MAKE) $(MAKESILENT) -f examples\CMakeFiles\eg13.exe.dir\build.make examples/CMakeFiles/eg13.exe.dir/eg13_text.cpp.s
+.PHONY : eg13_text.cpp.s
 
 # Help Target
 help:
@@ -210,10 +210,10 @@ help:
 	@echo ... install/strip
 	@echo ... list_install_components
 	@echo ... rebuild_cache
-	@echo ... eg12.exe
-	@echo ... eg12_load_picture.obj
-	@echo ... eg12_load_picture.i
-	@echo ... eg12_load_picture.s
+	@echo ... eg13.exe
+	@echo ... eg13_text.obj
+	@echo ... eg13_text.i
+	@echo ... eg13_text.s
 .PHONY : help
 
 

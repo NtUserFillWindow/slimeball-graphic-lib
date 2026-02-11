@@ -176,20 +176,35 @@ CMakeFiles/slimeballGraphicsLib.dir/src/core/EntryPoint.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/slimeballGraphicsLib.dir/src/core/EntryPoint.cpp.s"
 	F:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S F:\VSCodeWorkspace\slimeballGraphicLib\src\core\EntryPoint.cpp -o CMakeFiles\slimeballGraphicsLib.dir\src\core\EntryPoint.cpp.s
 
-CMakeFiles/slimeballGraphicsLib.dir/src/image/Image.cpp.obj: CMakeFiles/slimeballGraphicsLib.dir/flags.make
-CMakeFiles/slimeballGraphicsLib.dir/src/image/Image.cpp.obj: CMakeFiles/slimeballGraphicsLib.dir/includes_CXX.rsp
-CMakeFiles/slimeballGraphicsLib.dir/src/image/Image.cpp.obj: F:/VSCodeWorkspace/slimeballGraphicLib/src/image/Image.cpp
-CMakeFiles/slimeballGraphicsLib.dir/src/image/Image.cpp.obj: CMakeFiles/slimeballGraphicsLib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=F:\VSCodeWorkspace\slimeballGraphicLib\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/slimeballGraphicsLib.dir/src/image/Image.cpp.obj"
-	F:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/slimeballGraphicsLib.dir/src/image/Image.cpp.obj -MF CMakeFiles\slimeballGraphicsLib.dir\src\image\Image.cpp.obj.d -o CMakeFiles\slimeballGraphicsLib.dir\src\image\Image.cpp.obj -c F:\VSCodeWorkspace\slimeballGraphicLib\src\image\Image.cpp
+CMakeFiles/slimeballGraphicsLib.dir/src/assets/Image.cpp.obj: CMakeFiles/slimeballGraphicsLib.dir/flags.make
+CMakeFiles/slimeballGraphicsLib.dir/src/assets/Image.cpp.obj: CMakeFiles/slimeballGraphicsLib.dir/includes_CXX.rsp
+CMakeFiles/slimeballGraphicsLib.dir/src/assets/Image.cpp.obj: F:/VSCodeWorkspace/slimeballGraphicLib/src/assets/Image.cpp
+CMakeFiles/slimeballGraphicsLib.dir/src/assets/Image.cpp.obj: CMakeFiles/slimeballGraphicsLib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=F:\VSCodeWorkspace\slimeballGraphicLib\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/slimeballGraphicsLib.dir/src/assets/Image.cpp.obj"
+	F:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/slimeballGraphicsLib.dir/src/assets/Image.cpp.obj -MF CMakeFiles\slimeballGraphicsLib.dir\src\assets\Image.cpp.obj.d -o CMakeFiles\slimeballGraphicsLib.dir\src\assets\Image.cpp.obj -c F:\VSCodeWorkspace\slimeballGraphicLib\src\assets\Image.cpp
 
-CMakeFiles/slimeballGraphicsLib.dir/src/image/Image.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/slimeballGraphicsLib.dir/src/image/Image.cpp.i"
-	F:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E F:\VSCodeWorkspace\slimeballGraphicLib\src\image\Image.cpp > CMakeFiles\slimeballGraphicsLib.dir\src\image\Image.cpp.i
+CMakeFiles/slimeballGraphicsLib.dir/src/assets/Image.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/slimeballGraphicsLib.dir/src/assets/Image.cpp.i"
+	F:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E F:\VSCodeWorkspace\slimeballGraphicLib\src\assets\Image.cpp > CMakeFiles\slimeballGraphicsLib.dir\src\assets\Image.cpp.i
 
-CMakeFiles/slimeballGraphicsLib.dir/src/image/Image.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/slimeballGraphicsLib.dir/src/image/Image.cpp.s"
-	F:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S F:\VSCodeWorkspace\slimeballGraphicLib\src\image\Image.cpp -o CMakeFiles\slimeballGraphicsLib.dir\src\image\Image.cpp.s
+CMakeFiles/slimeballGraphicsLib.dir/src/assets/Image.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/slimeballGraphicsLib.dir/src/assets/Image.cpp.s"
+	F:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S F:\VSCodeWorkspace\slimeballGraphicLib\src\assets\Image.cpp -o CMakeFiles\slimeballGraphicsLib.dir\src\assets\Image.cpp.s
+
+CMakeFiles/slimeballGraphicsLib.dir/src/assets/Font.cpp.obj: CMakeFiles/slimeballGraphicsLib.dir/flags.make
+CMakeFiles/slimeballGraphicsLib.dir/src/assets/Font.cpp.obj: CMakeFiles/slimeballGraphicsLib.dir/includes_CXX.rsp
+CMakeFiles/slimeballGraphicsLib.dir/src/assets/Font.cpp.obj: F:/VSCodeWorkspace/slimeballGraphicLib/src/assets/Font.cpp
+CMakeFiles/slimeballGraphicsLib.dir/src/assets/Font.cpp.obj: CMakeFiles/slimeballGraphicsLib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=F:\VSCodeWorkspace\slimeballGraphicLib\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/slimeballGraphicsLib.dir/src/assets/Font.cpp.obj"
+	F:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/slimeballGraphicsLib.dir/src/assets/Font.cpp.obj -MF CMakeFiles\slimeballGraphicsLib.dir\src\assets\Font.cpp.obj.d -o CMakeFiles\slimeballGraphicsLib.dir\src\assets\Font.cpp.obj -c F:\VSCodeWorkspace\slimeballGraphicLib\src\assets\Font.cpp
+
+CMakeFiles/slimeballGraphicsLib.dir/src/assets/Font.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/slimeballGraphicsLib.dir/src/assets/Font.cpp.i"
+	F:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E F:\VSCodeWorkspace\slimeballGraphicLib\src\assets\Font.cpp > CMakeFiles\slimeballGraphicsLib.dir\src\assets\Font.cpp.i
+
+CMakeFiles/slimeballGraphicsLib.dir/src/assets/Font.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/slimeballGraphicsLib.dir/src/assets/Font.cpp.s"
+	F:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S F:\VSCodeWorkspace\slimeballGraphicLib\src\assets\Font.cpp -o CMakeFiles\slimeballGraphicsLib.dir\src\assets\Font.cpp.s
 
 # Object files for target slimeballGraphicsLib
 slimeballGraphicsLib_OBJECTS = \
@@ -200,7 +215,8 @@ slimeballGraphicsLib_OBJECTS = \
 "CMakeFiles/slimeballGraphicsLib.dir/src/utils/Utils.cpp.obj" \
 "CMakeFiles/slimeballGraphicsLib.dir/src/painter/Painter.cpp.obj" \
 "CMakeFiles/slimeballGraphicsLib.dir/src/core/EntryPoint.cpp.obj" \
-"CMakeFiles/slimeballGraphicsLib.dir/src/image/Image.cpp.obj"
+"CMakeFiles/slimeballGraphicsLib.dir/src/assets/Image.cpp.obj" \
+"CMakeFiles/slimeballGraphicsLib.dir/src/assets/Font.cpp.obj"
 
 # External object files for target slimeballGraphicsLib
 slimeballGraphicsLib_EXTERNAL_OBJECTS =
@@ -212,10 +228,11 @@ lib/libslimeballGraphicsLib.a: CMakeFiles/slimeballGraphicsLib.dir/src/core/Logg
 lib/libslimeballGraphicsLib.a: CMakeFiles/slimeballGraphicsLib.dir/src/utils/Utils.cpp.obj
 lib/libslimeballGraphicsLib.a: CMakeFiles/slimeballGraphicsLib.dir/src/painter/Painter.cpp.obj
 lib/libslimeballGraphicsLib.a: CMakeFiles/slimeballGraphicsLib.dir/src/core/EntryPoint.cpp.obj
-lib/libslimeballGraphicsLib.a: CMakeFiles/slimeballGraphicsLib.dir/src/image/Image.cpp.obj
+lib/libslimeballGraphicsLib.a: CMakeFiles/slimeballGraphicsLib.dir/src/assets/Image.cpp.obj
+lib/libslimeballGraphicsLib.a: CMakeFiles/slimeballGraphicsLib.dir/src/assets/Font.cpp.obj
 lib/libslimeballGraphicsLib.a: CMakeFiles/slimeballGraphicsLib.dir/build.make
 lib/libslimeballGraphicsLib.a: CMakeFiles/slimeballGraphicsLib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=F:\VSCodeWorkspace\slimeballGraphicLib\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX static library lib\libslimeballGraphicsLib.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=F:\VSCodeWorkspace\slimeballGraphicLib\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX static library lib\libslimeballGraphicsLib.a"
 	$(CMAKE_COMMAND) -P CMakeFiles\slimeballGraphicsLib.dir\cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\slimeballGraphicsLib.dir\link.txt --verbose=$(VERBOSE)
 

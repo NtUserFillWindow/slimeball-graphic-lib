@@ -1,6 +1,7 @@
-CMakeFiles/slimeballGraphicsLib.dir/src/window/Window.cpp.obj: \
- F:\VSCodeWorkspace\slimeballGraphicLib\src\window\Window.cpp \
- F:/VSCodeWorkspace/slimeballGraphicLib/include/Window.hpp \
+CMakeFiles/slimeballGraphicsLib.dir/src/assets/Image.cpp.obj: \
+ F:\VSCodeWorkspace\slimeballGraphicLib\src\assets\Image.cpp \
+ F:/VSCodeWorkspace/slimeballGraphicLib/include/Image.hpp \
+ F:/VSCodeWorkspace/slimeballGraphicLib/include/Color.hpp \
  F:/msys64/ucrt64/include/windows.h F:/msys64/ucrt64/include/_mingw.h \
  F:/msys64/ucrt64/include/_mingw_mac.h \
  F:/msys64/ucrt64/include/_mingw_secapi.h \
@@ -320,107 +321,18 @@ CMakeFiles/slimeballGraphicsLib.dir/src/window/Window.cpp.obj: \
  F:/msys64/ucrt64/include/c++/15.2.0/bits/uses_allocator.h \
  F:/msys64/ucrt64/include/c++/15.2.0/bits/uses_allocator_args.h \
  F:/msys64/ucrt64/include/c++/15.2.0/tuple \
- F:/msys64/ucrt64/include/c++/15.2.0/functional \
- F:/msys64/ucrt64/include/c++/15.2.0/bits/std_function.h \
- F:/msys64/ucrt64/include/c++/15.2.0/typeinfo \
- F:/msys64/ucrt64/include/c++/15.2.0/unordered_map \
- F:/msys64/ucrt64/include/c++/15.2.0/bits/unordered_map.h \
- F:/msys64/ucrt64/include/c++/15.2.0/bits/hashtable.h \
- F:/msys64/ucrt64/include/c++/15.2.0/bits/hashtable_policy.h \
- F:/msys64/ucrt64/include/c++/15.2.0/ext/aligned_buffer.h \
- F:/msys64/ucrt64/include/c++/15.2.0/bits/enable_special_members.h \
- F:/msys64/ucrt64/include/c++/15.2.0/bits/node_handle.h \
- F:/msys64/ucrt64/include/c++/15.2.0/bits/erase_if.h \
  F:/msys64/ucrt64/include/c++/15.2.0/vector \
  F:/msys64/ucrt64/include/c++/15.2.0/bits/stl_uninitialized.h \
  F:/msys64/ucrt64/include/c++/15.2.0/bits/stl_vector.h \
  F:/msys64/ucrt64/include/c++/15.2.0/bits/stl_bvector.h \
  F:/msys64/ucrt64/include/c++/15.2.0/bits/vector.tcc \
- F:/msys64/ucrt64/include/c++/15.2.0/array \
- F:/msys64/ucrt64/include/c++/15.2.0/compare \
- F:/msys64/ucrt64/include/c++/15.2.0/memory \
- F:/msys64/ucrt64/include/c++/15.2.0/bits/stl_tempbuf.h \
- F:/msys64/ucrt64/include/c++/15.2.0/bits/stl_raw_storage_iter.h \
- F:/msys64/ucrt64/include/c++/15.2.0/bits/align.h \
- F:/msys64/ucrt64/include/c++/15.2.0/bits/unique_ptr.h \
- F:/msys64/ucrt64/include/c++/15.2.0/bits/shared_ptr.h \
- F:/msys64/ucrt64/include/c++/15.2.0/bits/shared_ptr_base.h \
- F:/msys64/ucrt64/include/c++/15.2.0/bits/allocated_ptr.h \
- F:/msys64/ucrt64/include/c++/15.2.0/ext/atomicity.h \
- F:/msys64/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32/bits/gthr.h \
- F:/msys64/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32/bits/gthr-default.h \
- F:/msys64/ucrt64/include/pthread.h F:/msys64/ucrt64/include/sys/types.h \
- F:/msys64/ucrt64/include/process.h \
- F:/msys64/ucrt64/include/corecrt_startup.h \
- F:/msys64/ucrt64/include/signal.h \
- F:/msys64/ucrt64/include/pthread_signal.h \
- F:/msys64/ucrt64/include/time.h F:/msys64/ucrt64/include/sys/timeb.h \
- F:/msys64/ucrt64/include/sec_api/sys/timeb_s.h \
- F:/msys64/ucrt64/include/pthread_time.h \
- F:/msys64/ucrt64/include/pthread_compat.h \
- F:/msys64/ucrt64/include/sched.h \
- F:/msys64/ucrt64/include/pthread_unistd.h \
- F:/msys64/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32/bits/atomic_word.h \
- F:/msys64/ucrt64/include/c++/15.2.0/ext/concurrence.h \
- F:/msys64/ucrt64/include/c++/15.2.0/exception \
- F:/msys64/ucrt64/include/c++/15.2.0/bits/exception_ptr.h \
- F:/msys64/ucrt64/include/c++/15.2.0/bits/cxxabi_init_exception.h \
- F:/msys64/ucrt64/include/c++/15.2.0/bits/nested_exception.h \
- F:/msys64/ucrt64/include/c++/15.2.0/bits/shared_ptr_atomic.h \
- F:/msys64/ucrt64/include/c++/15.2.0/bits/atomic_base.h \
- F:/msys64/ucrt64/include/c++/15.2.0/bits/atomic_lockfree_defines.h \
- F:/msys64/ucrt64/include/c++/15.2.0/backward/auto_ptr.h \
- F:/msys64/ucrt64/include/c++/15.2.0/pstl/glue_memory_defs.h \
- F:/msys64/ucrt64/include/c++/15.2.0/pstl/execution_defs.h \
- F:/VSCodeWorkspace/slimeballGraphicLib/include/Canvas.hpp \
- F:/VSCodeWorkspace/slimeballGraphicLib/include/Color.hpp \
- F:/VSCodeWorkspace/slimeballGraphicLib/include/Logger.hpp \
- F:/msys64/ucrt64/include/c++/15.2.0/iostream \
- F:/msys64/ucrt64/include/c++/15.2.0/ostream \
- F:/msys64/ucrt64/include/c++/15.2.0/bits/ostream.h \
- F:/msys64/ucrt64/include/c++/15.2.0/ios \
- F:/msys64/ucrt64/include/c++/15.2.0/bits/ios_base.h \
- F:/msys64/ucrt64/include/c++/15.2.0/bits/locale_classes.h \
- F:/msys64/ucrt64/include/c++/15.2.0/bits/locale_classes.tcc \
- F:/msys64/ucrt64/include/c++/15.2.0/system_error \
- F:/msys64/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32/bits/error_constants.h \
- F:/msys64/ucrt64/include/c++/15.2.0/stdexcept \
- F:/msys64/ucrt64/include/c++/15.2.0/streambuf \
- F:/msys64/ucrt64/include/c++/15.2.0/bits/streambuf.tcc \
- F:/msys64/ucrt64/include/c++/15.2.0/bits/basic_ios.h \
- F:/msys64/ucrt64/include/c++/15.2.0/bits/locale_facets.h \
- F:/msys64/ucrt64/include/c++/15.2.0/cwctype \
- F:/msys64/ucrt64/include/wctype.h \
- F:/msys64/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32/bits/ctype_base.h \
- F:/msys64/ucrt64/include/c++/15.2.0/bits/streambuf_iterator.h \
- F:/msys64/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32/bits/ctype_inline.h \
- F:/msys64/ucrt64/include/c++/15.2.0/bits/locale_facets.tcc \
- F:/msys64/ucrt64/include/c++/15.2.0/bits/basic_ios.tcc \
- F:/msys64/ucrt64/include/c++/15.2.0/bits/ostream.tcc \
- F:/msys64/ucrt64/include/c++/15.2.0/istream \
- F:/msys64/ucrt64/include/c++/15.2.0/bits/istream.tcc \
- F:/msys64/ucrt64/include/c++/15.2.0/mutex \
- F:/msys64/ucrt64/include/c++/15.2.0/bits/chrono.h \
- F:/msys64/ucrt64/include/c++/15.2.0/ratio \
- F:/msys64/ucrt64/include/c++/15.2.0/cstdint \
- F:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdint.h \
- F:/msys64/ucrt64/include/stdint.h \
- F:/msys64/ucrt64/include/c++/15.2.0/limits \
- F:/msys64/ucrt64/include/c++/15.2.0/ctime \
- F:/msys64/ucrt64/include/c++/15.2.0/bits/parse_numbers.h \
- F:/msys64/ucrt64/include/c++/15.2.0/bits/std_mutex.h \
- F:/msys64/ucrt64/include/c++/15.2.0/bits/unique_lock.h \
- F:/msys64/ucrt64/include/c++/15.2.0/chrono \
- F:/VSCodeWorkspace/slimeballGraphicLib/include/Utils.hpp \
- F:/VSCodeWorkspace/slimeballGraphicLib/include/Window.hpp \
- F:/VSCodeWorkspace/slimeballGraphicLib/include/Painter.hpp \
- F:/VSCodeWorkspace/slimeballGraphicLib/include/Image.hpp \
  F:/msys64/ucrt64/include/gdiplus.h \
  F:/msys64/ucrt64/include/gdiplus/gdiplus.h \
  F:/msys64/ucrt64/include/c++/15.2.0/math.h \
  F:/msys64/ucrt64/include/c++/15.2.0/cmath \
  F:/msys64/ucrt64/include/math.h \
  F:/msys64/ucrt64/include/c++/15.2.0/bits/specfun.h \
+ F:/msys64/ucrt64/include/c++/15.2.0/limits \
  F:/msys64/ucrt64/include/c++/15.2.0/tr1/gamma.tcc \
  F:/msys64/ucrt64/include/c++/15.2.0/tr1/special_function_util.h \
  F:/msys64/ucrt64/include/c++/15.2.0/tr1/bessel_function.tcc \
@@ -459,20 +371,47 @@ CMakeFiles/slimeballGraphicsLib.dir/src/window/Window.cpp.obj: \
  F:/msys64/ucrt64/include/gdiplus/gdiplusgraphics.h \
  F:/msys64/ucrt64/include/gdiplus/gdipluslinecaps.h \
  F:/msys64/ucrt64/include/gdiplus/gdiplusimpl.h \
- F:/VSCodeWorkspace/slimeballGraphicLib/include/Font.hpp \
- F:/VSCodeWorkspace/slimeballGraphicLib/include/Logger.hpp \
- F:/VSCodeWorkspace/slimeballGraphicLib/include/Utils.hpp \
- F:/VSCodeWorkspace/slimeballGraphicLib/include/Painter.hpp \
- F:/msys64/ucrt64/include/c++/15.2.0/algorithm \
- F:/msys64/ucrt64/include/c++/15.2.0/bits/stl_algo.h \
- F:/msys64/ucrt64/include/c++/15.2.0/bits/algorithmfwd.h \
- F:/msys64/ucrt64/include/c++/15.2.0/bits/stl_heap.h \
- F:/msys64/ucrt64/include/c++/15.2.0/bits/uniform_int_dist.h \
- F:/msys64/ucrt64/include/c++/15.2.0/pstl/glue_algorithm_defs.h \
- F:/msys64/ucrt64/include/c++/15.2.0/thread \
- F:/msys64/ucrt64/include/c++/15.2.0/bits/std_thread.h \
- F:/msys64/ucrt64/include/c++/15.2.0/bits/this_thread_sleep.h \
- F:/msys64/ucrt64/include/c++/15.2.0/future \
- F:/msys64/ucrt64/include/c++/15.2.0/condition_variable \
- F:/msys64/ucrt64/include/c++/15.2.0/bits/atomic_futex.h \
- F:/msys64/ucrt64/include/c++/15.2.0/atomic
+ F:/msys64/ucrt64/include/c++/15.2.0/iostream \
+ F:/msys64/ucrt64/include/c++/15.2.0/ostream \
+ F:/msys64/ucrt64/include/c++/15.2.0/bits/ostream.h \
+ F:/msys64/ucrt64/include/c++/15.2.0/ios \
+ F:/msys64/ucrt64/include/c++/15.2.0/exception \
+ F:/msys64/ucrt64/include/c++/15.2.0/bits/exception_ptr.h \
+ F:/msys64/ucrt64/include/c++/15.2.0/bits/cxxabi_init_exception.h \
+ F:/msys64/ucrt64/include/c++/15.2.0/typeinfo \
+ F:/msys64/ucrt64/include/c++/15.2.0/bits/nested_exception.h \
+ F:/msys64/ucrt64/include/c++/15.2.0/bits/ios_base.h \
+ F:/msys64/ucrt64/include/c++/15.2.0/ext/atomicity.h \
+ F:/msys64/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32/bits/gthr.h \
+ F:/msys64/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32/bits/gthr-default.h \
+ F:/msys64/ucrt64/include/pthread.h F:/msys64/ucrt64/include/sys/types.h \
+ F:/msys64/ucrt64/include/process.h \
+ F:/msys64/ucrt64/include/corecrt_startup.h \
+ F:/msys64/ucrt64/include/signal.h \
+ F:/msys64/ucrt64/include/pthread_signal.h \
+ F:/msys64/ucrt64/include/time.h F:/msys64/ucrt64/include/sys/timeb.h \
+ F:/msys64/ucrt64/include/sec_api/sys/timeb_s.h \
+ F:/msys64/ucrt64/include/pthread_time.h \
+ F:/msys64/ucrt64/include/pthread_compat.h \
+ F:/msys64/ucrt64/include/sched.h \
+ F:/msys64/ucrt64/include/pthread_unistd.h \
+ F:/msys64/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32/bits/atomic_word.h \
+ F:/msys64/ucrt64/include/c++/15.2.0/bits/locale_classes.h \
+ F:/msys64/ucrt64/include/c++/15.2.0/bits/locale_classes.tcc \
+ F:/msys64/ucrt64/include/c++/15.2.0/system_error \
+ F:/msys64/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32/bits/error_constants.h \
+ F:/msys64/ucrt64/include/c++/15.2.0/stdexcept \
+ F:/msys64/ucrt64/include/c++/15.2.0/streambuf \
+ F:/msys64/ucrt64/include/c++/15.2.0/bits/streambuf.tcc \
+ F:/msys64/ucrt64/include/c++/15.2.0/bits/basic_ios.h \
+ F:/msys64/ucrt64/include/c++/15.2.0/bits/locale_facets.h \
+ F:/msys64/ucrt64/include/c++/15.2.0/cwctype \
+ F:/msys64/ucrt64/include/wctype.h \
+ F:/msys64/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32/bits/ctype_base.h \
+ F:/msys64/ucrt64/include/c++/15.2.0/bits/streambuf_iterator.h \
+ F:/msys64/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32/bits/ctype_inline.h \
+ F:/msys64/ucrt64/include/c++/15.2.0/bits/locale_facets.tcc \
+ F:/msys64/ucrt64/include/c++/15.2.0/bits/basic_ios.tcc \
+ F:/msys64/ucrt64/include/c++/15.2.0/bits/ostream.tcc \
+ F:/msys64/ucrt64/include/c++/15.2.0/istream \
+ F:/msys64/ucrt64/include/c++/15.2.0/bits/istream.tcc

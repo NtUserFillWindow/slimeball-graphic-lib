@@ -24,7 +24,8 @@ add_library(slimeballGraphicsLib STATIC
     src/utils/Utils.cpp
     src/painter/Painter.cpp
     src/core/EntryPoint.cpp
-    src/image/Image.cpp
+    src/assets/Image.cpp
+    src/assets/Font.cpp
 )
 
 target_link_libraries(slimeballGraphicsLib PRIVATE

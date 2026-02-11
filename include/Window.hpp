@@ -148,6 +148,11 @@
 #define KEY_SCROLLLOCK VK_SCROLL
 #define KEY_SCROLL VK_SCROLL
 
+#define WINDOWSTYLE_DEFAULT WS_OVERLAPPED|WS_MAXIMIZEBOX|WS_MINIMIZEBOX
+#define WINDOWSTYLE_FULLTRANSPARENT WS_EX_LAYERED|WS_EX_TRANSPARENT|WS_EX_TOOLWINDOW
+#define WINDOWSTYLE_TRANSPARENT WS_EX_LAYERED|WS_EX_APPWINDOW
+#define EXWINDOWSTYLE_NOFRAME WS_POPUP
+
 namespace Window{
     struct Handle:public std::enable_shared_from_this<Handle>{
         private:
@@ -155,6 +160,7 @@ namespace Window{
             int width,height;
             HWND mHWnd;
             int mWindowStyle;
+            int mExtraWindowStyle;
             std::wstring mTitle;
             Handle *mParentWindow;
             long long mID;
@@ -200,6 +206,7 @@ namespace Window{
             HWND initWindow(const wchar_t* className,HINSTANCE hInstance);
             Handle()=default;
             Handle(int x,int y,int w,int h,int windowStyle,std::wstring title);
+            Handle(int x,int y,int w,int h,int windowStyle,int exWindowStyle,std::wstring title);
             Handle(int x,int y,int w,int h,int windowStyle,std::wstring title,Handle *ParentWindow);
             ~Handle();
             void destroy();

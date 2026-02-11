@@ -305,6 +305,7 @@ namespace Window{
                 pThis->resizeBuffer();
                 int newWidth=LOWORD(lParam);
                 int newHeight=HIWORD(lParam);
+                InvalidateRect(pThis->mHWnd,NULL,TRUE);
                 if(!pThis->thisResize){
                     WindowLogger.traceLog(Core::logger::LOG_WARNING,"The function \"thisResize\" is not defined yet,Skipping.");
                 }
@@ -380,6 +381,9 @@ namespace Window{
                 }
                 break;
             }
+            case WM_ERASEBKGND:{
+                return 0;
+            }
         }
         return DefWindowProc(hWnd,uMsg,wParam,lParam);
     }
@@ -392,7 +396,7 @@ namespace Window{
             wc.hInstance=hInstance;
             RegisterClass(&wc);
         }
-        this->mHWnd=CreateWindowEx(this->mWindowStyle,className,this->mTitle.c_str(),WS_OVERLAPPEDWINDOW,this->x,this->y,this->width,this->height,
+        this->mHWnd=CreateWindowEx(this->mWindowStyle,className,this->mTitle.c_str(),this->mExtraWindowStyle,this->x,this->y,this->width,this->height,
                                    this->mParentWindow==nullptr?NULL:this->mParentWindow->mHWnd,NULL,hInstance,this);
         if(this->mHWnd!=NULL){
             ShowWindow(this->mHWnd, SW_SHOW);
@@ -406,6 +410,20 @@ namespace Window{
         this->width=w;
         this->height=h;
         this->mWindowStyle=windowStyle;
+        this->mExtraWindowStyle=WS_OVERLAPPEDWINDOW;
+        this->mTitle=title;
+        this->mHWnd=NULL;
+        this->mParentWindow=nullptr;
+        this->mID=globalHandleManager.getCnt();
+        this->thisCanvas=Core::Canvas(w,h);
+    }
+    Handle::Handle(int x,int y,int w,int h,int windowStyle,int exWindowStyle,std::wstring title){
+        this->x=x;
+        this->y=y;
+        this->width=w;
+        this->height=h;
+        this->mWindowStyle=windowStyle;
+        this->mExtraWindowStyle=exWindowStyle;
         this->mTitle=title;
         this->mHWnd=NULL;
         this->mParentWindow=nullptr;
@@ -483,6 +501,7 @@ namespace Window{
     void HandleManager::updateAll(){
         for(unsigned long long idx=0;idx<handles.size();idx++){
             InvalidateRect(handles[idx]->getHWnd(),NULL,TRUE);
+            UpdateWindow(handles[idx]->getHWnd());
             handles[idx]->update();
         }
     }

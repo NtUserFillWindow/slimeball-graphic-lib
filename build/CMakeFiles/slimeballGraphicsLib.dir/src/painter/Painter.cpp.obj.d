@@ -445,6 +445,7 @@ CMakeFiles/slimeballGraphicsLib.dir/src/painter/Painter.cpp.obj: \
  F:/msys64/ucrt64/include/gdiplus/gdiplusgraphics.h \
  F:/msys64/ucrt64/include/gdiplus/gdipluslinecaps.h \
  F:/msys64/ucrt64/include/gdiplus/gdiplusimpl.h \
+ F:/VSCodeWorkspace/slimeballGraphicLib/include/Font.hpp \
  F:/VSCodeWorkspace/slimeballGraphicLib/include/Logger.hpp \
  F:/VSCodeWorkspace/slimeballGraphicLib/include/Color.hpp \
  F:/VSCodeWorkspace/slimeballGraphicLib/include/Utils.hpp \

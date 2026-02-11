@@ -459,3 +459,15 @@ bool Window::Painter::putImage(char locateMode,const Point& locator,const Assets
     DeleteDC(hdcMem);
     return result != FALSE;
 }
+bool Window::Painter::putText(char locateMode,const Point& locator,const Assets::Font& font,const std::wstring& text,const Core::Color& color){
+    SelectObject(this->thisHDC,font.thisHFont);
+    TEXTMETRIC tm;
+    SIZE size;
+    GetTextMetrics(this->thisHDC,&tm);
+    GetTextExtentPoint32W(this->thisHDC,text.c_str(),text.length(),&size);
+    SetTextColor(this->thisHDC,color.toCOLORREF());
+    SetBkMode(this->thisHDC,TRANSPARENT);
+    Point locate=calculateDrawPosition(locateMode,locator,size.cx,size.cy);
+    TextOutW(this->thisHDC,locate.x,locate.y,text.c_str(),text.length());
+    return true;
+}

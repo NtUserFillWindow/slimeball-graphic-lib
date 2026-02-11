@@ -174,17 +174,65 @@ slimeballGraphicsLib/fast:
 .PHONY : slimeballGraphicsLib/fast
 
 #=============================================================================
-# Target rules for targets named eg12.exe
+# Target rules for targets named eg13.exe
 
 # Build rule for target.
-eg12.exe: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 eg12.exe
-.PHONY : eg12.exe
+eg13.exe: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 eg13.exe
+.PHONY : eg13.exe
 
 # fast build rule for target.
-eg12.exe/fast:
-	$(MAKE) $(MAKESILENT) -f examples\CMakeFiles\eg12.exe.dir\build.make examples/CMakeFiles/eg12.exe.dir/build
-.PHONY : eg12.exe/fast
+eg13.exe/fast:
+	$(MAKE) $(MAKESILENT) -f examples\CMakeFiles\eg13.exe.dir\build.make examples/CMakeFiles/eg13.exe.dir/build
+.PHONY : eg13.exe/fast
+
+src/assets/Font.obj: src/assets/Font.cpp.obj
+.PHONY : src/assets/Font.obj
+
+# target to build an object file
+src/assets/Font.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\slimeballGraphicsLib.dir\build.make CMakeFiles/slimeballGraphicsLib.dir/src/assets/Font.cpp.obj
+.PHONY : src/assets/Font.cpp.obj
+
+src/assets/Font.i: src/assets/Font.cpp.i
+.PHONY : src/assets/Font.i
+
+# target to preprocess a source file
+src/assets/Font.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\slimeballGraphicsLib.dir\build.make CMakeFiles/slimeballGraphicsLib.dir/src/assets/Font.cpp.i
+.PHONY : src/assets/Font.cpp.i
+
+src/assets/Font.s: src/assets/Font.cpp.s
+.PHONY : src/assets/Font.s
+
+# target to generate assembly for a file
+src/assets/Font.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\slimeballGraphicsLib.dir\build.make CMakeFiles/slimeballGraphicsLib.dir/src/assets/Font.cpp.s
+.PHONY : src/assets/Font.cpp.s
+
+src/assets/Image.obj: src/assets/Image.cpp.obj
+.PHONY : src/assets/Image.obj
+
+# target to build an object file
+src/assets/Image.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\slimeballGraphicsLib.dir\build.make CMakeFiles/slimeballGraphicsLib.dir/src/assets/Image.cpp.obj
+.PHONY : src/assets/Image.cpp.obj
+
+src/assets/Image.i: src/assets/Image.cpp.i
+.PHONY : src/assets/Image.i
+
+# target to preprocess a source file
+src/assets/Image.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\slimeballGraphicsLib.dir\build.make CMakeFiles/slimeballGraphicsLib.dir/src/assets/Image.cpp.i
+.PHONY : src/assets/Image.cpp.i
+
+src/assets/Image.s: src/assets/Image.cpp.s
+.PHONY : src/assets/Image.s
+
+# target to generate assembly for a file
+src/assets/Image.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\slimeballGraphicsLib.dir\build.make CMakeFiles/slimeballGraphicsLib.dir/src/assets/Image.cpp.s
+.PHONY : src/assets/Image.cpp.s
 
 src/core/Canvas.obj: src/core/Canvas.cpp.obj
 .PHONY : src/core/Canvas.obj
@@ -282,30 +330,6 @@ src/core/Logger.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\slimeballGraphicsLib.dir\build.make CMakeFiles/slimeballGraphicsLib.dir/src/core/Logger.cpp.s
 .PHONY : src/core/Logger.cpp.s
 
-src/image/Image.obj: src/image/Image.cpp.obj
-.PHONY : src/image/Image.obj
-
-# target to build an object file
-src/image/Image.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\slimeballGraphicsLib.dir\build.make CMakeFiles/slimeballGraphicsLib.dir/src/image/Image.cpp.obj
-.PHONY : src/image/Image.cpp.obj
-
-src/image/Image.i: src/image/Image.cpp.i
-.PHONY : src/image/Image.i
-
-# target to preprocess a source file
-src/image/Image.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\slimeballGraphicsLib.dir\build.make CMakeFiles/slimeballGraphicsLib.dir/src/image/Image.cpp.i
-.PHONY : src/image/Image.cpp.i
-
-src/image/Image.s: src/image/Image.cpp.s
-.PHONY : src/image/Image.s
-
-# target to generate assembly for a file
-src/image/Image.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\slimeballGraphicsLib.dir\build.make CMakeFiles/slimeballGraphicsLib.dir/src/image/Image.cpp.s
-.PHONY : src/image/Image.cpp.s
-
 src/painter/Painter.obj: src/painter/Painter.cpp.obj
 .PHONY : src/painter/Painter.obj
 
@@ -390,8 +414,14 @@ help:
 	@echo ... install/strip
 	@echo ... list_install_components
 	@echo ... rebuild_cache
-	@echo ... eg12.exe
+	@echo ... eg13.exe
 	@echo ... slimeballGraphicsLib
+	@echo ... src/assets/Font.obj
+	@echo ... src/assets/Font.i
+	@echo ... src/assets/Font.s
+	@echo ... src/assets/Image.obj
+	@echo ... src/assets/Image.i
+	@echo ... src/assets/Image.s
 	@echo ... src/core/Canvas.obj
 	@echo ... src/core/Canvas.i
 	@echo ... src/core/Canvas.s
@@ -404,9 +434,6 @@ help:
 	@echo ... src/core/Logger.obj
 	@echo ... src/core/Logger.i
 	@echo ... src/core/Logger.s
-	@echo ... src/image/Image.obj
-	@echo ... src/image/Image.i
-	@echo ... src/image/Image.s
 	@echo ... src/painter/Painter.obj
 	@echo ... src/painter/Painter.i
 	@echo ... src/painter/Painter.s

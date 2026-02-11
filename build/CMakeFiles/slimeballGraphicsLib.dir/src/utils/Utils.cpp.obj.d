@@ -458,4 +458,5 @@ CMakeFiles/slimeballGraphicsLib.dir/src/utils/Utils.cpp.obj: \
  F:/msys64/ucrt64/include/gdiplus/gdipluspath.h \
  F:/msys64/ucrt64/include/gdiplus/gdiplusgraphics.h \
  F:/msys64/ucrt64/include/gdiplus/gdipluslinecaps.h \
- F:/msys64/ucrt64/include/gdiplus/gdiplusimpl.h
+ F:/msys64/ucrt64/include/gdiplus/gdiplusimpl.h \
+ F:/VSCodeWorkspace/slimeballGraphicLib/include/Font.hpp

@@ -43,14 +43,20 @@
 },
 {
   "directory": "F:/VSCodeWorkspace/slimeballGraphicLib/build",
-  "command": "F:\\msys64\\ucrt64\\bin\\g++.exe -DNOMINMAX @CMakeFiles/slimeballGraphicsLib.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -pedantic -o CMakeFiles\\slimeballGraphicsLib.dir\\src\\image\\Image.cpp.obj -c F:\\VSCodeWorkspace\\slimeballGraphicLib\\src\\image\\Image.cpp",
-  "file": "F:/VSCodeWorkspace/slimeballGraphicLib/src/image/Image.cpp",
-  "output": "CMakeFiles/slimeballGraphicsLib.dir/src/image/Image.cpp.obj"
+  "command": "F:\\msys64\\ucrt64\\bin\\g++.exe -DNOMINMAX @CMakeFiles/slimeballGraphicsLib.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -pedantic -o CMakeFiles\\slimeballGraphicsLib.dir\\src\\assets\\Image.cpp.obj -c F:\\VSCodeWorkspace\\slimeballGraphicLib\\src\\assets\\Image.cpp",
+  "file": "F:/VSCodeWorkspace/slimeballGraphicLib/src/assets/Image.cpp",
+  "output": "CMakeFiles/slimeballGraphicsLib.dir/src/assets/Image.cpp.obj"
+},
+{
+  "directory": "F:/VSCodeWorkspace/slimeballGraphicLib/build",
+  "command": "F:\\msys64\\ucrt64\\bin\\g++.exe -DNOMINMAX @CMakeFiles/slimeballGraphicsLib.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -pedantic -o CMakeFiles\\slimeballGraphicsLib.dir\\src\\assets\\Font.cpp.obj -c F:\\VSCodeWorkspace\\slimeballGraphicLib\\src\\assets\\Font.cpp",
+  "file": "F:/VSCodeWorkspace/slimeballGraphicLib/src/assets/Font.cpp",
+  "output": "CMakeFiles/slimeballGraphicsLib.dir/src/assets/Font.cpp.obj"
 },
 {
   "directory": "F:/VSCodeWorkspace/slimeballGraphicLib/build/examples",
-  "command": "F:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/eg12.exe.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -pedantic -o CMakeFiles\\eg12.exe.dir\\eg12_load_picture.cpp.obj -c F:\\VSCodeWorkspace\\slimeballGraphicLib\\examples\\eg12_load_picture.cpp",
-  "file": "F:/VSCodeWorkspace/slimeballGraphicLib/examples/eg12_load_picture.cpp",
-  "output": "examples/CMakeFiles/eg12.exe.dir/eg12_load_picture.cpp.obj"
+  "command": "F:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/eg13.exe.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -pedantic -o CMakeFiles\\eg13.exe.dir\\eg13_text.cpp.obj -c F:\\VSCodeWorkspace\\slimeballGraphicLib\\examples\\eg13_text.cpp",
+  "file": "F:/VSCodeWorkspace/slimeballGraphicLib/examples/eg13_text.cpp",
+  "output": "examples/CMakeFiles/eg13.exe.dir/eg13_text.cpp.obj"
 }
 ]

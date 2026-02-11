@@ -14,6 +14,7 @@
 #include "Canvas.hpp"
 #include "Logger.hpp"
 #include "Image.hpp"
+#include "Font.hpp"
 
 namespace Window{
     struct Handle;
@@ -96,6 +97,7 @@ namespace Window{
             bool hollowCircle(const Point& origin,int radius,const Core::Color& color);
             bool solidCircle(const Point& origin,int radius,const Core::Color& color);
             bool putImage(char locateMode,const Point& locator,const Assets::Image& src,unsigned char alpha);
+            bool putText(char locateMode,const Point& locator,const Assets::Font& font,const std::wstring& text,const Core::Color& color);
     };
 }
 #endif//PAINTER_HPP
