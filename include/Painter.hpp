@@ -67,6 +67,7 @@ namespace Window{
             Painter(HWND hWnd,Handle *handle):thisBindHWnd(hWnd),thisHDC(BeginPaint(hWnd,&ps)){
                 thisBindHandle=handle;
                 nowHDC=WINDOW;
+                radius=0;
             };
             ~Painter(){
                 EndPaint(thisBindHWnd,&ps);

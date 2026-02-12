@@ -161,42 +161,42 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-examples/CMakeFiles/eg13.exe.dir/rule:
-	cd /d F:\VSCodeWorkspace\slimeballGraphicLib\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 examples/CMakeFiles/eg13.exe.dir/rule
-.PHONY : examples/CMakeFiles/eg13.exe.dir/rule
+examples/CMakeFiles/bee.exe.dir/rule:
+	cd /d F:\VSCodeWorkspace\slimeballGraphicLib\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 examples/CMakeFiles/bee.exe.dir/rule
+.PHONY : examples/CMakeFiles/bee.exe.dir/rule
 
 # Convenience name for target.
-eg13.exe: examples/CMakeFiles/eg13.exe.dir/rule
-.PHONY : eg13.exe
+bee.exe: examples/CMakeFiles/bee.exe.dir/rule
+.PHONY : bee.exe
 
 # fast build rule for target.
-eg13.exe/fast:
-	cd /d F:\VSCodeWorkspace\slimeballGraphicLib\build && $(MAKE) $(MAKESILENT) -f examples\CMakeFiles\eg13.exe.dir\build.make examples/CMakeFiles/eg13.exe.dir/build
-.PHONY : eg13.exe/fast
+bee.exe/fast:
+	cd /d F:\VSCodeWorkspace\slimeballGraphicLib\build && $(MAKE) $(MAKESILENT) -f examples\CMakeFiles\bee.exe.dir\build.make examples/CMakeFiles/bee.exe.dir/build
+.PHONY : bee.exe/fast
 
-eg13_text.obj: eg13_text.cpp.obj
-.PHONY : eg13_text.obj
+bee.obj: bee.cpp.obj
+.PHONY : bee.obj
 
 # target to build an object file
-eg13_text.cpp.obj:
-	cd /d F:\VSCodeWorkspace\slimeballGraphicLib\build && $(MAKE) $(MAKESILENT) -f examples\CMakeFiles\eg13.exe.dir\build.make examples/CMakeFiles/eg13.exe.dir/eg13_text.cpp.obj
-.PHONY : eg13_text.cpp.obj
+bee.cpp.obj:
+	cd /d F:\VSCodeWorkspace\slimeballGraphicLib\build && $(MAKE) $(MAKESILENT) -f examples\CMakeFiles\bee.exe.dir\build.make examples/CMakeFiles/bee.exe.dir/bee.cpp.obj
+.PHONY : bee.cpp.obj
 
-eg13_text.i: eg13_text.cpp.i
-.PHONY : eg13_text.i
+bee.i: bee.cpp.i
+.PHONY : bee.i
 
 # target to preprocess a source file
-eg13_text.cpp.i:
-	cd /d F:\VSCodeWorkspace\slimeballGraphicLib\build && $(MAKE) $(MAKESILENT) -f examples\CMakeFiles\eg13.exe.dir\build.make examples/CMakeFiles/eg13.exe.dir/eg13_text.cpp.i
-.PHONY : eg13_text.cpp.i
+bee.cpp.i:
+	cd /d F:\VSCodeWorkspace\slimeballGraphicLib\build && $(MAKE) $(MAKESILENT) -f examples\CMakeFiles\bee.exe.dir\build.make examples/CMakeFiles/bee.exe.dir/bee.cpp.i
+.PHONY : bee.cpp.i
 
-eg13_text.s: eg13_text.cpp.s
-.PHONY : eg13_text.s
+bee.s: bee.cpp.s
+.PHONY : bee.s
 
 # target to generate assembly for a file
-eg13_text.cpp.s:
-	cd /d F:\VSCodeWorkspace\slimeballGraphicLib\build && $(MAKE) $(MAKESILENT) -f examples\CMakeFiles\eg13.exe.dir\build.make examples/CMakeFiles/eg13.exe.dir/eg13_text.cpp.s
-.PHONY : eg13_text.cpp.s
+bee.cpp.s:
+	cd /d F:\VSCodeWorkspace\slimeballGraphicLib\build && $(MAKE) $(MAKESILENT) -f examples\CMakeFiles\bee.exe.dir\build.make examples/CMakeFiles/bee.exe.dir/bee.cpp.s
+.PHONY : bee.cpp.s
 
 # Help Target
 help:
@@ -210,10 +210,10 @@ help:
 	@echo ... install/strip
 	@echo ... list_install_components
 	@echo ... rebuild_cache
-	@echo ... eg13.exe
-	@echo ... eg13_text.obj
-	@echo ... eg13_text.i
-	@echo ... eg13_text.s
+	@echo ... bee.exe
+	@echo ... bee.obj
+	@echo ... bee.i
+	@echo ... bee.s
 .PHONY : help
 
 

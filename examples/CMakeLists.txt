@@ -1,2 +1,2 @@
-add_executable(eg13.exe eg13_text.cpp)
-target_link_libraries(eg13.exe slimeballGraphicsLib)
+add_executable(bee.exe bee.cpp)
+target_link_libraries(bee.exe slimeballGraphicsLib)

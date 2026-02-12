@@ -55,8 +55,8 @@
 },
 {
   "directory": "F:/VSCodeWorkspace/slimeballGraphicLib/build/examples",
-  "command": "F:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/eg13.exe.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -pedantic -o CMakeFiles\\eg13.exe.dir\\eg13_text.cpp.obj -c F:\\VSCodeWorkspace\\slimeballGraphicLib\\examples\\eg13_text.cpp",
-  "file": "F:/VSCodeWorkspace/slimeballGraphicLib/examples/eg13_text.cpp",
-  "output": "examples/CMakeFiles/eg13.exe.dir/eg13_text.cpp.obj"
+  "command": "F:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/bee.exe.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -pedantic -o CMakeFiles\\bee.exe.dir\\bee.cpp.obj -c F:\\VSCodeWorkspace\\slimeballGraphicLib\\examples\\bee.cpp",
+  "file": "F:/VSCodeWorkspace/slimeballGraphicLib/examples/bee.cpp",
+  "output": "examples/CMakeFiles/bee.exe.dir/bee.cpp.obj"
 }
 ]

@@ -148,10 +148,22 @@
 #define KEY_SCROLLLOCK VK_SCROLL
 #define KEY_SCROLL VK_SCROLL
 
-#define WINDOWSTYLE_DEFAULT WS_OVERLAPPED|WS_MAXIMIZEBOX|WS_MINIMIZEBOX
+#define WINDOWSTYLE_DEFAULT WS_SYSMENU|WS_CAPTION
 #define WINDOWSTYLE_FULLTRANSPARENT WS_EX_LAYERED|WS_EX_TRANSPARENT|WS_EX_TOOLWINDOW
 #define WINDOWSTYLE_TRANSPARENT WS_EX_LAYERED|WS_EX_APPWINDOW
-#define EXWINDOWSTYLE_NOFRAME WS_POPUP
+
+#define HITSTATUS_INCLIENT HTCLIENT
+#define HITRETURNSTATUS_DRAG HTCAPTION
+#define HITRETURNSTATUS_HELP HTHELP
+#define HITRETURNSTATUS_CLOSE HTCLOSE
+#define HITSTATUS_EMPTY HTNOWHERE
+#define HITSTATUS_NOWHERE HTNOWHERE
+#define HITSTATUS_OUTSIDE HTNOWHERE
+#define HITSTATUS_THROUGH HTTRANSPARENT
+#define HITRETURNSTATUS_ERROR HTERROR
+
+#define MOVEMODE_DELTA true
+#define MOVEMODE_POS false
 
 namespace Window{
     struct Handle:public std::enable_shared_from_this<Handle>{
@@ -202,6 +214,7 @@ namespace Window{
             std::function<long long(HWND,UINT,WPARAM,LPARAM,HDROP)> thisDropFile;
             std::function<long long(HWND,UINT,WPARAM,LPARAM,int,int)> thisInstantLeftClick;
             std::function<long long(HWND,UINT,WPARAM,LPARAM,int,int)> thisInstantRightClick;
+            std::function<long long(HWND,UINT,WPARAM,LPARAM,int,int,LRESULT)> thisHit;
             static LRESULT CALLBACK thisWindowProc(HWND hWnd,UINT uMsg,WPARAM wParam,LPARAM lParam);
             HWND initWindow(const wchar_t* className,HINSTANCE hInstance);
             Handle()=default;
@@ -220,6 +233,7 @@ namespace Window{
             void clearBuffer();
             void resizeBuffer();
             Buffer& getBuffer();
+            void moveWindow(bool type,int argX,int argY);
     };
     struct HandleManager{
         private:
@@ -235,7 +249,6 @@ namespace Window{
             void updateAll();
             HandleManager()=default;
             ~HandleManager();
-            void refreshAll(WPARAM,LPARAM);
     };
     extern HandleManager globalHandleManager;
 }

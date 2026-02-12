@@ -174,17 +174,17 @@ slimeballGraphicsLib/fast:
 .PHONY : slimeballGraphicsLib/fast
 
 #=============================================================================
-# Target rules for targets named eg13.exe
+# Target rules for targets named bee.exe
 
 # Build rule for target.
-eg13.exe: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 eg13.exe
-.PHONY : eg13.exe
+bee.exe: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 bee.exe
+.PHONY : bee.exe
 
 # fast build rule for target.
-eg13.exe/fast:
-	$(MAKE) $(MAKESILENT) -f examples\CMakeFiles\eg13.exe.dir\build.make examples/CMakeFiles/eg13.exe.dir/build
-.PHONY : eg13.exe/fast
+bee.exe/fast:
+	$(MAKE) $(MAKESILENT) -f examples\CMakeFiles\bee.exe.dir\build.make examples/CMakeFiles/bee.exe.dir/build
+.PHONY : bee.exe/fast
 
 src/assets/Font.obj: src/assets/Font.cpp.obj
 .PHONY : src/assets/Font.obj
@@ -414,7 +414,7 @@ help:
 	@echo ... install/strip
 	@echo ... list_install_components
 	@echo ... rebuild_cache
-	@echo ... eg13.exe
+	@echo ... bee.exe
 	@echo ... slimeballGraphicsLib
 	@echo ... src/assets/Font.obj
 	@echo ... src/assets/Font.i

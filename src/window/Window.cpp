@@ -51,6 +51,7 @@ namespace Window{
             case WM_PAINT:{
                 Window::Painter thisPainter(hWnd,pThis);
                 thisPainter.switchHDC();
+                pThis->resizeBuffer();
                 if(!pThis->thisPaint){
                     WindowLogger.traceLog(Core::logger::LOG_WARNING,"The function \"thisPaint\" is not defined yet,Skipping.");
                 }
@@ -382,6 +383,27 @@ namespace Window{
                 break;
             }
             case WM_ERASEBKGND:{
+                return 1;
+                break;
+            }
+            case WM_NCCALCSIZE:{
+                if(wParam==TRUE&&GetProp(pThis->mHWnd,L"isTransparent")==(HANDLE)TRUE){
+                    return 0;
+                }
+                break;
+            }
+            case WM_NCHITTEST:{
+                LRESULT hit=DefWindowProc(hWnd,uMsg,wParam,lParam);
+                POINT hitPos={LOWORD(lParam),HIWORD(lParam)};
+                ScreenToClient(hWnd,&hitPos);
+                if(!pThis->thisHit)
+                return hit;
+                return pThis->thisHit(hWnd,uMsg,wParam,lParam,hitPos.x,hitPos.y,hit);
+            }
+            case WM_DPICHANGED:{
+                UINT newDpi=LOWORD(wParam);
+                RECT* prcNewWindow=(RECT*)lParam;
+                SetWindowPos(hWnd,NULL,prcNewWindow->left,prcNewWindow->top,prcNewWindow->right-prcNewWindow->left,prcNewWindow->bottom-prcNewWindow->top,SWP_NOZORDER|SWP_NOACTIVATE);
                 return 0;
             }
         }
@@ -394,11 +416,13 @@ namespace Window{
             wc.lpfnWndProc=thisWindowProc;
             wc.lpszClassName=CLASSNAME;
             wc.hInstance=hInstance;
+            wc.hbrBackground=NULL;
             RegisterClass(&wc);
         }
-        this->mHWnd=CreateWindowEx(this->mWindowStyle,className,this->mTitle.c_str(),this->mExtraWindowStyle,this->x,this->y,this->width,this->height,
+        this->mHWnd=CreateWindowEx(this->mExtraWindowStyle,className,this->mTitle.c_str(),this->mWindowStyle,this->x,this->y,this->width,this->height,
                                    this->mParentWindow==nullptr?NULL:this->mParentWindow->mHWnd,NULL,hInstance,this);
         if(this->mHWnd!=NULL){
+            SetWindowPos(this->mHWnd,NULL,this->x,this->y,0,0,SWP_FRAMECHANGED|SWP_NOMOVE|SWP_NOZORDER|SWP_NOSIZE);
             ShowWindow(this->mHWnd, SW_SHOW);
             UpdateWindow(this->mHWnd);
         }
@@ -510,10 +534,6 @@ namespace Window{
             WindowLogger.traceLog(Core::logger::LOG_ERROR,"The window doesn't have an HWnd yet,maybe it's not created properly?");
             return false;
         }
-        if(this->mBuffer.memHDC!=NULL){
-            WindowLogger.traceLog(Core::logger::LOG_INFO,"Initialized this buffer,or the HDC broke down");
-            return true;
-        }
         RECT rect;
         GetClientRect(this->mHWnd,&rect);
         int rectwidth=rect.right;
@@ -560,38 +580,59 @@ namespace Window{
         ReleaseDC(this->mHWnd,hdc);
     }
     void Handle::resizeBuffer(){
-        if(!this->mBuffer.memHDC||!this->mHWnd){
-            WindowLogger.traceLog(Core::logger::LOG_ERROR,"The buffer or the window is not initialized yet, your fault:P");
+        if(!this->mHWnd){
+            WindowLogger.traceLog(Core::logger::LOG_ERROR,"window not initialized");
             return;
         }
         RECT rect;
         GetClientRect(this->mHWnd,&rect);
-        int rectwidth=rect.right;
-        int rectheight=rect.bottom;
-        HDC newhdc=CreateCompatibleDC(this->mBuffer.memHDC);
-        if(!newhdc){
-            WindowLogger.traceLog(Core::logger::LOG_ERROR,"Failed to create compatible DC for buffer");
+        int newWidth=rect.right;
+        int newHeight=rect.bottom;
+        if(newWidth==this->mBuffer.width&&newHeight==this->mBuffer.height){
+            return;
+        }
+        HDC hdcScreen=GetDC(this->mHWnd);
+        if(!hdcScreen){
+            WindowLogger.traceLog(Core::logger::LOG_ERROR,"GetDC failed");
+            return;
+        }
+        HDC newMemDC=CreateCompatibleDC(hdcScreen);
+        HBITMAP newBitmap=CreateCompatibleBitmap(hdcScreen, newWidth, newHeight);
+        ReleaseDC(this->mHWnd,hdcScreen);
+        if(!newMemDC||!newBitmap){
+            if(newMemDC) DeleteDC(newMemDC);
+            if(newBitmap) DeleteObject(newBitmap);
+            WindowLogger.traceLog(Core::logger::LOG_ERROR,"failed to create DC/bitmap");
+            return;
+        }
+        SelectObject(newMemDC,newBitmap);
+        if(this->mBuffer.memHDC){
+            if(this->mBuffer.oldBmp){
+                SelectObject(this->mBuffer.memHDC,this->mBuffer.oldBmp);
+                DeleteObject(this->mBuffer.oldBmp);
+            }
             DeleteDC(this->mBuffer.memHDC);
-            return;
+            this->mBuffer.memHDC=NULL;
+            this->mBuffer.oldBmp=NULL;
         }
-        HBITMAP hbmp=CreateCompatibleBitmap(newhdc,rectwidth,rectheight);
-        if(!hbmp){
-            WindowLogger.traceLog(Core::logger::LOG_ERROR,"Failed to create compatible bitmap for buffer");
-            DeleteDC(newhdc);
-            return;
-        }
-        HBITMAP currentOldBmp=this->mBuffer.oldBmp;
-        SelectObject(newhdc,hbmp);
-        SelectObject(this->mBuffer.memHDC,currentOldBmp);
-        DeleteObject(currentOldBmp);
-        DeleteDC(this->mBuffer.memHDC);
-        this->mBuffer.memHDC=newhdc;
-        this->mBuffer.oldBmp=hbmp;
-        this->mBuffer.width=rectwidth;
-        this->mBuffer.height=rectheight;
+        this->mBuffer.memHDC=newMemDC;
+        this->mBuffer.oldBmp=newBitmap;
+        this->mBuffer.width=newWidth;
+        this->mBuffer.height=newHeight;
         clearBuffer();
     }
     Buffer& Handle::getBuffer(){
         return this->mBuffer;
+    }
+    void Handle::moveWindow(bool type,int argX,int argY){
+        if(type){
+            this->x+=argX;
+            this->y+=argY;
+        }
+        else{
+            this->x=argX;
+            this->y=argY;
+        }
+        MoveWindow(this->mHWnd,this->x,this->y,this->width,this->height,TRUE);
     }
 }
