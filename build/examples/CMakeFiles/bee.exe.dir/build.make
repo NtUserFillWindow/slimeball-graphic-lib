@@ -72,6 +72,7 @@ examples/CMakeFiles/bee.exe.dir/codegen:
 .PHONY : examples/CMakeFiles/bee.exe.dir/codegen
 
 examples/CMakeFiles/bee.exe.dir/bee.cpp.obj: examples/CMakeFiles/bee.exe.dir/flags.make
+examples/CMakeFiles/bee.exe.dir/bee.cpp.obj: examples/CMakeFiles/bee.exe.dir/includes_CXX.rsp
 examples/CMakeFiles/bee.exe.dir/bee.cpp.obj: F:/VSCodeWorkspace/slimeballGraphicLib/examples/bee.cpp
 examples/CMakeFiles/bee.exe.dir/bee.cpp.obj: examples/CMakeFiles/bee.exe.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=F:\VSCodeWorkspace\slimeballGraphicLib\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object examples/CMakeFiles/bee.exe.dir/bee.cpp.obj"
@@ -94,6 +95,7 @@ bee_exe_EXTERNAL_OBJECTS =
 
 bin/bee.exe.exe: examples/CMakeFiles/bee.exe.dir/bee.cpp.obj
 bin/bee.exe.exe: examples/CMakeFiles/bee.exe.dir/build.make
+bin/bee.exe.exe: lib/libZmultiplier.a
 bin/bee.exe.exe: examples/CMakeFiles/bee.exe.dir/linkLibs.rsp
 bin/bee.exe.exe: examples/CMakeFiles/bee.exe.dir/objects1.rsp
 bin/bee.exe.exe: examples/CMakeFiles/bee.exe.dir/link.txt

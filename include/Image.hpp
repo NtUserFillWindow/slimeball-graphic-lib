@@ -30,6 +30,8 @@ namespace Assets{
             bool syncData();
             HBITMAP getHBITMAP() const;
     };
+    HBITMAP saveScreenAsHBITMAP(HWND targetHWnd);
+    bool saveScreen(HWND targetHWnd,std::wstring fileName,std::wstring type);
 };
 
 #endif // IMAGE_HPP

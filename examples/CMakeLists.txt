@@ -1,2 +1,2 @@
-add_executable(bee.exe bee.cpp)
-target_link_libraries(bee.exe slimeballGraphicsLib)
+add_executable(test.exe test.cpp)
+target_link_libraries(test.exe Zmultiplier)

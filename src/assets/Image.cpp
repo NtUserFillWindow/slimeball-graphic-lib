@@ -2,6 +2,7 @@
 
 //Copyright (c) 2026 wzxTheSlimeball
 #include "Image.hpp"
+#include "Window.hpp"
 #include <iostream>
 
 namespace Assets{
@@ -130,4 +131,71 @@ HBITMAP Assets::Image::getHBITMAP()const{
     thisBmp->UnlockBits(&bitmapData);
     thisHBITMAP=hAlphaBitmap;
     return hAlphaBitmap;
+}
+HBITMAP Assets::saveScreenAsHBITMAP(HWND targetHWnd){
+    if(!targetHWnd) return NULL;
+    RECT rc;
+    GetWindowRect(targetHWnd,&rc);
+    int width=rc.right-rc.left;
+    int height=rc.bottom-rc.top;
+    HDC hdcScreen=GetDC(NULL);
+    HDC hdcMem=CreateCompatibleDC(hdcScreen);
+    HBITMAP hBitmap=CreateCompatibleBitmap(hdcScreen,width,height);
+    HBITMAP hOld=(HBITMAP)SelectObject(hdcMem,hBitmap);
+    BOOL bRet=BitBlt(hdcMem,0,0,width,height,hdcScreen,rc.left,rc.top,SRCCOPY);
+    SelectObject(hdcMem,hOld);
+    DeleteDC(hdcMem);
+    ReleaseDC(NULL,hdcScreen);
+    return bRet?hBitmap:NULL;
+}
+static int GetEncoderClsid(const WCHAR* mimeType, CLSID* pClsid)
+{
+    UINT num=0;
+    UINT size=0;
+    Gdiplus::GetImageEncodersSize(&num, &size);
+    if(size == 0) return -1;
+    Gdiplus::ImageCodecInfo* pImageCodecInfo = (Gdiplus::ImageCodecInfo*)(malloc(size));
+    if(pImageCodecInfo == NULL) return -1;
+    Gdiplus::GetImageEncoders(num,size,pImageCodecInfo);
+    for(UINT j=0;j<num;++j)
+    {
+        if(wcscmp(pImageCodecInfo[j].MimeType,mimeType)==0)
+        {
+            *pClsid=pImageCodecInfo[j].Clsid;
+            free(pImageCodecInfo);
+            return static_cast<int>(j);
+        }
+    }
+    free(pImageCodecInfo);
+    return -1;
+}
+
+bool Assets::saveScreen(HWND targetHWnd,std::wstring fileName,std::wstring type){
+    if(!targetHWnd) return false;
+    HBITMAP hBmp=saveScreenAsHBITMAP(targetHWnd);
+    if(!hBmp) return false;
+    Gdiplus::Bitmap *bmp=Gdiplus::Bitmap::FromHBITMAP(hBmp, NULL);
+    if(!bmp){
+        DeleteObject(hBmp);
+        return false;
+    }
+    std::wstring t=type;
+    for(auto &c:t) c=towlower(c);
+    if(t.size()>0 && t[0]==L'.') t=t.substr(1);
+    const WCHAR* mime=L"image/png";
+    if(t==L"png") mime=L"image/png";
+    else if(t==L"jpg"||t==L"jpeg") mime=L"image/jpeg";
+    else if(t==L"bmp") mime=L"image/bmp";
+    else if(t==L"gif") mime=L"image/gif";
+    else if(t==L"tiff"||t==L"tif") mime=L"image/tiff";
+    CLSID clsid;
+    if(GetEncoderClsid(mime,&clsid)<0){
+        delete bmp;
+        DeleteObject(hBmp);
+        return false;
+    }
+    Gdiplus::Status status=bmp->Save(fileName.c_str(),&clsid,NULL);
+    delete bmp;
+    DeleteObject(hBmp);
+    return status==Gdiplus::Ok;
 }

@@ -176,13 +176,13 @@ namespace Window{
             std::wstring mTitle;
             Handle *mParentWindow;
             long long mID;
-            static std::unordered_map<HWND,Handle*> mHWndMap;
             bool isActive=true;
             Buffer mBuffer;
             std::chrono::time_point<std::chrono::high_resolution_clock> lbuttonDownTime;
             std::chrono::time_point<std::chrono::high_resolution_clock> rbuttonDownTime;
             bool isCaptured=false;
         public:
+            static std::unordered_map<HWND,Handle*> mHWndMap;
             Core::Canvas thisCanvas;
             std::function<long long(HWND,UINT,WPARAM,LPARAM)> thisDestroy;
             std::function<long long(HWND,UINT,WPARAM,LPARAM)> thisOnClose;//return true to close,false to not close

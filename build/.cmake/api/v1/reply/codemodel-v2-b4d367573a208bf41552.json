@@ -67,9 +67,9 @@
 				},
 				{
 					"directoryIndex" : 1,
-					"id" : "bee.exe::@714eac15f71a94114fdf",
-					"jsonFile" : "target-bee.exe-Debug-caa641ba60ba40c0330c.json",
-					"name" : "bee.exe",
+					"id" : "test.exe::@714eac15f71a94114fdf",
+					"jsonFile" : "target-test.exe-Debug-5a922872841f91150676.json",
+					"name" : "test.exe",
 					"projectIndex" : 0
 				}
 			]

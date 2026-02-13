@@ -174,17 +174,17 @@ Zmultiplier/fast:
 .PHONY : Zmultiplier/fast
 
 #=============================================================================
-# Target rules for targets named bee.exe
+# Target rules for targets named test.exe
 
 # Build rule for target.
-bee.exe: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 bee.exe
-.PHONY : bee.exe
+test.exe: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 test.exe
+.PHONY : test.exe
 
 # fast build rule for target.
-bee.exe/fast:
-	$(MAKE) $(MAKESILENT) -f examples\CMakeFiles\bee.exe.dir\build.make examples/CMakeFiles/bee.exe.dir/build
-.PHONY : bee.exe/fast
+test.exe/fast:
+	$(MAKE) $(MAKESILENT) -f examples\CMakeFiles\test.exe.dir\build.make examples/CMakeFiles/test.exe.dir/build
+.PHONY : test.exe/fast
 
 src/assets/Font.obj: src/assets/Font.cpp.obj
 .PHONY : src/assets/Font.obj
@@ -415,7 +415,7 @@ help:
 	@echo ... list_install_components
 	@echo ... rebuild_cache
 	@echo ... Zmultiplier
-	@echo ... bee.exe
+	@echo ... test.exe
 	@echo ... src/assets/Font.obj
 	@echo ... src/assets/Font.i
 	@echo ... src/assets/Font.s

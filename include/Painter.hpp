@@ -18,6 +18,7 @@
 
 namespace Window{
     struct Handle;
+    Handle *queryWindow(HWND);
     struct Buffer{
         HDC memHDC;
         HBITMAP hBmp;
@@ -51,6 +52,9 @@ namespace Window{
         Point(const Point& other)=default;
         bool operator==(Point& other);
     };
+    Window::Buffer* queryBufferFromHandle(Window::Handle* target){
+        return &target->getBuffer();
+    }
     struct Painter{
         private:
             HWND thisBindHWnd;
@@ -64,13 +68,12 @@ namespace Window{
             int radius;
         public:
             Painter()=delete;
-            Painter(HWND hWnd,Handle *handle):thisBindHWnd(hWnd),thisHDC(BeginPaint(hWnd,&ps)){
+            Painter(HWND hWnd,Handle *handle):thisBindHWnd(hWnd),thisHDC(queryBufferFromHandle(queryWindow(hWnd))->memHDC){
                 thisBindHandle=handle;
-                nowHDC=WINDOW;
+                nowHDC=BUFFER;
                 radius=0;
             };
             ~Painter(){
-                EndPaint(thisBindHWnd,&ps);
             }
             Painter(const Painter &)=delete;
             Painter &operator=(const Painter &)=delete;

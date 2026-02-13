@@ -161,42 +161,42 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-examples/CMakeFiles/bee.exe.dir/rule:
-	cd /d F:\VSCodeWorkspace\slimeballGraphicLib\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 examples/CMakeFiles/bee.exe.dir/rule
-.PHONY : examples/CMakeFiles/bee.exe.dir/rule
+examples/CMakeFiles/test.exe.dir/rule:
+	cd /d F:\VSCodeWorkspace\slimeballGraphicLib\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 examples/CMakeFiles/test.exe.dir/rule
+.PHONY : examples/CMakeFiles/test.exe.dir/rule
 
 # Convenience name for target.
-bee.exe: examples/CMakeFiles/bee.exe.dir/rule
-.PHONY : bee.exe
+test.exe: examples/CMakeFiles/test.exe.dir/rule
+.PHONY : test.exe
 
 # fast build rule for target.
-bee.exe/fast:
-	cd /d F:\VSCodeWorkspace\slimeballGraphicLib\build && $(MAKE) $(MAKESILENT) -f examples\CMakeFiles\bee.exe.dir\build.make examples/CMakeFiles/bee.exe.dir/build
-.PHONY : bee.exe/fast
+test.exe/fast:
+	cd /d F:\VSCodeWorkspace\slimeballGraphicLib\build && $(MAKE) $(MAKESILENT) -f examples\CMakeFiles\test.exe.dir\build.make examples/CMakeFiles/test.exe.dir/build
+.PHONY : test.exe/fast
 
-bee.obj: bee.cpp.obj
-.PHONY : bee.obj
+test.obj: test.cpp.obj
+.PHONY : test.obj
 
 # target to build an object file
-bee.cpp.obj:
-	cd /d F:\VSCodeWorkspace\slimeballGraphicLib\build && $(MAKE) $(MAKESILENT) -f examples\CMakeFiles\bee.exe.dir\build.make examples/CMakeFiles/bee.exe.dir/bee.cpp.obj
-.PHONY : bee.cpp.obj
+test.cpp.obj:
+	cd /d F:\VSCodeWorkspace\slimeballGraphicLib\build && $(MAKE) $(MAKESILENT) -f examples\CMakeFiles\test.exe.dir\build.make examples/CMakeFiles/test.exe.dir/test.cpp.obj
+.PHONY : test.cpp.obj
 
-bee.i: bee.cpp.i
-.PHONY : bee.i
+test.i: test.cpp.i
+.PHONY : test.i
 
 # target to preprocess a source file
-bee.cpp.i:
-	cd /d F:\VSCodeWorkspace\slimeballGraphicLib\build && $(MAKE) $(MAKESILENT) -f examples\CMakeFiles\bee.exe.dir\build.make examples/CMakeFiles/bee.exe.dir/bee.cpp.i
-.PHONY : bee.cpp.i
+test.cpp.i:
+	cd /d F:\VSCodeWorkspace\slimeballGraphicLib\build && $(MAKE) $(MAKESILENT) -f examples\CMakeFiles\test.exe.dir\build.make examples/CMakeFiles/test.exe.dir/test.cpp.i
+.PHONY : test.cpp.i
 
-bee.s: bee.cpp.s
-.PHONY : bee.s
+test.s: test.cpp.s
+.PHONY : test.s
 
 # target to generate assembly for a file
-bee.cpp.s:
-	cd /d F:\VSCodeWorkspace\slimeballGraphicLib\build && $(MAKE) $(MAKESILENT) -f examples\CMakeFiles\bee.exe.dir\build.make examples/CMakeFiles/bee.exe.dir/bee.cpp.s
-.PHONY : bee.cpp.s
+test.cpp.s:
+	cd /d F:\VSCodeWorkspace\slimeballGraphicLib\build && $(MAKE) $(MAKESILENT) -f examples\CMakeFiles\test.exe.dir\build.make examples/CMakeFiles/test.exe.dir/test.cpp.s
+.PHONY : test.cpp.s
 
 # Help Target
 help:
@@ -210,10 +210,10 @@ help:
 	@echo ... install/strip
 	@echo ... list_install_components
 	@echo ... rebuild_cache
-	@echo ... bee.exe
-	@echo ... bee.obj
-	@echo ... bee.i
-	@echo ... bee.s
+	@echo ... test.exe
+	@echo ... test.obj
+	@echo ... test.i
+	@echo ... test.s
 .PHONY : help
 
 

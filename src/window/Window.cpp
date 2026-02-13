@@ -49,9 +49,8 @@ namespace Window{
                 break;
             }
             case WM_PAINT:{
-                Window::Painter thisPainter(hWnd,pThis);
-                thisPainter.switchHDC();
                 pThis->resizeBuffer();
+                Window::Painter thisPainter(hWnd,pThis);
                 if(!pThis->thisPaint){
                     WindowLogger.traceLog(Core::logger::LOG_WARNING,"The function \"thisPaint\" is not defined yet,Skipping.");
                 }
@@ -383,7 +382,7 @@ namespace Window{
                 break;
             }
             case WM_ERASEBKGND:{
-                return 1;
+                return 0;
                 break;
             }
             case WM_NCCALCSIZE:{
@@ -509,6 +508,12 @@ namespace Window{
         globalHandleManager.pop(this->mID);
     }
     Handle* Handle::queryWindow(HWND hWnd){
+        if(Handle::mHWndMap.find(hWnd)!=Handle::mHWndMap.end()){
+            return Handle::mHWndMap[hWnd];
+        }
+        return nullptr;
+    }
+    Handle* queryWindow(HWND hWnd){
         if(Handle::mHWndMap.find(hWnd)!=Handle::mHWndMap.end()){
             return Handle::mHWndMap[hWnd];
         }
