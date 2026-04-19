@@ -127,7 +127,6 @@ examples/CMakeFiles/eg13_text.exe.dir/eg13_text.cpp.obj: F:/VSCodeWorkspace/Z-Mu
   F:/msys64/ucrt64/include/c++/15.2.0/cctype \
   F:/msys64/ucrt64/include/c++/15.2.0/cerrno \
   F:/msys64/ucrt64/include/c++/15.2.0/chrono \
-  F:/msys64/ucrt64/include/c++/15.2.0/climits \
   F:/msys64/ucrt64/include/c++/15.2.0/clocale \
   F:/msys64/ucrt64/include/c++/15.2.0/cmath \
   F:/msys64/ucrt64/include/c++/15.2.0/compare \
@@ -892,8 +891,6 @@ F:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/avx512fp16vlintrin.h:
 F:/msys64/ucrt64/include/c++/15.2.0/bits/stl_pair.h:
 
 F:/msys64/ucrt64/include/c++/15.2.0/ext/concurrence.h:
-
-F:/msys64/ucrt64/include/c++/15.2.0/climits:
 
 F:/msys64/ucrt64/include/c++/15.2.0/bits/stl_raw_storage_iter.h:
 

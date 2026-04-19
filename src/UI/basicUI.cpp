@@ -36,8 +36,74 @@ bool UI::Button::isOnHover(int x,int y){
            ly+this->height>y;
 }
 bool UI::Checkbox::show(Window::Painter& p){
+    Window::Point center=Window::calculateDrawPosition(locateMode,locator,size,size);
+    center.x+=size/2;
+    center.y+=size/2;
+    if(this->borderRadius>this->size/2){
+        this->borderRadius=this->size/2;
+    }
+    int half=this->size/2;
+    int innerHalf=half-this->borderRadius;
+    int cx=center.x;
+    int cy=center.y;
+    if(innerHalf>0){
+        std::vector<Window::Point> rect={
+            {cx-innerHalf,cy-innerHalf},
+            {cx+innerHalf,cy-innerHalf},
+            {cx+innerHalf,cy+innerHalf},
+            {cx-innerHalf,cy+innerHalf}
+        };
+        p.solidPolygon(rect,this->body);
+    }
+    if(this->borderRadius>0){
+        std::vector<Window::Point> topRect={
+            {cx-innerHalf,cy-half},
+            {cx+innerHalf,cy-half},
+            {cx+innerHalf,cy-innerHalf},
+            {cx-innerHalf,cy-innerHalf}
+        };
+        p.solidPolygon(topRect,this->body);
+        std::vector<Window::Point> bottomRect={
+            {cx-innerHalf,cy+innerHalf},
+            {cx+innerHalf,cy+innerHalf},
+            {cx+innerHalf,cy+half},
+            {cx-innerHalf,cy+half}
+        };
+        p.solidPolygon(bottomRect,this->body);
+        std::vector<Window::Point> leftRect={
+            {cx-half,cy-innerHalf},
+            {cx-innerHalf,cy-innerHalf},
+            {cx-innerHalf,cy+innerHalf},
+            {cx-half,cy+innerHalf}
+        };
+        p.solidPolygon(leftRect,this->body);
+        std::vector<Window::Point> rightRect={
+            {cx+innerHalf,cy-innerHalf},
+            {cx+half,cy-innerHalf},
+            {cx+half,cy+innerHalf},
+            {cx+innerHalf,cy+innerHalf}
+        };
+        p.solidPolygon(rightRect,this->body);
+    }
+    if(this->borderRadius>0){
+        p.solidCircle({cx-innerHalf,cy-innerHalf},this->borderRadius,this->body);
+        p.solidCircle({cx+innerHalf,cy-innerHalf},this->borderRadius,this->body);
+        p.solidCircle({cx-innerHalf,cy+innerHalf},this->borderRadius,this->body);
+        p.solidCircle({cx+innerHalf,cy+innerHalf},this->borderRadius,this->body);
+    }
+    if(this->ticked){
+        p.setSize(2);
+        p.line({cx-innerHalf,cy},{cx,cy+innerHalf},this->tick);
+        p.line({cx,cy+innerHalf},{cx+innerHalf,cy-innerHalf},this->tick);
+        p.setSize(0);
+    }
     return true;
 }
 bool UI::Checkbox::switchStatus(int x,int y){
+    auto [cx,cy]=Window::calculateDrawPosition(locateMode,locator,size,size);
+    if(x>cx&&x<cx+size&&y>cy&&y<cy+size){
+        this->ticked=!this->ticked;
+        return true;
+    }
     return false;
 }

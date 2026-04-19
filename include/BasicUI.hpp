@@ -49,6 +49,11 @@ namespace UI{
         bool ticked;
         bool show(Window::Painter& p);
         bool switchStatus(int x,int y);
+        ~Checkbox()=default;
+        Checkbox()=delete;
+        Checkbox(char locateMode,Window::Point locator,int size,int radius,Core::Color body,Core::Color tick,
+                 bool defaultStatus):locateMode(locateMode),locator(locator),size(size),borderRadius(radius),
+                 body(body),tick(tick),ticked(defaultStatus){};
     };
 };
 
