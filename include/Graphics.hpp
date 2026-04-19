@@ -13,6 +13,7 @@
 #include "Window.hpp"
 #include "EntryPoint.hpp"
 #include "Painter.hpp"
+#include "Clock.hpp"
 
 #define SCREEN_MAXX GetSystemMetrics(SM_CXSCREEN)
 #define SCREEN_MAXY GetSystemMetrics(SM_CYSCREEN)
@@ -71,4 +72,5 @@ namespace Graphics{
     using Window::globalHandleManager;
     using Window::Painter;
     using Window::Point;
+    using Core::Clock;
 }

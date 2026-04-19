@@ -3,7 +3,9 @@
 
 examples/CMakeFiles/eg13_text.exe.dir/eg13_text.cpp.obj
  F:/VSCodeWorkspace/Z-MultiplierLib/examples/eg13_text.cpp
+ F:/VSCodeWorkspace/Z-MultiplierLib/include/BasicUI.hpp
  F:/VSCodeWorkspace/Z-MultiplierLib/include/Canvas.hpp
+ F:/VSCodeWorkspace/Z-MultiplierLib/include/Clock.hpp
  F:/VSCodeWorkspace/Z-MultiplierLib/include/Color.hpp
  F:/VSCodeWorkspace/Z-MultiplierLib/include/EntryPoint.hpp
  F:/VSCodeWorkspace/Z-MultiplierLib/include/Font.hpp
@@ -70,6 +72,7 @@ examples/CMakeFiles/eg13_text.exe.dir/eg13_text.cpp.obj
  F:/msys64/ucrt64/include/c++/15.2.0/bits/localefwd.h
  F:/msys64/ucrt64/include/c++/15.2.0/bits/memory_resource.h
  F:/msys64/ucrt64/include/c++/15.2.0/bits/memoryfwd.h
+ F:/msys64/ucrt64/include/c++/15.2.0/bits/monostate.h
  F:/msys64/ucrt64/include/c++/15.2.0/bits/move.h
  F:/msys64/ucrt64/include/c++/15.2.0/bits/nested_exception.h
  F:/msys64/ucrt64/include/c++/15.2.0/bits/new_allocator.h
@@ -93,6 +96,7 @@ examples/CMakeFiles/eg13_text.exe.dir/eg13_text.cpp.obj
  F:/msys64/ucrt64/include/c++/15.2.0/bits/std_abs.h
  F:/msys64/ucrt64/include/c++/15.2.0/bits/std_function.h
  F:/msys64/ucrt64/include/c++/15.2.0/bits/std_mutex.h
+ F:/msys64/ucrt64/include/c++/15.2.0/bits/std_thread.h
  F:/msys64/ucrt64/include/c++/15.2.0/bits/stl_algobase.h
  F:/msys64/ucrt64/include/c++/15.2.0/bits/stl_bvector.h
  F:/msys64/ucrt64/include/c++/15.2.0/bits/stl_construct.h
@@ -103,6 +107,7 @@ examples/CMakeFiles/eg13_text.exe.dir/eg13_text.cpp.obj
  F:/msys64/ucrt64/include/c++/15.2.0/bits/stl_numeric.h
  F:/msys64/ucrt64/include/c++/15.2.0/bits/stl_pair.h
  F:/msys64/ucrt64/include/c++/15.2.0/bits/stl_raw_storage_iter.h
+ F:/msys64/ucrt64/include/c++/15.2.0/bits/stl_relops.h
  F:/msys64/ucrt64/include/c++/15.2.0/bits/stl_tempbuf.h
  F:/msys64/ucrt64/include/c++/15.2.0/bits/stl_uninitialized.h
  F:/msys64/ucrt64/include/c++/15.2.0/bits/stl_vector.h
@@ -110,6 +115,7 @@ examples/CMakeFiles/eg13_text.exe.dir/eg13_text.cpp.obj
  F:/msys64/ucrt64/include/c++/15.2.0/bits/streambuf_iterator.h
  F:/msys64/ucrt64/include/c++/15.2.0/bits/string_view.tcc
  F:/msys64/ucrt64/include/c++/15.2.0/bits/stringfwd.h
+ F:/msys64/ucrt64/include/c++/15.2.0/bits/this_thread_sleep.h
  F:/msys64/ucrt64/include/c++/15.2.0/bits/uniform_int_dist.h
  F:/msys64/ucrt64/include/c++/15.2.0/bits/unique_lock.h
  F:/msys64/ucrt64/include/c++/15.2.0/bits/unique_ptr.h
@@ -122,6 +128,7 @@ examples/CMakeFiles/eg13_text.exe.dir/eg13_text.cpp.obj
  F:/msys64/ucrt64/include/c++/15.2.0/cctype
  F:/msys64/ucrt64/include/c++/15.2.0/cerrno
  F:/msys64/ucrt64/include/c++/15.2.0/chrono
+ F:/msys64/ucrt64/include/c++/15.2.0/climits
  F:/msys64/ucrt64/include/c++/15.2.0/clocale
  F:/msys64/ucrt64/include/c++/15.2.0/cmath
  F:/msys64/ucrt64/include/c++/15.2.0/compare
@@ -155,6 +162,7 @@ examples/CMakeFiles/eg13_text.exe.dir/eg13_text.cpp.obj
  F:/msys64/ucrt64/include/c++/15.2.0/mutex
  F:/msys64/ucrt64/include/c++/15.2.0/new
  F:/msys64/ucrt64/include/c++/15.2.0/numeric
+ F:/msys64/ucrt64/include/c++/15.2.0/optional
  F:/msys64/ucrt64/include/c++/15.2.0/ostream
  F:/msys64/ucrt64/include/c++/15.2.0/pstl/execution_defs.h
  F:/msys64/ucrt64/include/c++/15.2.0/pstl/glue_memory_defs.h
@@ -168,6 +176,7 @@ examples/CMakeFiles/eg13_text.exe.dir/eg13_text.cpp.obj
  F:/msys64/ucrt64/include/c++/15.2.0/string
  F:/msys64/ucrt64/include/c++/15.2.0/string_view
  F:/msys64/ucrt64/include/c++/15.2.0/system_error
+ F:/msys64/ucrt64/include/c++/15.2.0/thread
  F:/msys64/ucrt64/include/c++/15.2.0/tr1/bessel_function.tcc
  F:/msys64/ucrt64/include/c++/15.2.0/tr1/beta_function.tcc
  F:/msys64/ucrt64/include/c++/15.2.0/tr1/ell_integral.tcc
@@ -184,6 +193,8 @@ examples/CMakeFiles/eg13_text.exe.dir/eg13_text.cpp.obj
  F:/msys64/ucrt64/include/c++/15.2.0/type_traits
  F:/msys64/ucrt64/include/c++/15.2.0/typeinfo
  F:/msys64/ucrt64/include/c++/15.2.0/unordered_map
+ F:/msys64/ucrt64/include/c++/15.2.0/utility
+ F:/msys64/ucrt64/include/c++/15.2.0/variant
  F:/msys64/ucrt64/include/c++/15.2.0/vector
  F:/msys64/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32/bits/atomic_word.h
  F:/msys64/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++allocator.h

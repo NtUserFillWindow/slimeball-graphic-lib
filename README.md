@@ -21,36 +21,43 @@ This library is a **CPU-based 2D ~~graphics~~ game library** for **Windows**, bu
 - Comprehensive functions: supports commonly used graphics, image loading and font loading, comprehensive window callback support, all can be customized, see the example below for details
 - Modular: easy to find declarations and implementations
 
-下面是一个画椭圆的样例代码：
-Here is an example code of drawing an ellipse:
+下面是一个示例按钮的样例代码：
+Here is an example code of an example button:
 ```cpp
-#include "Graphics.hpp"
-using namespace Graphics;
-long long mainWindowPaint(HWND hWnd,UINT uMsg,WPARAM wParam,LPARAM lParam,Painter& painter){
-    painter.drawBackground(Color((unsigned char)255,255,255,255));
-    painter.solidEllipse(Point(100,100),50,25,Color((unsigned char)0,0,0,255));
-    hWnd;uMsg;wParam;lParam;//make the compiler shut up,I hate -Werror
+#define IGNORE_WARNING_LOG //Ignore all the warning logs
+#include "Graphics.hpp"//main file
+#include "BasicUI.hpp"//UI file
+using namespace Graphics;//Just for convenience
+int main(){
+    auto mainWindow=createInitWindow(0,0,207,230,L"Window");//init 1 window.
+    //+7 +30 if for the non-client area
+    UI::Button btn(LOCATEMODE_CENTER,{100,100},50,30,Color((unsigned char)200,200,200),Color((unsigned char)0,0,0));
+    //init 1 button
+    btn.react.push_back([=](){std::cerr<<"Btn clicked!"<<std::endl;return;});//onclick
+    mainWindow.first->thisPaint=[&](HWND,UINT,WPARAM,LPARAM,Painter& p)->long long {
+        p.drawBackground(Color((unsigned char)255,255,255));
+        btn.show(p);
+        return 0;
+    };//drawing function
+    mainWindow.first->thisInstantLeftClick=[&](HWND,UINT,WPARAM,LPARAM,int x,int y)->long long {
+        if(btn.isOnHover(x,y)){
+            btn.react.back()();
+        }
+        return 0;
+    };//clicking function
+    Clock c([&](){
+        return;
+    });//clock
+    while(c){
+        c.run();
+    }
     return 0;
 }
-int main(){
-    auto mainWindow=createInitWindow(400,400,207,230,L"Window");//x,y,width,height,title
-    //notice that the width and the height includes the non-client area,
-    //after some tests, I found +7,+30 is good, but it may change as the environment changes
-    //The type that createInitWindow() return is std::pair<std::shared_ptr<Handle>,HWND>
-    mainWindow.first->thisPaint=mainWindowPaint;
-    MSG msg={};
-    while(msg.message!=WM_QUIT){
-        while(PeekMessage(&msg,NULL,0,0,PM_REMOVE)){
-            TranslateMessage(&msg);
-            DispatchMessage(&msg);
-        }
-        Sleep(16);//60FPS
-        globalHandleManager.updateAll();//literally
-    }
-}
 ```
+(Actually the UI can use now is only the button.I haven't code other ones)
 
 本项目采用[MIT许可](/COPYING)
+
 This project is licensed under the [MIT license](/COPYING).
 
 #### 安装与配置

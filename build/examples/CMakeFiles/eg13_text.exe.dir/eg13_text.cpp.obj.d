@@ -469,4 +469,15 @@ examples/CMakeFiles/eg13_text.exe.dir/eg13_text.cpp.obj: \
  F:/msys64/ucrt64/include/gdiplus/gdipluslinecaps.h \
  F:/msys64/ucrt64/include/gdiplus/gdiplusimpl.h \
  F:/VSCodeWorkspace/Z-MultiplierLib/include/Font.hpp \
- F:/VSCodeWorkspace/Z-MultiplierLib/include/EntryPoint.hpp
+ F:/VSCodeWorkspace/Z-MultiplierLib/include/EntryPoint.hpp \
+ F:/VSCodeWorkspace/Z-MultiplierLib/include/Clock.hpp \
+ F:/msys64/ucrt64/include/c++/15.2.0/thread \
+ F:/msys64/ucrt64/include/c++/15.2.0/bits/std_thread.h \
+ F:/msys64/ucrt64/include/c++/15.2.0/bits/this_thread_sleep.h \
+ F:/VSCodeWorkspace/Z-MultiplierLib/include/BasicUI.hpp \
+ F:/msys64/ucrt64/include/c++/15.2.0/optional \
+ F:/msys64/ucrt64/include/c++/15.2.0/variant \
+ F:/msys64/ucrt64/include/c++/15.2.0/bits/monostate.h \
+ F:/msys64/ucrt64/include/c++/15.2.0/utility \
+ F:/msys64/ucrt64/include/c++/15.2.0/bits/stl_relops.h \
+ F:/msys64/ucrt64/include/c++/15.2.0/climits

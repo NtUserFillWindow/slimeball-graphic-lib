@@ -52,6 +52,7 @@ namespace Window{
         Point(const Point& other)=default;
         bool operator==(Point& other);
     };
+    Point calculateDrawPosition(char,Point,unsigned long long,unsigned long long);
     struct Painter{
         private:
             HWND thisBindHWnd;

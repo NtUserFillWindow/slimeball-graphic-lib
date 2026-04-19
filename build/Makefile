@@ -186,6 +186,30 @@ eg13_text.exe/fast:
 	$(MAKE) $(MAKESILENT) -f examples\CMakeFiles\eg13_text.exe.dir\build.make examples/CMakeFiles/eg13_text.exe.dir/build
 .PHONY : eg13_text.exe/fast
 
+src/UI/basicUI.obj: src/UI/basicUI.cpp.obj
+.PHONY : src/UI/basicUI.obj
+
+# target to build an object file
+src/UI/basicUI.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZmultiplierLib.dir\build.make CMakeFiles/ZmultiplierLib.dir/src/UI/basicUI.cpp.obj
+.PHONY : src/UI/basicUI.cpp.obj
+
+src/UI/basicUI.i: src/UI/basicUI.cpp.i
+.PHONY : src/UI/basicUI.i
+
+# target to preprocess a source file
+src/UI/basicUI.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZmultiplierLib.dir\build.make CMakeFiles/ZmultiplierLib.dir/src/UI/basicUI.cpp.i
+.PHONY : src/UI/basicUI.cpp.i
+
+src/UI/basicUI.s: src/UI/basicUI.cpp.s
+.PHONY : src/UI/basicUI.s
+
+# target to generate assembly for a file
+src/UI/basicUI.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZmultiplierLib.dir\build.make CMakeFiles/ZmultiplierLib.dir/src/UI/basicUI.cpp.s
+.PHONY : src/UI/basicUI.cpp.s
+
 src/assets/Font.obj: src/assets/Font.cpp.obj
 .PHONY : src/assets/Font.obj
 
@@ -305,6 +329,30 @@ src/core/Canvas.s: src/core/Canvas.cpp.s
 src/core/Canvas.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZmultiplierLib.dir\build.make CMakeFiles/ZmultiplierLib.dir/src/core/Canvas.cpp.s
 .PHONY : src/core/Canvas.cpp.s
+
+src/core/Clock.obj: src/core/Clock.cpp.obj
+.PHONY : src/core/Clock.obj
+
+# target to build an object file
+src/core/Clock.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZmultiplierLib.dir\build.make CMakeFiles/ZmultiplierLib.dir/src/core/Clock.cpp.obj
+.PHONY : src/core/Clock.cpp.obj
+
+src/core/Clock.i: src/core/Clock.cpp.i
+.PHONY : src/core/Clock.i
+
+# target to preprocess a source file
+src/core/Clock.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZmultiplierLib.dir\build.make CMakeFiles/ZmultiplierLib.dir/src/core/Clock.cpp.i
+.PHONY : src/core/Clock.cpp.i
+
+src/core/Clock.s: src/core/Clock.cpp.s
+.PHONY : src/core/Clock.s
+
+# target to generate assembly for a file
+src/core/Clock.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZmultiplierLib.dir\build.make CMakeFiles/ZmultiplierLib.dir/src/core/Clock.cpp.s
+.PHONY : src/core/Clock.cpp.s
 
 src/core/Color.obj: src/core/Color.cpp.obj
 .PHONY : src/core/Color.obj
@@ -512,6 +560,9 @@ help:
 	@echo ... rebuild_cache
 	@echo ... ZmultiplierLib
 	@echo ... eg13_text.exe
+	@echo ... src/UI/basicUI.obj
+	@echo ... src/UI/basicUI.i
+	@echo ... src/UI/basicUI.s
 	@echo ... src/assets/Font.obj
 	@echo ... src/assets/Font.i
 	@echo ... src/assets/Font.s
@@ -527,6 +578,9 @@ help:
 	@echo ... src/core/Canvas.obj
 	@echo ... src/core/Canvas.i
 	@echo ... src/core/Canvas.s
+	@echo ... src/core/Clock.obj
+	@echo ... src/core/Clock.i
+	@echo ... src/core/Clock.s
 	@echo ... src/core/Color.obj
 	@echo ... src/core/Color.i
 	@echo ... src/core/Color.s

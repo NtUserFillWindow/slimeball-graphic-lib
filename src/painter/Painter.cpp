@@ -407,7 +407,7 @@ bool Window::Painter::solidCircle(const Point& origin,int r,const Core::Color& c
     }
     return hollowCircle(origin,r,color);
 }
-static Window::Point calculateDrawPosition(char locateMode,Window::Point locator,unsigned long long width,unsigned long long height){
+Window::Point Window::calculateDrawPosition(char locateMode,Window::Point locator,unsigned long long width,unsigned long long height){
     Window::Point result={locator.x,locator.y};
     switch(locateMode){
         case LOCATEMODE_CENTER:{

@@ -29,7 +29,35 @@ namespace Core{
             };
             logger():out(&std::clog){};
             logger(ostream &output):out(&output){};
-            void traceLog(enum LogLevel level,string message);
+            void traceLog(enum LogLevel level,string message){
+                std::lock_guard<std::mutex> lock(safeLock);
+                auto now=std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
+                switch(level){
+                    case LOG_DEBUG:
+                        (*out)<<std::ctime(&now)<<"[DEBUG]: "<<message<<std::endl;
+                        break;
+                    case LOG_INFO:
+                        (*out)<<std::ctime(&now)<<"[INFO]: "<<message<<std::endl;
+                        break;
+                    case LOG_WARNING:
+                        #ifndef IGNORE_WARNING_LOG
+                        (*out)<<std::ctime(&now)<<"[WARNING]: "<<message<<std::endl;
+                        #endif
+                        break;
+                    case LOG_ERROR:
+                        (*out)<<std::ctime(&now)<<"[ERROR]: "<<message<<std::endl;
+                        break;
+                    case LOG_NOTE:
+                        (*out)<<"[NOTE]: "<<message<<std::endl;
+                        break;
+                    case LOG_FATAL:
+                        (*out)<<"[FATAL]: "<<message<<std::endl;
+                        break;
+                    default:
+                        (*out)<<"[UNKNOWN]: "<<message<<std::endl;
+                        break;
+                }
+            }
             template<typename T>
             void varLog(enum LogLevel level,string varName,T varValue){
                 std::lock_guard<mutex> lock(safeLock);
@@ -42,7 +70,9 @@ namespace Core{
                         (*out)<<std::ctime(&now)<<"[INFO]: "<<varName<<" = "<<varValue<<std::endl;
                         break;
                     case LOG_WARNING:
+                        #ifndef IGNORE_WARNING_LOG
                         (*out)<<std::ctime(&now)<<"[WARNING]: "<<varName<<" = "<<varValue<<std::endl;
+                        #endif
                         break;
                     case LOG_ERROR:
                         (*out)<<std::ctime(&now)<<"[ERROR]: "<<varName<<" = "<<varValue<<std::endl;
@@ -73,7 +103,9 @@ namespace Core{
                         (*out)<<std::ctime(&now)<<"[INFO]: "<<string(buf.get(),buf.get()+size-1)<<std::endl;
                         break;
                     case LOG_WARNING:
+                        #ifndef IGNORE_WARNING_LOG
                         (*out)<<std::ctime(&now)<<"[WARNING]: "<<string(buf.get(),buf.get()+size-1)<<std::endl;
+                        #endif
                         break;
                     case LOG_ERROR:
                         (*out)<<std::ctime(&now)<<"[ERROR]: "<<string(buf.get(),buf.get()+size-1)<<std::endl;

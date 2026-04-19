@@ -266,6 +266,36 @@ CMakeFiles/ZmultiplierLib.dir/src/audio/Audio.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ZmultiplierLib.dir/src/audio/Audio.cpp.s"
 	F:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S F:\VSCodeWorkspace\Z-MultiplierLib\src\audio\Audio.cpp -o CMakeFiles\ZmultiplierLib.dir\src\audio\Audio.cpp.s
 
+CMakeFiles/ZmultiplierLib.dir/src/UI/basicUI.cpp.obj: CMakeFiles/ZmultiplierLib.dir/flags.make
+CMakeFiles/ZmultiplierLib.dir/src/UI/basicUI.cpp.obj: CMakeFiles/ZmultiplierLib.dir/includes_CXX.rsp
+CMakeFiles/ZmultiplierLib.dir/src/UI/basicUI.cpp.obj: F:/VSCodeWorkspace/Z-MultiplierLib/src/UI/basicUI.cpp
+CMakeFiles/ZmultiplierLib.dir/src/UI/basicUI.cpp.obj: CMakeFiles/ZmultiplierLib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=F:\VSCodeWorkspace\Z-MultiplierLib\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/ZmultiplierLib.dir/src/UI/basicUI.cpp.obj"
+	F:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ZmultiplierLib.dir/src/UI/basicUI.cpp.obj -MF CMakeFiles\ZmultiplierLib.dir\src\UI\basicUI.cpp.obj.d -o CMakeFiles\ZmultiplierLib.dir\src\UI\basicUI.cpp.obj -c F:\VSCodeWorkspace\Z-MultiplierLib\src\UI\basicUI.cpp
+
+CMakeFiles/ZmultiplierLib.dir/src/UI/basicUI.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ZmultiplierLib.dir/src/UI/basicUI.cpp.i"
+	F:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E F:\VSCodeWorkspace\Z-MultiplierLib\src\UI\basicUI.cpp > CMakeFiles\ZmultiplierLib.dir\src\UI\basicUI.cpp.i
+
+CMakeFiles/ZmultiplierLib.dir/src/UI/basicUI.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ZmultiplierLib.dir/src/UI/basicUI.cpp.s"
+	F:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S F:\VSCodeWorkspace\Z-MultiplierLib\src\UI\basicUI.cpp -o CMakeFiles\ZmultiplierLib.dir\src\UI\basicUI.cpp.s
+
+CMakeFiles/ZmultiplierLib.dir/src/core/Clock.cpp.obj: CMakeFiles/ZmultiplierLib.dir/flags.make
+CMakeFiles/ZmultiplierLib.dir/src/core/Clock.cpp.obj: CMakeFiles/ZmultiplierLib.dir/includes_CXX.rsp
+CMakeFiles/ZmultiplierLib.dir/src/core/Clock.cpp.obj: F:/VSCodeWorkspace/Z-MultiplierLib/src/core/Clock.cpp
+CMakeFiles/ZmultiplierLib.dir/src/core/Clock.cpp.obj: CMakeFiles/ZmultiplierLib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=F:\VSCodeWorkspace\Z-MultiplierLib\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/ZmultiplierLib.dir/src/core/Clock.cpp.obj"
+	F:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ZmultiplierLib.dir/src/core/Clock.cpp.obj -MF CMakeFiles\ZmultiplierLib.dir\src\core\Clock.cpp.obj.d -o CMakeFiles\ZmultiplierLib.dir\src\core\Clock.cpp.obj -c F:\VSCodeWorkspace\Z-MultiplierLib\src\core\Clock.cpp
+
+CMakeFiles/ZmultiplierLib.dir/src/core/Clock.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ZmultiplierLib.dir/src/core/Clock.cpp.i"
+	F:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E F:\VSCodeWorkspace\Z-MultiplierLib\src\core\Clock.cpp > CMakeFiles\ZmultiplierLib.dir\src\core\Clock.cpp.i
+
+CMakeFiles/ZmultiplierLib.dir/src/core/Clock.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ZmultiplierLib.dir/src/core/Clock.cpp.s"
+	F:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S F:\VSCodeWorkspace\Z-MultiplierLib\src\core\Clock.cpp -o CMakeFiles\ZmultiplierLib.dir\src\core\Clock.cpp.s
+
 # Object files for target ZmultiplierLib
 ZmultiplierLib_OBJECTS = \
 "CMakeFiles/ZmultiplierLib.dir/src/core/Color.cpp.obj" \
@@ -280,7 +310,9 @@ ZmultiplierLib_OBJECTS = \
 "CMakeFiles/ZmultiplierLib.dir/src/assets/Transformation.cpp.obj" \
 "CMakeFiles/ZmultiplierLib.dir/src/game/DefaultAIBehavior.cpp.obj" \
 "CMakeFiles/ZmultiplierLib.dir/src/game/GameObject.cpp.obj" \
-"CMakeFiles/ZmultiplierLib.dir/src/audio/Audio.cpp.obj"
+"CMakeFiles/ZmultiplierLib.dir/src/audio/Audio.cpp.obj" \
+"CMakeFiles/ZmultiplierLib.dir/src/UI/basicUI.cpp.obj" \
+"CMakeFiles/ZmultiplierLib.dir/src/core/Clock.cpp.obj"
 
 # External object files for target ZmultiplierLib
 ZmultiplierLib_EXTERNAL_OBJECTS =
@@ -298,9 +330,11 @@ lib/libZmultiplierLib.a: CMakeFiles/ZmultiplierLib.dir/src/assets/Transformation
 lib/libZmultiplierLib.a: CMakeFiles/ZmultiplierLib.dir/src/game/DefaultAIBehavior.cpp.obj
 lib/libZmultiplierLib.a: CMakeFiles/ZmultiplierLib.dir/src/game/GameObject.cpp.obj
 lib/libZmultiplierLib.a: CMakeFiles/ZmultiplierLib.dir/src/audio/Audio.cpp.obj
+lib/libZmultiplierLib.a: CMakeFiles/ZmultiplierLib.dir/src/UI/basicUI.cpp.obj
+lib/libZmultiplierLib.a: CMakeFiles/ZmultiplierLib.dir/src/core/Clock.cpp.obj
 lib/libZmultiplierLib.a: CMakeFiles/ZmultiplierLib.dir/build.make
 lib/libZmultiplierLib.a: CMakeFiles/ZmultiplierLib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=F:\VSCodeWorkspace\Z-MultiplierLib\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX static library lib\libZmultiplierLib.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=F:\VSCodeWorkspace\Z-MultiplierLib\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX static library lib\libZmultiplierLib.a"
 	$(CMAKE_COMMAND) -P CMakeFiles\ZmultiplierLib.dir\cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\ZmultiplierLib.dir\link.txt --verbose=$(VERBOSE)
 

@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/ZmultiplierLib.dir/src/UI/basicUI.cpp.obj"
+  "CMakeFiles/ZmultiplierLib.dir/src/UI/basicUI.cpp.obj.d"
   "CMakeFiles/ZmultiplierLib.dir/src/assets/Font.cpp.obj"
   "CMakeFiles/ZmultiplierLib.dir/src/assets/Font.cpp.obj.d"
   "CMakeFiles/ZmultiplierLib.dir/src/assets/Image.cpp.obj"
@@ -9,6 +11,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ZmultiplierLib.dir/src/audio/Audio.cpp.obj.d"
   "CMakeFiles/ZmultiplierLib.dir/src/core/Canvas.cpp.obj"
   "CMakeFiles/ZmultiplierLib.dir/src/core/Canvas.cpp.obj.d"
+  "CMakeFiles/ZmultiplierLib.dir/src/core/Clock.cpp.obj"
+  "CMakeFiles/ZmultiplierLib.dir/src/core/Clock.cpp.obj.d"
   "CMakeFiles/ZmultiplierLib.dir/src/core/Color.cpp.obj"
   "CMakeFiles/ZmultiplierLib.dir/src/core/Color.cpp.obj.d"
   "CMakeFiles/ZmultiplierLib.dir/src/core/EntryPoint.cpp.obj"

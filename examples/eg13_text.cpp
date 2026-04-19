@@ -1,28 +1,29 @@
-#include "Graphics.hpp"
-using namespace Graphics;
-
-long long mainWindowDrawer(HWND hWnd,UINT message,WPARAM wParam,LPARAM lParam,Painter& painter){
-    painter.drawBackground(Color((unsigned char)255,255,255,255));
-    painter.bezierCurve({{10,10},{10,190},{190,190}},5,Color((unsigned char)0,0,0,255));
-    painter.bezierCurve({{210,10},{210,190},{390,190}},10,Color((unsigned char)0,0,0,255));
-    painter.bezierCurve({{410,10},{410,190},{590,190}},20,Color((unsigned char)0,0,0,255));
-    return 0;
-}
-
+#define IGNORE_WARNING_LOG //Ignore all the warning logs
+#include "Graphics.hpp"//main file
+#include "BasicUI.hpp"//UI file
+using namespace Graphics;//Just for convenience
 int main(){
-    auto mainWindow=createInitWindow(0,0,607,230,L"Window");
-    std::function<long long(HWND,UINT,WPARAM,LPARAM,Painter&)> mainWindowDrawerFunc=mainWindowDrawer;
-    mainWindow.first->thisPaint=mainWindowDrawerFunc;
-
-    MSG msg={};
-    while(msg.message!=WM_QUIT){
-        while(PeekMessage(&msg,NULL,0,0,PM_REMOVE)){
-            TranslateMessage(&msg);
-            DispatchMessage(&msg);
+    auto mainWindow=createInitWindow(0,0,207,230,L"Window");//init 1 window.
+    //+7 +30 if for the non-client area
+    UI::Button btn(LOCATEMODE_CENTER,{100,100},50,30,Color((unsigned char)200,200,200),Color((unsigned char)0,0,0));
+    //init 1 button
+    btn.react.push_back([=](){std::cerr<<"Btn clicked!"<<std::endl;return;});//onclick
+    mainWindow.first->thisPaint=[&](HWND,UINT,WPARAM,LPARAM,Painter& p)->long long {
+        p.drawBackground(Color((unsigned char)255,255,255));
+        btn.show(p);
+        return 0;
+    };//drawing function
+    mainWindow.first->thisInstantLeftClick=[&](HWND,UINT,WPARAM,LPARAM,int x,int y)->long long {
+        if(btn.isOnHover(x,y)){
+            btn.react.back()();
         }
-        Sleep(16);
-        globalHandleManager.updateAll();
-        PostMessage(mainWindow.second,WM_PAINT,0,0);
+        return 0;
+    };//clicking function
+    Clock c([&](){
+        return;
+    });//clock
+    while(c){
+        c.run();
     }
     return 0;
 }

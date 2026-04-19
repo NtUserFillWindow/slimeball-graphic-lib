@@ -8,11 +8,13 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "F:/VSCodeWorkspace/Z-MultiplierLib/src/UI/basicUI.cpp" "CMakeFiles/ZmultiplierLib.dir/src/UI/basicUI.cpp.obj" "gcc" "CMakeFiles/ZmultiplierLib.dir/src/UI/basicUI.cpp.obj.d"
   "F:/VSCodeWorkspace/Z-MultiplierLib/src/assets/Font.cpp" "CMakeFiles/ZmultiplierLib.dir/src/assets/Font.cpp.obj" "gcc" "CMakeFiles/ZmultiplierLib.dir/src/assets/Font.cpp.obj.d"
   "F:/VSCodeWorkspace/Z-MultiplierLib/src/assets/Image.cpp" "CMakeFiles/ZmultiplierLib.dir/src/assets/Image.cpp.obj" "gcc" "CMakeFiles/ZmultiplierLib.dir/src/assets/Image.cpp.obj.d"
   "F:/VSCodeWorkspace/Z-MultiplierLib/src/assets/Transformation.cpp" "CMakeFiles/ZmultiplierLib.dir/src/assets/Transformation.cpp.obj" "gcc" "CMakeFiles/ZmultiplierLib.dir/src/assets/Transformation.cpp.obj.d"
   "F:/VSCodeWorkspace/Z-MultiplierLib/src/audio/Audio.cpp" "CMakeFiles/ZmultiplierLib.dir/src/audio/Audio.cpp.obj" "gcc" "CMakeFiles/ZmultiplierLib.dir/src/audio/Audio.cpp.obj.d"
   "F:/VSCodeWorkspace/Z-MultiplierLib/src/core/Canvas.cpp" "CMakeFiles/ZmultiplierLib.dir/src/core/Canvas.cpp.obj" "gcc" "CMakeFiles/ZmultiplierLib.dir/src/core/Canvas.cpp.obj.d"
+  "F:/VSCodeWorkspace/Z-MultiplierLib/src/core/Clock.cpp" "CMakeFiles/ZmultiplierLib.dir/src/core/Clock.cpp.obj" "gcc" "CMakeFiles/ZmultiplierLib.dir/src/core/Clock.cpp.obj.d"
   "F:/VSCodeWorkspace/Z-MultiplierLib/src/core/Color.cpp" "CMakeFiles/ZmultiplierLib.dir/src/core/Color.cpp.obj" "gcc" "CMakeFiles/ZmultiplierLib.dir/src/core/Color.cpp.obj.d"
   "F:/VSCodeWorkspace/Z-MultiplierLib/src/core/EntryPoint.cpp" "CMakeFiles/ZmultiplierLib.dir/src/core/EntryPoint.cpp.obj" "gcc" "CMakeFiles/ZmultiplierLib.dir/src/core/EntryPoint.cpp.obj.d"
   "F:/VSCodeWorkspace/Z-MultiplierLib/src/core/Logger.cpp" "CMakeFiles/ZmultiplierLib.dir/src/core/Logger.cpp.obj" "gcc" "CMakeFiles/ZmultiplierLib.dir/src/core/Logger.cpp.obj.d"
