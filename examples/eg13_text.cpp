@@ -4,7 +4,7 @@
 #include "Game.hpp"
 using namespace Graphics;
 int main(){
-    Game::Terrain terrain({{"WALL" ,"WALL" ,"WALL" ,"WALL" ,"WALL"},
+    Game::Terrain terrain({{"EMPTY","EMPTY","EMPTY","EMPTY","EMPTY"},
                            {"WALL" ,"EMPTY","EMPTY","EMPTY","WALL"},
                            {"WALL" ,"WALL" ,"WALL" ,"EMPTY","WALL"},
                            {"WALL" ,"EMPTY","EMPTY","EMPTY","WALL"},
@@ -12,7 +12,7 @@ int main(){
         ,{{"EMPTY",0.1f},{"WALL",Game::Unpassable}});
     Clock c([&](){
         auto st=std::chrono::high_resolution_clock::now();
-        std::vector<Game::Point> path=Game::Astar({1,1},{3,1},terrain,Game::ExpandMode::EIGHTDIR,
+        std::vector<Game::Point> path=Game::Astar({1,1},{1,3},terrain,Game::ExpandMode::INFFOURDIR,
                                                 [&](Game::Point a,Game::Point b){
                                                     return terrain(a.x,a.y)+terrain(b.x,b.y);
                                                 },

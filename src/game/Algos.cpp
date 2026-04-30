@@ -59,6 +59,8 @@ namespace Game{
             auto addRay=[&](int dx,int dy){
                 Point cur{p.x+dx,p.y+dy};
                 while(terrain(cur.x,cur.y)<Unpassable){
+                    if (dx!=0&&terrain(p.x+(cur.x>p.x?dx:0),p.y)>=Unpassable) break;
+                    if (dy!=0&&terrain(p.x,p.y+(cur.y>p.y?dy:0))>=Unpassable) break;
                     neighbors.push_back(cur);
                     cur.x+=dx;
                     cur.y+=dy;
