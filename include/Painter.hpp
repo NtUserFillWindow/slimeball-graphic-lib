@@ -50,7 +50,7 @@ namespace Window{
         Point(int x,int y):x(x),y(y){};
         Point(std::pair<int,int> pair):x(pair.first),y(pair.second){};
         Point(const Point& other)=default;
-        bool operator==(Point& other);
+        bool operator==(const Point& other)const;
     };
     Point calculateDrawPosition(char,Point,unsigned long long,unsigned long long);
     struct Painter{

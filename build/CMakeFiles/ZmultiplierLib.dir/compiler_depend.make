@@ -3703,18 +3703,16 @@ CMakeFiles/ZmultiplierLib.dir/src/core/Logger.cpp.obj: F:/VSCodeWorkspace/Z-Mult
   F:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdint.h \
   F:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/syslimits.h
 
-CMakeFiles/ZmultiplierLib.dir/src/game/DefaultAIBehavior.cpp.obj: F:/VSCodeWorkspace/Z-MultiplierLib/src/game/DefaultAIBehavior.cpp \
+CMakeFiles/ZmultiplierLib.dir/src/game/Algos.cpp.obj: F:/VSCodeWorkspace/Z-MultiplierLib/src/game/Algos.cpp \
+  F:/VSCodeWorkspace/Z-MultiplierLib/include/Algos.hpp \
   F:/VSCodeWorkspace/Z-MultiplierLib/include/Canvas.hpp \
   F:/VSCodeWorkspace/Z-MultiplierLib/include/Color.hpp \
-  F:/VSCodeWorkspace/Z-MultiplierLib/include/DefaultAIBehavior.hpp \
   F:/VSCodeWorkspace/Z-MultiplierLib/include/Font.hpp \
   F:/VSCodeWorkspace/Z-MultiplierLib/include/GameObject.hpp \
   F:/VSCodeWorkspace/Z-MultiplierLib/include/Image.hpp \
   F:/VSCodeWorkspace/Z-MultiplierLib/include/Logger.hpp \
   F:/VSCodeWorkspace/Z-MultiplierLib/include/Painter.hpp \
   F:/VSCodeWorkspace/Z-MultiplierLib/include/Transformation.hpp \
-  F:/VSCodeWorkspace/Z-MultiplierLib/include/Utils.hpp \
-  F:/VSCodeWorkspace/Z-MultiplierLib/include/Window.hpp \
   F:/msys64/ucrt64/include/_bsd_types.h \
   F:/msys64/ucrt64/include/_mingw.h \
   F:/msys64/ucrt64/include/_mingw_mac.h \
@@ -3754,6 +3752,7 @@ CMakeFiles/ZmultiplierLib.dir/src/game/DefaultAIBehavior.cpp.obj: F:/VSCodeWorks
   F:/msys64/ucrt64/include/c++/15.2.0/bits/cpp_type_traits.h \
   F:/msys64/ucrt64/include/c++/15.2.0/bits/cxxabi_forced.h \
   F:/msys64/ucrt64/include/c++/15.2.0/bits/cxxabi_init_exception.h \
+  F:/msys64/ucrt64/include/c++/15.2.0/bits/deque.tcc \
   F:/msys64/ucrt64/include/c++/15.2.0/bits/enable_special_members.h \
   F:/msys64/ucrt64/include/c++/15.2.0/bits/erase_if.h \
   F:/msys64/ucrt64/include/c++/15.2.0/bits/exception.h \
@@ -3785,8 +3784,6 @@ CMakeFiles/ZmultiplierLib.dir/src/game/DefaultAIBehavior.cpp.obj: F:/VSCodeWorks
   F:/msys64/ucrt64/include/c++/15.2.0/bits/postypes.h \
   F:/msys64/ucrt64/include/c++/15.2.0/bits/predefined_ops.h \
   F:/msys64/ucrt64/include/c++/15.2.0/bits/ptr_traits.h \
-  F:/msys64/ucrt64/include/c++/15.2.0/bits/random.h \
-  F:/msys64/ucrt64/include/c++/15.2.0/bits/random.tcc \
   F:/msys64/ucrt64/include/c++/15.2.0/bits/range_access.h \
   F:/msys64/ucrt64/include/c++/15.2.0/bits/refwrap.h \
   F:/msys64/ucrt64/include/c++/15.2.0/bits/requires_hosted.h \
@@ -3801,6 +3798,7 @@ CMakeFiles/ZmultiplierLib.dir/src/game/DefaultAIBehavior.cpp.obj: F:/VSCodeWorks
   F:/msys64/ucrt64/include/c++/15.2.0/bits/stl_algobase.h \
   F:/msys64/ucrt64/include/c++/15.2.0/bits/stl_bvector.h \
   F:/msys64/ucrt64/include/c++/15.2.0/bits/stl_construct.h \
+  F:/msys64/ucrt64/include/c++/15.2.0/bits/stl_deque.h \
   F:/msys64/ucrt64/include/c++/15.2.0/bits/stl_function.h \
   F:/msys64/ucrt64/include/c++/15.2.0/bits/stl_heap.h \
   F:/msys64/ucrt64/include/c++/15.2.0/bits/stl_iterator.h \
@@ -3808,6 +3806,7 @@ CMakeFiles/ZmultiplierLib.dir/src/game/DefaultAIBehavior.cpp.obj: F:/VSCodeWorks
   F:/msys64/ucrt64/include/c++/15.2.0/bits/stl_iterator_base_types.h \
   F:/msys64/ucrt64/include/c++/15.2.0/bits/stl_numeric.h \
   F:/msys64/ucrt64/include/c++/15.2.0/bits/stl_pair.h \
+  F:/msys64/ucrt64/include/c++/15.2.0/bits/stl_queue.h \
   F:/msys64/ucrt64/include/c++/15.2.0/bits/stl_raw_storage_iter.h \
   F:/msys64/ucrt64/include/c++/15.2.0/bits/stl_tempbuf.h \
   F:/msys64/ucrt64/include/c++/15.2.0/bits/stl_uninitialized.h \
@@ -3842,6 +3841,7 @@ CMakeFiles/ZmultiplierLib.dir/src/game/DefaultAIBehavior.cpp.obj: F:/VSCodeWorks
   F:/msys64/ucrt64/include/c++/15.2.0/cwctype \
   F:/msys64/ucrt64/include/c++/15.2.0/debug/assertions.h \
   F:/msys64/ucrt64/include/c++/15.2.0/debug/debug.h \
+  F:/msys64/ucrt64/include/c++/15.2.0/deque \
   F:/msys64/ucrt64/include/c++/15.2.0/exception \
   F:/msys64/ucrt64/include/c++/15.2.0/ext/aligned_buffer.h \
   F:/msys64/ucrt64/include/c++/15.2.0/ext/alloc_traits.h \
@@ -3868,7 +3868,7 @@ CMakeFiles/ZmultiplierLib.dir/src/game/DefaultAIBehavior.cpp.obj: F:/VSCodeWorks
   F:/msys64/ucrt64/include/c++/15.2.0/pstl/glue_memory_defs.h \
   F:/msys64/ucrt64/include/c++/15.2.0/pstl/glue_numeric_defs.h \
   F:/msys64/ucrt64/include/c++/15.2.0/pstl/pstl_config.h \
-  F:/msys64/ucrt64/include/c++/15.2.0/random \
+  F:/msys64/ucrt64/include/c++/15.2.0/queue \
   F:/msys64/ucrt64/include/c++/15.2.0/ratio \
   F:/msys64/ucrt64/include/c++/15.2.0/stdexcept \
   F:/msys64/ucrt64/include/c++/15.2.0/stdlib.h \
@@ -3904,7 +3904,6 @@ CMakeFiles/ZmultiplierLib.dir/src/game/DefaultAIBehavior.cpp.obj: F:/VSCodeWorks
   F:/msys64/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32/bits/error_constants.h \
   F:/msys64/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32/bits/gthr-default.h \
   F:/msys64/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32/bits/gthr.h \
-  F:/msys64/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32/bits/opt_random.h \
   F:/msys64/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32/bits/os_defines.h \
   F:/msys64/ucrt64/include/cderr.h \
   F:/msys64/ucrt64/include/cguid.h \
@@ -4309,6 +4308,7 @@ CMakeFiles/ZmultiplierLib.dir/src/game/GameObject.cpp.obj: F:/VSCodeWorkspace/Z-
   F:/msys64/ucrt64/include/c++/15.2.0/bits/stl_iterator.h \
   F:/msys64/ucrt64/include/c++/15.2.0/bits/stl_iterator_base_funcs.h \
   F:/msys64/ucrt64/include/c++/15.2.0/bits/stl_iterator_base_types.h \
+  F:/msys64/ucrt64/include/c++/15.2.0/bits/stl_numeric.h \
   F:/msys64/ucrt64/include/c++/15.2.0/bits/stl_pair.h \
   F:/msys64/ucrt64/include/c++/15.2.0/bits/stl_raw_storage_iter.h \
   F:/msys64/ucrt64/include/c++/15.2.0/bits/stl_tempbuf.h \
@@ -4360,9 +4360,11 @@ CMakeFiles/ZmultiplierLib.dir/src/game/GameObject.cpp.obj: F:/VSCodeWorkspace/Z-
   F:/msys64/ucrt64/include/c++/15.2.0/memory \
   F:/msys64/ucrt64/include/c++/15.2.0/mutex \
   F:/msys64/ucrt64/include/c++/15.2.0/new \
+  F:/msys64/ucrt64/include/c++/15.2.0/numeric \
   F:/msys64/ucrt64/include/c++/15.2.0/ostream \
   F:/msys64/ucrt64/include/c++/15.2.0/pstl/execution_defs.h \
   F:/msys64/ucrt64/include/c++/15.2.0/pstl/glue_memory_defs.h \
+  F:/msys64/ucrt64/include/c++/15.2.0/pstl/glue_numeric_defs.h \
   F:/msys64/ucrt64/include/c++/15.2.0/pstl/pstl_config.h \
   F:/msys64/ucrt64/include/c++/15.2.0/ratio \
   F:/msys64/ucrt64/include/c++/15.2.0/stdexcept \
@@ -7169,9 +7171,9 @@ F:/VSCodeWorkspace/Z-MultiplierLib/src/core/EntryPoint.cpp:
 
 F:/VSCodeWorkspace/Z-MultiplierLib/src/core/Logger.cpp:
 
-F:/VSCodeWorkspace/Z-MultiplierLib/src/game/DefaultAIBehavior.cpp:
+F:/VSCodeWorkspace/Z-MultiplierLib/src/game/Algos.cpp:
 
-F:/VSCodeWorkspace/Z-MultiplierLib/include/DefaultAIBehavior.hpp:
+F:/VSCodeWorkspace/Z-MultiplierLib/include/Algos.hpp:
 
 F:/msys64/ucrt64/include/c++/15.2.0/unordered_set:
 

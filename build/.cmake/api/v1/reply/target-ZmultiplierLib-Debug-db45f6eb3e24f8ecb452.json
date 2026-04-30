@@ -233,12 +233,6 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/game/DefaultAIBehavior.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
 			"path" : "src/game/GameObject.cpp",
 			"sourceGroupIndex" : 0
 		},
@@ -258,6 +252,12 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "src/core/Clock.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/game/Algos.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

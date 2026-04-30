@@ -90,7 +90,7 @@ void Window::Painter::switchHDC(){
     }
     this->updateHDC();
 }
-bool Window::Point::operator==(Point& other){
+bool Window::Point::operator==(const Point& other)const{
     return this->x==other.x&&this->y==other.y;
 }
 bool Window::Painter::putUnitPixel(int x,int y,const Core::Color& color)const{

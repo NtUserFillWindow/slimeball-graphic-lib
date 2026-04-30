@@ -25,3 +25,16 @@ void Game::BasicLife::update(){
         }
     }
 }
+std::vector<std::vector<float>> Game::Terrain::getCost()const{
+    std::vector<std::vector<float>> ret(storage.size(),std::vector<float>(storage.back().size(),Game::Unpassable));
+    for(size_t i=0;i<storage.size();i++){
+        for(size_t j=0;j<storage[i].size();j++){
+            ret[j][i]=costMap.at(storage[j][i]);
+        }
+    }
+    return ret;
+}
+float Game::Terrain::operator()(int x,int y)const{
+    if(x<0||y<0||x>static_cast<int>(storage.back().size())||y>static_cast<int>(storage.size())) return Game::Unpassable;
+    return costMap.at(storage[x][y]);
+}

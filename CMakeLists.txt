@@ -27,11 +27,11 @@ add_library(ZmultiplierLib STATIC
     src/assets/Image.cpp
     src/assets/Font.cpp
     src/assets/Transformation.cpp
-    src/game/DefaultAIBehavior.cpp
     src/game/GameObject.cpp
     src/audio/Audio.cpp
     src/UI/basicUI.cpp
     src/core/Clock.cpp
+    src/game/Algos.cpp
 )
 
 target_link_libraries(ZmultiplierLib PRIVATE

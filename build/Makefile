@@ -426,29 +426,29 @@ src/core/Logger.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZmultiplierLib.dir\build.make CMakeFiles/ZmultiplierLib.dir/src/core/Logger.cpp.s
 .PHONY : src/core/Logger.cpp.s
 
-src/game/DefaultAIBehavior.obj: src/game/DefaultAIBehavior.cpp.obj
-.PHONY : src/game/DefaultAIBehavior.obj
+src/game/Algos.obj: src/game/Algos.cpp.obj
+.PHONY : src/game/Algos.obj
 
 # target to build an object file
-src/game/DefaultAIBehavior.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZmultiplierLib.dir\build.make CMakeFiles/ZmultiplierLib.dir/src/game/DefaultAIBehavior.cpp.obj
-.PHONY : src/game/DefaultAIBehavior.cpp.obj
+src/game/Algos.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZmultiplierLib.dir\build.make CMakeFiles/ZmultiplierLib.dir/src/game/Algos.cpp.obj
+.PHONY : src/game/Algos.cpp.obj
 
-src/game/DefaultAIBehavior.i: src/game/DefaultAIBehavior.cpp.i
-.PHONY : src/game/DefaultAIBehavior.i
+src/game/Algos.i: src/game/Algos.cpp.i
+.PHONY : src/game/Algos.i
 
 # target to preprocess a source file
-src/game/DefaultAIBehavior.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZmultiplierLib.dir\build.make CMakeFiles/ZmultiplierLib.dir/src/game/DefaultAIBehavior.cpp.i
-.PHONY : src/game/DefaultAIBehavior.cpp.i
+src/game/Algos.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZmultiplierLib.dir\build.make CMakeFiles/ZmultiplierLib.dir/src/game/Algos.cpp.i
+.PHONY : src/game/Algos.cpp.i
 
-src/game/DefaultAIBehavior.s: src/game/DefaultAIBehavior.cpp.s
-.PHONY : src/game/DefaultAIBehavior.s
+src/game/Algos.s: src/game/Algos.cpp.s
+.PHONY : src/game/Algos.s
 
 # target to generate assembly for a file
-src/game/DefaultAIBehavior.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZmultiplierLib.dir\build.make CMakeFiles/ZmultiplierLib.dir/src/game/DefaultAIBehavior.cpp.s
-.PHONY : src/game/DefaultAIBehavior.cpp.s
+src/game/Algos.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZmultiplierLib.dir\build.make CMakeFiles/ZmultiplierLib.dir/src/game/Algos.cpp.s
+.PHONY : src/game/Algos.cpp.s
 
 src/game/GameObject.obj: src/game/GameObject.cpp.obj
 .PHONY : src/game/GameObject.obj
@@ -590,9 +590,9 @@ help:
 	@echo ... src/core/Logger.obj
 	@echo ... src/core/Logger.i
 	@echo ... src/core/Logger.s
-	@echo ... src/game/DefaultAIBehavior.obj
-	@echo ... src/game/DefaultAIBehavior.i
-	@echo ... src/game/DefaultAIBehavior.s
+	@echo ... src/game/Algos.obj
+	@echo ... src/game/Algos.i
+	@echo ... src/game/Algos.s
 	@echo ... src/game/GameObject.obj
 	@echo ... src/game/GameObject.i
 	@echo ... src/game/GameObject.s

@@ -61,12 +61,6 @@
 },
 {
   "directory": "F:/VSCodeWorkspace/Z-MultiplierLib/build",
-  "command": "F:\\msys64\\ucrt64\\bin\\g++.exe -DNOMINMAX @CMakeFiles/ZmultiplierLib.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -pedantic -o CMakeFiles\\ZmultiplierLib.dir\\src\\game\\DefaultAIBehavior.cpp.obj -c F:\\VSCodeWorkspace\\Z-MultiplierLib\\src\\game\\DefaultAIBehavior.cpp",
-  "file": "F:/VSCodeWorkspace/Z-MultiplierLib/src/game/DefaultAIBehavior.cpp",
-  "output": "CMakeFiles/ZmultiplierLib.dir/src/game/DefaultAIBehavior.cpp.obj"
-},
-{
-  "directory": "F:/VSCodeWorkspace/Z-MultiplierLib/build",
   "command": "F:\\msys64\\ucrt64\\bin\\g++.exe -DNOMINMAX @CMakeFiles/ZmultiplierLib.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -pedantic -o CMakeFiles\\ZmultiplierLib.dir\\src\\game\\GameObject.cpp.obj -c F:\\VSCodeWorkspace\\Z-MultiplierLib\\src\\game\\GameObject.cpp",
   "file": "F:/VSCodeWorkspace/Z-MultiplierLib/src/game/GameObject.cpp",
   "output": "CMakeFiles/ZmultiplierLib.dir/src/game/GameObject.cpp.obj"
@@ -88,6 +82,12 @@
   "command": "F:\\msys64\\ucrt64\\bin\\g++.exe -DNOMINMAX @CMakeFiles/ZmultiplierLib.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -pedantic -o CMakeFiles\\ZmultiplierLib.dir\\src\\core\\Clock.cpp.obj -c F:\\VSCodeWorkspace\\Z-MultiplierLib\\src\\core\\Clock.cpp",
   "file": "F:/VSCodeWorkspace/Z-MultiplierLib/src/core/Clock.cpp",
   "output": "CMakeFiles/ZmultiplierLib.dir/src/core/Clock.cpp.obj"
+},
+{
+  "directory": "F:/VSCodeWorkspace/Z-MultiplierLib/build",
+  "command": "F:\\msys64\\ucrt64\\bin\\g++.exe -DNOMINMAX @CMakeFiles/ZmultiplierLib.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -pedantic -o CMakeFiles\\ZmultiplierLib.dir\\src\\game\\Algos.cpp.obj -c F:\\VSCodeWorkspace\\Z-MultiplierLib\\src\\game\\Algos.cpp",
+  "file": "F:/VSCodeWorkspace/Z-MultiplierLib/src/game/Algos.cpp",
+  "output": "CMakeFiles/ZmultiplierLib.dir/src/game/Algos.cpp.obj"
 },
 {
   "directory": "F:/VSCodeWorkspace/Z-MultiplierLib/build/examples",

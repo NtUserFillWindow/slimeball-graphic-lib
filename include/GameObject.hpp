@@ -9,9 +9,27 @@
 #include <any>
 #include <unordered_set>
 #include <functional>
+#include <numeric>
 
 namespace Game{
     extern Core::logger gameLogger;
+    constexpr float Unpassable=std::numeric_limits<float>::infinity();
+    struct Terrain{
+        std::vector<std::vector<std::string>> storage;
+        std::unordered_map<std::string,float> costMap; 
+        std::vector<std::vector<float>> getCost()const;
+        float operator()(int x,int y)const;
+        Terrain()=delete;
+        Terrain(const Terrain& other)=default;
+        Terrain& operator=(const Terrain& other)=default;
+        Terrain(Terrain&& other)=default;
+        Terrain& operator=(Terrain&& other)=default;
+        Terrain(const std::vector<std::vector<std::string>>& terrain,const std::unordered_map<std::string,float>& costs)
+        :storage(terrain),costMap(costs){};
+        Terrain(const std::string& init,size_t width,size_t height,const std::unordered_map<std::string,float>& costs):costMap(costs){
+            storage.assign(height,std::vector<std::string>(width,init));
+        };
+    };
     struct AIBehavior{
         std::vector<std::function<bool(const std::unordered_map<string,std::any>&,const std::unordered_set<std::string>&)>> conditions;
         std::function<void(std::unordered_map<string,std::any>&,std::unordered_set<std::string>&)> behavior;

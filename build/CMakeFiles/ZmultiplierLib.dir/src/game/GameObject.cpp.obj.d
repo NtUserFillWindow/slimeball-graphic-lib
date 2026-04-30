@@ -188,4 +188,7 @@ CMakeFiles/ZmultiplierLib.dir/src/game/GameObject.cpp.obj: \
  F:/msys64/ucrt64/include/c++/15.2.0/bits/stl_bvector.h \
  F:/msys64/ucrt64/include/c++/15.2.0/bits/vector.tcc \
  F:/msys64/ucrt64/include/c++/15.2.0/array \
- F:/msys64/ucrt64/include/c++/15.2.0/compare
+ F:/msys64/ucrt64/include/c++/15.2.0/compare \
+ F:/msys64/ucrt64/include/c++/15.2.0/numeric \
+ F:/msys64/ucrt64/include/c++/15.2.0/bits/stl_numeric.h \
+ F:/msys64/ucrt64/include/c++/15.2.0/pstl/glue_numeric_defs.h

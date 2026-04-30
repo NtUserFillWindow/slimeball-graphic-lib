@@ -18,7 +18,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "F:/VSCodeWorkspace/Z-MultiplierLib/src/core/Color.cpp" "CMakeFiles/ZmultiplierLib.dir/src/core/Color.cpp.obj" "gcc" "CMakeFiles/ZmultiplierLib.dir/src/core/Color.cpp.obj.d"
   "F:/VSCodeWorkspace/Z-MultiplierLib/src/core/EntryPoint.cpp" "CMakeFiles/ZmultiplierLib.dir/src/core/EntryPoint.cpp.obj" "gcc" "CMakeFiles/ZmultiplierLib.dir/src/core/EntryPoint.cpp.obj.d"
   "F:/VSCodeWorkspace/Z-MultiplierLib/src/core/Logger.cpp" "CMakeFiles/ZmultiplierLib.dir/src/core/Logger.cpp.obj" "gcc" "CMakeFiles/ZmultiplierLib.dir/src/core/Logger.cpp.obj.d"
-  "F:/VSCodeWorkspace/Z-MultiplierLib/src/game/DefaultAIBehavior.cpp" "CMakeFiles/ZmultiplierLib.dir/src/game/DefaultAIBehavior.cpp.obj" "gcc" "CMakeFiles/ZmultiplierLib.dir/src/game/DefaultAIBehavior.cpp.obj.d"
+  "F:/VSCodeWorkspace/Z-MultiplierLib/src/game/Algos.cpp" "CMakeFiles/ZmultiplierLib.dir/src/game/Algos.cpp.obj" "gcc" "CMakeFiles/ZmultiplierLib.dir/src/game/Algos.cpp.obj.d"
   "F:/VSCodeWorkspace/Z-MultiplierLib/src/game/GameObject.cpp" "CMakeFiles/ZmultiplierLib.dir/src/game/GameObject.cpp.obj" "gcc" "CMakeFiles/ZmultiplierLib.dir/src/game/GameObject.cpp.obj.d"
   "F:/VSCodeWorkspace/Z-MultiplierLib/src/painter/Painter.cpp" "CMakeFiles/ZmultiplierLib.dir/src/painter/Painter.cpp.obj" "gcc" "CMakeFiles/ZmultiplierLib.dir/src/painter/Painter.cpp.obj.d"
   "F:/VSCodeWorkspace/Z-MultiplierLib/src/utils/Utils.cpp" "CMakeFiles/ZmultiplierLib.dir/src/utils/Utils.cpp.obj" "gcc" "CMakeFiles/ZmultiplierLib.dir/src/utils/Utils.cpp.obj.d"
