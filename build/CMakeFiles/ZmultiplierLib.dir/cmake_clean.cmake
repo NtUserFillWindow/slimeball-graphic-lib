@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ZmultiplierLib.dir/src/UI/basicUI.cpp.obj"
   "CMakeFiles/ZmultiplierLib.dir/src/UI/basicUI.cpp.obj.d"
+  "CMakeFiles/ZmultiplierLib.dir/src/assets/Animation.cpp.obj"
+  "CMakeFiles/ZmultiplierLib.dir/src/assets/Animation.cpp.obj.d"
   "CMakeFiles/ZmultiplierLib.dir/src/assets/Font.cpp.obj"
   "CMakeFiles/ZmultiplierLib.dir/src/assets/Font.cpp.obj.d"
   "CMakeFiles/ZmultiplierLib.dir/src/assets/Image.cpp.obj"

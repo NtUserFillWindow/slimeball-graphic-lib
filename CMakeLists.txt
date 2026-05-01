@@ -32,6 +32,7 @@ add_library(ZmultiplierLib STATIC
     src/UI/basicUI.cpp
     src/core/Clock.cpp
     src/game/Algos.cpp
+    src/assets/Animation.cpp
 )
 
 target_link_libraries(ZmultiplierLib PRIVATE

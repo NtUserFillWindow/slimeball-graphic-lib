@@ -90,6 +90,12 @@
   "output": "CMakeFiles/ZmultiplierLib.dir/src/game/Algos.cpp.obj"
 },
 {
+  "directory": "F:/VSCodeWorkspace/Z-MultiplierLib/build",
+  "command": "F:\\msys64\\ucrt64\\bin\\g++.exe -DNOMINMAX @CMakeFiles/ZmultiplierLib.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -pedantic -o CMakeFiles\\ZmultiplierLib.dir\\src\\assets\\Animation.cpp.obj -c F:\\VSCodeWorkspace\\Z-MultiplierLib\\src\\assets\\Animation.cpp",
+  "file": "F:/VSCodeWorkspace/Z-MultiplierLib/src/assets/Animation.cpp",
+  "output": "CMakeFiles/ZmultiplierLib.dir/src/assets/Animation.cpp.obj"
+},
+{
   "directory": "F:/VSCodeWorkspace/Z-MultiplierLib/build/examples",
   "command": "F:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/eg13_text.exe.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -pedantic -o CMakeFiles\\eg13_text.exe.dir\\eg13_text.cpp.obj -c F:\\VSCodeWorkspace\\Z-MultiplierLib\\examples\\eg13_text.cpp",
   "file": "F:/VSCodeWorkspace/Z-MultiplierLib/examples/eg13_text.cpp",

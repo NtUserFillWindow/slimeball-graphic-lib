@@ -210,6 +210,30 @@ src/UI/basicUI.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZmultiplierLib.dir\build.make CMakeFiles/ZmultiplierLib.dir/src/UI/basicUI.cpp.s
 .PHONY : src/UI/basicUI.cpp.s
 
+src/assets/Animation.obj: src/assets/Animation.cpp.obj
+.PHONY : src/assets/Animation.obj
+
+# target to build an object file
+src/assets/Animation.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZmultiplierLib.dir\build.make CMakeFiles/ZmultiplierLib.dir/src/assets/Animation.cpp.obj
+.PHONY : src/assets/Animation.cpp.obj
+
+src/assets/Animation.i: src/assets/Animation.cpp.i
+.PHONY : src/assets/Animation.i
+
+# target to preprocess a source file
+src/assets/Animation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZmultiplierLib.dir\build.make CMakeFiles/ZmultiplierLib.dir/src/assets/Animation.cpp.i
+.PHONY : src/assets/Animation.cpp.i
+
+src/assets/Animation.s: src/assets/Animation.cpp.s
+.PHONY : src/assets/Animation.s
+
+# target to generate assembly for a file
+src/assets/Animation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZmultiplierLib.dir\build.make CMakeFiles/ZmultiplierLib.dir/src/assets/Animation.cpp.s
+.PHONY : src/assets/Animation.cpp.s
+
 src/assets/Font.obj: src/assets/Font.cpp.obj
 .PHONY : src/assets/Font.obj
 
@@ -563,6 +587,9 @@ help:
 	@echo ... src/UI/basicUI.obj
 	@echo ... src/UI/basicUI.i
 	@echo ... src/UI/basicUI.s
+	@echo ... src/assets/Animation.obj
+	@echo ... src/assets/Animation.i
+	@echo ... src/assets/Animation.s
 	@echo ... src/assets/Font.obj
 	@echo ... src/assets/Font.i
 	@echo ... src/assets/Font.s

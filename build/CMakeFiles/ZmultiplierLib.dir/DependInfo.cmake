@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "F:/VSCodeWorkspace/Z-MultiplierLib/src/UI/basicUI.cpp" "CMakeFiles/ZmultiplierLib.dir/src/UI/basicUI.cpp.obj" "gcc" "CMakeFiles/ZmultiplierLib.dir/src/UI/basicUI.cpp.obj.d"
+  "F:/VSCodeWorkspace/Z-MultiplierLib/src/assets/Animation.cpp" "CMakeFiles/ZmultiplierLib.dir/src/assets/Animation.cpp.obj" "gcc" "CMakeFiles/ZmultiplierLib.dir/src/assets/Animation.cpp.obj.d"
   "F:/VSCodeWorkspace/Z-MultiplierLib/src/assets/Font.cpp" "CMakeFiles/ZmultiplierLib.dir/src/assets/Font.cpp.obj" "gcc" "CMakeFiles/ZmultiplierLib.dir/src/assets/Font.cpp.obj.d"
   "F:/VSCodeWorkspace/Z-MultiplierLib/src/assets/Image.cpp" "CMakeFiles/ZmultiplierLib.dir/src/assets/Image.cpp.obj" "gcc" "CMakeFiles/ZmultiplierLib.dir/src/assets/Image.cpp.obj.d"
   "F:/VSCodeWorkspace/Z-MultiplierLib/src/assets/Transformation.cpp" "CMakeFiles/ZmultiplierLib.dir/src/assets/Transformation.cpp.obj" "gcc" "CMakeFiles/ZmultiplierLib.dir/src/assets/Transformation.cpp.obj.d"

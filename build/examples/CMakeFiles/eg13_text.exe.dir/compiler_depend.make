@@ -3,6 +3,7 @@
 
 examples/CMakeFiles/eg13_text.exe.dir/eg13_text.cpp.obj: F:/VSCodeWorkspace/Z-MultiplierLib/examples/eg13_text.cpp \
   F:/VSCodeWorkspace/Z-MultiplierLib/include/Algos.hpp \
+  F:/VSCodeWorkspace/Z-MultiplierLib/include/Animation.hpp \
   F:/VSCodeWorkspace/Z-MultiplierLib/include/BasicUI.hpp \
   F:/VSCodeWorkspace/Z-MultiplierLib/include/Canvas.hpp \
   F:/VSCodeWorkspace/Z-MultiplierLib/include/Clock.hpp \
@@ -33,11 +34,13 @@ examples/CMakeFiles/eg13_text.exe.dir/eg13_text.cpp.obj: F:/VSCodeWorkspace/Z-Mu
   F:/msys64/ucrt64/include/basetyps.h \
   F:/msys64/ucrt64/include/bcrypt.h \
   F:/msys64/ucrt64/include/bemapiset.h \
+  F:/msys64/ucrt64/include/c++/15.2.0/algorithm \
   F:/msys64/ucrt64/include/c++/15.2.0/any \
   F:/msys64/ucrt64/include/c++/15.2.0/array \
   F:/msys64/ucrt64/include/c++/15.2.0/backward/auto_ptr.h \
   F:/msys64/ucrt64/include/c++/15.2.0/backward/binders.h \
   F:/msys64/ucrt64/include/c++/15.2.0/bit \
+  F:/msys64/ucrt64/include/c++/15.2.0/bits/algorithmfwd.h \
   F:/msys64/ucrt64/include/c++/15.2.0/bits/align.h \
   F:/msys64/ucrt64/include/c++/15.2.0/bits/alloc_traits.h \
   F:/msys64/ucrt64/include/c++/15.2.0/bits/allocated_ptr.h \
@@ -101,6 +104,7 @@ examples/CMakeFiles/eg13_text.exe.dir/eg13_text.cpp.obj: F:/VSCodeWorkspace/Z-Mu
   F:/msys64/ucrt64/include/c++/15.2.0/bits/std_function.h \
   F:/msys64/ucrt64/include/c++/15.2.0/bits/std_mutex.h \
   F:/msys64/ucrt64/include/c++/15.2.0/bits/std_thread.h \
+  F:/msys64/ucrt64/include/c++/15.2.0/bits/stl_algo.h \
   F:/msys64/ucrt64/include/c++/15.2.0/bits/stl_algobase.h \
   F:/msys64/ucrt64/include/c++/15.2.0/bits/stl_bvector.h \
   F:/msys64/ucrt64/include/c++/15.2.0/bits/stl_construct.h \
@@ -173,6 +177,7 @@ examples/CMakeFiles/eg13_text.exe.dir/eg13_text.cpp.obj: F:/VSCodeWorkspace/Z-Mu
   F:/msys64/ucrt64/include/c++/15.2.0/optional \
   F:/msys64/ucrt64/include/c++/15.2.0/ostream \
   F:/msys64/ucrt64/include/c++/15.2.0/pstl/execution_defs.h \
+  F:/msys64/ucrt64/include/c++/15.2.0/pstl/glue_algorithm_defs.h \
   F:/msys64/ucrt64/include/c++/15.2.0/pstl/glue_memory_defs.h \
   F:/msys64/ucrt64/include/c++/15.2.0/pstl/glue_numeric_defs.h \
   F:/msys64/ucrt64/include/c++/15.2.0/pstl/pstl_config.h \
@@ -568,6 +573,8 @@ F:/msys64/ucrt64/include/combaseapi.h:
 
 F:/VSCodeWorkspace/Z-MultiplierLib/examples/eg13_text.cpp:
 
+F:/msys64/ucrt64/include/c++/15.2.0/bits/algorithmfwd.h:
+
 F:/msys64/ucrt64/include/c++/15.2.0/ext/string_conversions.h:
 
 F:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/avx512vbmiintrin.h:
@@ -575,10 +582,6 @@ F:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/avx512vbmiintrin.h:
 F:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/mm3dnow.h:
 
 F:/VSCodeWorkspace/Z-MultiplierLib/include/Algos.hpp:
-
-F:/VSCodeWorkspace/Z-MultiplierLib/include/Canvas.hpp:
-
-F:/msys64/ucrt64/include/locale.h:
 
 F:/msys64/ucrt64/include/bcrypt.h:
 
@@ -592,6 +595,20 @@ F:/VSCodeWorkspace/Z-MultiplierLib/include/Window.hpp:
 
 F:/msys64/ucrt64/include/gdiplus/gdipluspath.h:
 
+F:/msys64/ucrt64/include/c++/15.2.0/bits/basic_ios.tcc:
+
+F:/VSCodeWorkspace/Z-MultiplierLib/include/Animation.hpp:
+
+F:/VSCodeWorkspace/Z-MultiplierLib/include/Canvas.hpp:
+
+F:/msys64/ucrt64/include/locale.h:
+
+F:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/avx512fp16intrin.h:
+
+F:/VSCodeWorkspace/Z-MultiplierLib/include/Color.hpp:
+
+F:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/avx10_2-512minmaxintrin.h:
+
 F:/VSCodeWorkspace/Z-MultiplierLib/include/Transformation.hpp:
 
 F:/msys64/ucrt64/include/c++/15.2.0/new:
@@ -599,12 +616,6 @@ F:/msys64/ucrt64/include/c++/15.2.0/new:
 F:/VSCodeWorkspace/Z-MultiplierLib/include/Painter.hpp:
 
 F:/VSCodeWorkspace/Z-MultiplierLib/include/Font.hpp:
-
-F:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/avx512fp16intrin.h:
-
-F:/VSCodeWorkspace/Z-MultiplierLib/include/Color.hpp:
-
-F:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/avx10_2-512minmaxintrin.h:
 
 F:/VSCodeWorkspace/Z-MultiplierLib/include/Game.hpp:
 
@@ -702,10 +713,6 @@ F:/msys64/ucrt64/include/sysinfoapi.h:
 
 F:/msys64/ucrt64/include/basetyps.h:
 
-F:/msys64/ucrt64/include/c++/15.2.0/bits/hash_bytes.h:
-
-F:/msys64/ucrt64/include/c++/15.2.0/bits/std_abs.h:
-
 F:/msys64/ucrt64/include/c++/15.2.0/bits/erase_if.h:
 
 F:/msys64/ucrt64/include/c++/15.2.0/bits/deque.tcc:
@@ -716,6 +723,8 @@ F:/msys64/ucrt64/include/c++/15.2.0/tr1/modified_bessel_func.tcc:
 
 F:/msys64/ucrt64/include/c++/15.2.0/array:
 
+F:/msys64/ucrt64/include/c++/15.2.0/algorithm:
+
 F:/msys64/ucrt64/include/winver.h:
 
 F:/msys64/ucrt64/include/c++/15.2.0/bits/cxxabi_forced.h:
@@ -723,8 +732,6 @@ F:/msys64/ucrt64/include/c++/15.2.0/bits/cxxabi_forced.h:
 F:/msys64/ucrt64/include/c++/15.2.0/bits/atomic_base.h:
 
 F:/msys64/ucrt64/include/c++/15.2.0/backward/auto_ptr.h:
-
-F:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/rdseedintrin.h:
 
 F:/msys64/ucrt64/include/c++/15.2.0/bit:
 
@@ -742,8 +749,6 @@ F:/msys64/ucrt64/include/securityappcontainer.h:
 
 F:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/avx512vbmi2intrin.h:
 
-F:/msys64/ucrt64/include/c++/15.2.0/bits/basic_ios.tcc:
-
 F:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/immintrin.h:
 
 F:/msys64/ucrt64/include/c++/15.2.0/bits/basic_string.h:
@@ -751,10 +756,6 @@ F:/msys64/ucrt64/include/c++/15.2.0/bits/basic_string.h:
 F:/msys64/ucrt64/include/c++/15.2.0/bits/chrono.h:
 
 F:/msys64/ucrt64/include/c++/15.2.0/bits/concept_check.h:
-
-F:/msys64/ucrt64/include/c++/15.2.0/bits/functional_hash.h:
-
-F:/msys64/ucrt64/include/errhandlingapi.h:
 
 F:/msys64/ucrt64/include/c++/15.2.0/bits/cpp_type_traits.h:
 
@@ -771,6 +772,14 @@ F:/msys64/ucrt64/include/c++/15.2.0/bits/exception_defines.h:
 F:/msys64/ucrt64/include/c++/15.2.0/bits/exception_ptr.h:
 
 F:/msys64/ucrt64/include/c++/15.2.0/bits/functexcept.h:
+
+F:/msys64/ucrt64/include/c++/15.2.0/bits/functional_hash.h:
+
+F:/msys64/ucrt64/include/errhandlingapi.h:
+
+F:/msys64/ucrt64/include/c++/15.2.0/bits/hash_bytes.h:
+
+F:/msys64/ucrt64/include/c++/15.2.0/bits/std_abs.h:
 
 F:/msys64/ucrt64/include/c++/15.2.0/bits/hashtable.h:
 
@@ -834,8 +843,6 @@ F:/msys64/ucrt64/include/c++/15.2.0/bits/move.h:
 
 F:/msys64/ucrt64/include/c++/15.2.0/bits/nested_exception.h:
 
-F:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/rtmintrin.h:
-
 F:/msys64/ucrt64/include/c++/15.2.0/bits/new_allocator.h:
 
 F:/msys64/ucrt64/include/c++/15.2.0/bits/node_handle.h:
@@ -897,6 +904,8 @@ F:/msys64/ucrt64/include/c++/15.2.0/bits/std_mutex.h:
 F:/msys64/ucrt64/include/c++/15.2.0/ext/alloc_traits.h:
 
 F:/msys64/ucrt64/include/c++/15.2.0/bits/std_thread.h:
+
+F:/msys64/ucrt64/include/c++/15.2.0/bits/stl_algo.h:
 
 F:/msys64/ucrt64/include/c++/15.2.0/bits/stl_algobase.h:
 
@@ -1010,9 +1019,9 @@ F:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/avx512vp2intersectint
 
 F:/msys64/ucrt64/include/c++/15.2.0/cerrno:
 
-F:/msys64/ucrt64/include/c++/15.2.0/chrono:
-
 F:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/raointintrin.h:
+
+F:/msys64/ucrt64/include/c++/15.2.0/chrono:
 
 F:/msys64/ucrt64/include/c++/15.2.0/clocale:
 
@@ -1091,6 +1100,8 @@ F:/msys64/ucrt64/include/c++/15.2.0/limits:
 F:/msys64/ucrt64/include/namespaceapi.h:
 
 F:/msys64/ucrt64/include/c++/15.2.0/math.h:
+
+F:/msys64/ucrt64/include/c++/15.2.0/pstl/glue_algorithm_defs.h:
 
 F:/msys64/ucrt64/include/c++/15.2.0/memory:
 
@@ -1583,6 +1594,10 @@ F:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/pkuintrin.h:
 F:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/popcntintrin.h:
 
 F:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/prfchwintrin.h:
+
+F:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/rdseedintrin.h:
+
+F:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/rtmintrin.h:
 
 F:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/serializeintrin.h:
 

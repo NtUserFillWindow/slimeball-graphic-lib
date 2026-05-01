@@ -4,6 +4,7 @@
 examples/CMakeFiles/eg13_text.exe.dir/eg13_text.cpp.obj
  F:/VSCodeWorkspace/Z-MultiplierLib/examples/eg13_text.cpp
  F:/VSCodeWorkspace/Z-MultiplierLib/include/Algos.hpp
+ F:/VSCodeWorkspace/Z-MultiplierLib/include/Animation.hpp
  F:/VSCodeWorkspace/Z-MultiplierLib/include/BasicUI.hpp
  F:/VSCodeWorkspace/Z-MultiplierLib/include/Canvas.hpp
  F:/VSCodeWorkspace/Z-MultiplierLib/include/Clock.hpp
@@ -34,11 +35,13 @@ examples/CMakeFiles/eg13_text.exe.dir/eg13_text.cpp.obj
  F:/msys64/ucrt64/include/basetyps.h
  F:/msys64/ucrt64/include/bcrypt.h
  F:/msys64/ucrt64/include/bemapiset.h
+ F:/msys64/ucrt64/include/c++/15.2.0/algorithm
  F:/msys64/ucrt64/include/c++/15.2.0/any
  F:/msys64/ucrt64/include/c++/15.2.0/array
  F:/msys64/ucrt64/include/c++/15.2.0/backward/auto_ptr.h
  F:/msys64/ucrt64/include/c++/15.2.0/backward/binders.h
  F:/msys64/ucrt64/include/c++/15.2.0/bit
+ F:/msys64/ucrt64/include/c++/15.2.0/bits/algorithmfwd.h
  F:/msys64/ucrt64/include/c++/15.2.0/bits/align.h
  F:/msys64/ucrt64/include/c++/15.2.0/bits/alloc_traits.h
  F:/msys64/ucrt64/include/c++/15.2.0/bits/allocated_ptr.h
@@ -102,6 +105,7 @@ examples/CMakeFiles/eg13_text.exe.dir/eg13_text.cpp.obj
  F:/msys64/ucrt64/include/c++/15.2.0/bits/std_function.h
  F:/msys64/ucrt64/include/c++/15.2.0/bits/std_mutex.h
  F:/msys64/ucrt64/include/c++/15.2.0/bits/std_thread.h
+ F:/msys64/ucrt64/include/c++/15.2.0/bits/stl_algo.h
  F:/msys64/ucrt64/include/c++/15.2.0/bits/stl_algobase.h
  F:/msys64/ucrt64/include/c++/15.2.0/bits/stl_bvector.h
  F:/msys64/ucrt64/include/c++/15.2.0/bits/stl_construct.h
@@ -174,6 +178,7 @@ examples/CMakeFiles/eg13_text.exe.dir/eg13_text.cpp.obj
  F:/msys64/ucrt64/include/c++/15.2.0/optional
  F:/msys64/ucrt64/include/c++/15.2.0/ostream
  F:/msys64/ucrt64/include/c++/15.2.0/pstl/execution_defs.h
+ F:/msys64/ucrt64/include/c++/15.2.0/pstl/glue_algorithm_defs.h
  F:/msys64/ucrt64/include/c++/15.2.0/pstl/glue_memory_defs.h
  F:/msys64/ucrt64/include/c++/15.2.0/pstl/glue_numeric_defs.h
  F:/msys64/ucrt64/include/c++/15.2.0/pstl/pstl_config.h
