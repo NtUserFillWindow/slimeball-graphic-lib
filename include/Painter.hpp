@@ -52,6 +52,20 @@ namespace Window{
         Point(const Point& other)=default;
         bool operator==(const Point& other)const;
     };
+    struct Vec2{
+        double x,y;
+        Vec2()=default;
+        Vec2(double x,double y):x(x),y(y){};
+        bool operator==(const Vec2& other)const{
+            return x==other.x&&y==other.y;
+        }
+        operator Point()const{
+            return {static_cast<int>(x),static_cast<int>(y)};
+        }
+    };
+    inline Vec2 toVec2(Point p){
+        return {static_cast<double>(p.x),static_cast<double>(p.y)};
+    }
     Point calculateDrawPosition(char,Point,unsigned long long,unsigned long long);
     struct Painter{
         private:

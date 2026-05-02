@@ -22,6 +22,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "F:/VSCodeWorkspace/Z-MultiplierLib/src/game/Algos.cpp" "CMakeFiles/ZmultiplierLib.dir/src/game/Algos.cpp.obj" "gcc" "CMakeFiles/ZmultiplierLib.dir/src/game/Algos.cpp.obj.d"
   "F:/VSCodeWorkspace/Z-MultiplierLib/src/game/GameObject.cpp" "CMakeFiles/ZmultiplierLib.dir/src/game/GameObject.cpp.obj" "gcc" "CMakeFiles/ZmultiplierLib.dir/src/game/GameObject.cpp.obj.d"
   "F:/VSCodeWorkspace/Z-MultiplierLib/src/painter/Painter.cpp" "CMakeFiles/ZmultiplierLib.dir/src/painter/Painter.cpp.obj" "gcc" "CMakeFiles/ZmultiplierLib.dir/src/painter/Painter.cpp.obj.d"
+  "F:/VSCodeWorkspace/Z-MultiplierLib/src/physics/Collision.cpp" "CMakeFiles/ZmultiplierLib.dir/src/physics/Collision.cpp.obj" "gcc" "CMakeFiles/ZmultiplierLib.dir/src/physics/Collision.cpp.obj.d"
+  "F:/VSCodeWorkspace/Z-MultiplierLib/src/physics/PhysicObject.cpp" "CMakeFiles/ZmultiplierLib.dir/src/physics/PhysicObject.cpp.obj" "gcc" "CMakeFiles/ZmultiplierLib.dir/src/physics/PhysicObject.cpp.obj.d"
   "F:/VSCodeWorkspace/Z-MultiplierLib/src/utils/Utils.cpp" "CMakeFiles/ZmultiplierLib.dir/src/utils/Utils.cpp.obj" "gcc" "CMakeFiles/ZmultiplierLib.dir/src/utils/Utils.cpp.obj.d"
   "F:/VSCodeWorkspace/Z-MultiplierLib/src/window/Window.cpp" "CMakeFiles/ZmultiplierLib.dir/src/window/Window.cpp.obj" "gcc" "CMakeFiles/ZmultiplierLib.dir/src/window/Window.cpp.obj.d"
   )

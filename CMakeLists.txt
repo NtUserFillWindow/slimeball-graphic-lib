@@ -33,6 +33,8 @@ add_library(ZmultiplierLib STATIC
     src/core/Clock.cpp
     src/game/Algos.cpp
     src/assets/Animation.cpp
+    src/physics/Collision.cpp
+    src/physics/PhysicObject.cpp
 )
 
 target_link_libraries(ZmultiplierLib PRIVATE

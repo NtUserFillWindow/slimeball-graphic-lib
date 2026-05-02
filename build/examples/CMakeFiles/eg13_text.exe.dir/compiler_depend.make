@@ -7,6 +7,7 @@ examples/CMakeFiles/eg13_text.exe.dir/eg13_text.cpp.obj: F:/VSCodeWorkspace/Z-Mu
   F:/VSCodeWorkspace/Z-MultiplierLib/include/BasicUI.hpp \
   F:/VSCodeWorkspace/Z-MultiplierLib/include/Canvas.hpp \
   F:/VSCodeWorkspace/Z-MultiplierLib/include/Clock.hpp \
+  F:/VSCodeWorkspace/Z-MultiplierLib/include/Collision.hpp \
   F:/VSCodeWorkspace/Z-MultiplierLib/include/Color.hpp \
   F:/VSCodeWorkspace/Z-MultiplierLib/include/EntryPoint.hpp \
   F:/VSCodeWorkspace/Z-MultiplierLib/include/Font.hpp \
@@ -16,6 +17,8 @@ examples/CMakeFiles/eg13_text.exe.dir/eg13_text.cpp.obj: F:/VSCodeWorkspace/Z-Mu
   F:/VSCodeWorkspace/Z-MultiplierLib/include/Image.hpp \
   F:/VSCodeWorkspace/Z-MultiplierLib/include/Logger.hpp \
   F:/VSCodeWorkspace/Z-MultiplierLib/include/Painter.hpp \
+  F:/VSCodeWorkspace/Z-MultiplierLib/include/PhysicObject.hpp \
+  F:/VSCodeWorkspace/Z-MultiplierLib/include/Physics.hpp \
   F:/VSCodeWorkspace/Z-MultiplierLib/include/Transformation.hpp \
   F:/VSCodeWorkspace/Z-MultiplierLib/include/Utils.hpp \
   F:/VSCodeWorkspace/Z-MultiplierLib/include/Window.hpp \
@@ -72,6 +75,7 @@ examples/CMakeFiles/eg13_text.exe.dir/eg13_text.cpp.obj: F:/VSCodeWorkspace/Z-Mu
   F:/msys64/ucrt64/include/c++/15.2.0/bits/invoke.h \
   F:/msys64/ucrt64/include/c++/15.2.0/bits/ios_base.h \
   F:/msys64/ucrt64/include/c++/15.2.0/bits/istream.tcc \
+  F:/msys64/ucrt64/include/c++/15.2.0/bits/list.tcc \
   F:/msys64/ucrt64/include/c++/15.2.0/bits/locale_classes.h \
   F:/msys64/ucrt64/include/c++/15.2.0/bits/locale_classes.tcc \
   F:/msys64/ucrt64/include/c++/15.2.0/bits/locale_facets.h \
@@ -114,6 +118,7 @@ examples/CMakeFiles/eg13_text.exe.dir/eg13_text.cpp.obj: F:/VSCodeWorkspace/Z-Mu
   F:/msys64/ucrt64/include/c++/15.2.0/bits/stl_iterator.h \
   F:/msys64/ucrt64/include/c++/15.2.0/bits/stl_iterator_base_funcs.h \
   F:/msys64/ucrt64/include/c++/15.2.0/bits/stl_iterator_base_types.h \
+  F:/msys64/ucrt64/include/c++/15.2.0/bits/stl_list.h \
   F:/msys64/ucrt64/include/c++/15.2.0/bits/stl_numeric.h \
   F:/msys64/ucrt64/include/c++/15.2.0/bits/stl_pair.h \
   F:/msys64/ucrt64/include/c++/15.2.0/bits/stl_queue.h \
@@ -169,6 +174,7 @@ examples/CMakeFiles/eg13_text.exe.dir/eg13_text.cpp.obj: F:/VSCodeWorkspace/Z-Mu
   F:/msys64/ucrt64/include/c++/15.2.0/iostream \
   F:/msys64/ucrt64/include/c++/15.2.0/istream \
   F:/msys64/ucrt64/include/c++/15.2.0/limits \
+  F:/msys64/ucrt64/include/c++/15.2.0/list \
   F:/msys64/ucrt64/include/c++/15.2.0/math.h \
   F:/msys64/ucrt64/include/c++/15.2.0/memory \
   F:/msys64/ucrt64/include/c++/15.2.0/mutex \
@@ -549,20 +555,6 @@ examples/CMakeFiles/eg13_text.exe.dir/eg13_text.cpp.obj: F:/VSCodeWorkspace/Z-Mu
   F:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/xtestintrin.h
 
 
-F:/msys64/ucrt64/include/c++/15.2.0/bits/atomic_lockfree_defines.h:
-
-F:/msys64/ucrt64/include/c++/15.2.0/backward/binders.h:
-
-F:/msys64/ucrt64/include/_bsd_types.h:
-
-F:/msys64/ucrt64/include/c++/15.2.0/ext/atomicity.h:
-
-F:/msys64/ucrt64/include/gdiplus/gdiplusbase.h:
-
-F:/VSCodeWorkspace/Z-MultiplierLib/include/EntryPoint.hpp:
-
-F:/msys64/ucrt64/include/c++/15.2.0/bits/memoryfwd.h:
-
 F:/VSCodeWorkspace/Z-MultiplierLib/include/BasicUI.hpp:
 
 F:/msys64/ucrt64/include/gdiplus.h:
@@ -572,6 +564,8 @@ F:/msys64/ucrt64/include/c++/15.2.0/bits/char_traits.h:
 F:/msys64/ucrt64/include/combaseapi.h:
 
 F:/VSCodeWorkspace/Z-MultiplierLib/examples/eg13_text.cpp:
+
+F:/VSCodeWorkspace/Z-MultiplierLib/include/Collision.hpp:
 
 F:/msys64/ucrt64/include/c++/15.2.0/bits/algorithmfwd.h:
 
@@ -608,6 +602,20 @@ F:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/avx512fp16intrin.h:
 F:/VSCodeWorkspace/Z-MultiplierLib/include/Color.hpp:
 
 F:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/avx10_2-512minmaxintrin.h:
+
+F:/msys64/ucrt64/include/c++/15.2.0/bits/atomic_lockfree_defines.h:
+
+F:/msys64/ucrt64/include/c++/15.2.0/backward/binders.h:
+
+F:/msys64/ucrt64/include/_bsd_types.h:
+
+F:/msys64/ucrt64/include/c++/15.2.0/ext/atomicity.h:
+
+F:/msys64/ucrt64/include/gdiplus/gdiplusbase.h:
+
+F:/VSCodeWorkspace/Z-MultiplierLib/include/EntryPoint.hpp:
+
+F:/msys64/ucrt64/include/c++/15.2.0/bits/memoryfwd.h:
 
 F:/VSCodeWorkspace/Z-MultiplierLib/include/Transformation.hpp:
 
@@ -667,6 +675,20 @@ F:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/avx512fintrin.h:
 
 F:/VSCodeWorkspace/Z-MultiplierLib/include/Logger.hpp:
 
+F:/msys64/ucrt64/include/jobapi.h:
+
+F:/VSCodeWorkspace/Z-MultiplierLib/include/PhysicObject.hpp:
+
+F:/msys64/ucrt64/include/c++/15.2.0/bits/locale_facets.tcc:
+
+F:/msys64/ucrt64/include/string.h:
+
+F:/msys64/ucrt64/include/_mingw_unicode.h:
+
+F:/msys64/ucrt64/include/concurrencysal.h:
+
+F:/VSCodeWorkspace/Z-MultiplierLib/include/Physics.hpp:
+
 F:/VSCodeWorkspace/Z-MultiplierLib/include/Utils.hpp:
 
 F:/msys64/ucrt64/include/c++/15.2.0/bits/enable_special_members.h:
@@ -694,12 +716,6 @@ F:/msys64/ucrt64/include/_timeval.h:
 F:/msys64/ucrt64/include/_mingw_secapi.h:
 
 F:/msys64/ucrt64/include/_mingw_stat64.h:
-
-F:/msys64/ucrt64/include/string.h:
-
-F:/msys64/ucrt64/include/_mingw_unicode.h:
-
-F:/msys64/ucrt64/include/concurrencysal.h:
 
 F:/msys64/ucrt64/include/c++/15.2.0/ios:
 
@@ -807,6 +823,8 @@ F:/msys64/ucrt64/include/winnls.h:
 
 F:/msys64/ucrt64/include/c++/15.2.0/bits/istream.tcc:
 
+F:/msys64/ucrt64/include/c++/15.2.0/bits/list.tcc:
+
 F:/msys64/ucrt64/include/winnetwk.h:
 
 F:/msys64/ucrt64/include/c++/15.2.0/bits/locale_classes.h:
@@ -816,10 +834,6 @@ F:/msys64/ucrt64/include/c++/15.2.0/bits/locale_classes.tcc:
 F:/msys64/ucrt64/include/gdiplus/gdiplusimaging.h:
 
 F:/msys64/ucrt64/include/c++/15.2.0/bits/locale_facets.h:
-
-F:/msys64/ucrt64/include/jobapi.h:
-
-F:/msys64/ucrt64/include/c++/15.2.0/bits/locale_facets.tcc:
 
 F:/msys64/ucrt64/include/c++/15.2.0/bits/localefwd.h:
 
@@ -870,6 +884,8 @@ F:/msys64/ucrt64/include/c++/15.2.0/bits/predefined_ops.h:
 F:/msys64/ucrt64/include/c++/15.2.0/bits/version.h:
 
 F:/msys64/ucrt64/include/c++/15.2.0/bits/ptr_traits.h:
+
+F:/msys64/ucrt64/include/c++/15.2.0/bits/stl_list.h:
 
 F:/msys64/ucrt64/include/c++/15.2.0/bits/random.h:
 
@@ -1099,6 +1115,8 @@ F:/msys64/ucrt64/include/c++/15.2.0/limits:
 
 F:/msys64/ucrt64/include/namespaceapi.h:
 
+F:/msys64/ucrt64/include/c++/15.2.0/list:
+
 F:/msys64/ucrt64/include/c++/15.2.0/math.h:
 
 F:/msys64/ucrt64/include/c++/15.2.0/pstl/glue_algorithm_defs.h:
@@ -1151,9 +1169,9 @@ F:/msys64/ucrt64/include/c++/15.2.0/tr1/ell_integral.tcc:
 
 F:/msys64/ucrt64/include/commdlg.h:
 
-F:/msys64/ucrt64/include/c++/15.2.0/tr1/exp_integral.tcc:
-
 F:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/mwaitxintrin.h:
+
+F:/msys64/ucrt64/include/c++/15.2.0/tr1/exp_integral.tcc:
 
 F:/msys64/ucrt64/include/psdk_inc/_wsa_errnos.h:
 
@@ -1166,8 +1184,6 @@ F:/msys64/ucrt64/include/corecrt_startup.h:
 F:/msys64/ucrt64/include/pthread_time.h:
 
 F:/msys64/ucrt64/include/c++/15.2.0/tr1/poly_hermite.tcc:
-
-F:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/prfchiintrin.h:
 
 F:/msys64/ucrt64/include/c++/15.2.0/tuple:
 
@@ -1261,11 +1277,11 @@ F:/msys64/ucrt64/include/gdiplus/gdipluscolor.h:
 
 F:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/avx10_2-512bf16intrin.h:
 
+F:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/pmmintrin.h:
+
 F:/msys64/ucrt64/include/gdiplus/gdipluscolormatrix.h:
 
 F:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/bmi2intrin.h:
-
-F:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/pmmintrin.h:
 
 F:/msys64/ucrt64/include/gdiplus/gdipluseffects.h:
 
@@ -1457,8 +1473,6 @@ F:/msys64/ucrt64/include/sec_api/string_s.h:
 
 F:/msys64/ucrt64/include/sec_api/wchar_s.h:
 
-F:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/pconfigintrin.h:
-
 F:/msys64/ucrt64/include/servprov.h:
 
 F:/msys64/ucrt64/include/stddef.h:
@@ -1589,9 +1603,13 @@ F:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/lwpintrin.h:
 
 F:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/mmintrin.h:
 
+F:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/pconfigintrin.h:
+
 F:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/pkuintrin.h:
 
 F:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/popcntintrin.h:
+
+F:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/prfchiintrin.h:
 
 F:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/prfchwintrin.h:
 
