@@ -111,11 +111,12 @@ int main() {
         return 0;
     };
     // 物理定时器
-    Clock c([&]() {
+    Clock c([&](){
         pw.update(1.0 / 60.0);   // 固定时间步长 60 FPS
     });
-    while (c) {
+    while(c){
         c.run();
+        std::cerr<<c.fps()<<std::endl;
     }
 
     return 0;

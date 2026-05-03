@@ -11,6 +11,7 @@ void Core::Clock::run(){
         TranslateMessage(&msg);
         DispatchMessage(&msg);
     }
+    this->fpsCounter.tick();
     if(!running){
         return;
     }

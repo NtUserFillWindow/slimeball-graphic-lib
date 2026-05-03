@@ -10,6 +10,24 @@
 #include <windows.h>
 namespace Core{
     struct Clock{
+        struct FPSCounter{
+            private:
+                int frameCount=0;
+                double fps=0;
+                std::chrono::steady_clock::time_point lastTime;
+            public:
+                void tick(){
+                    frameCount++;
+                    auto now=std::chrono::steady_clock::now();
+                    double elapsed=std::chrono::duration<double>(now-lastTime).count();
+                    if(elapsed>=1.0){
+                        fps=frameCount/elapsed;
+                        frameCount=0;
+                        lastTime=now;
+                    }
+                }
+                double getFPS()const{return fps;}
+        }fpsCounter;
         MSG msg;
         bool running;
         std::chrono::steady_clock::time_point nextFrame;
@@ -21,6 +39,7 @@ namespace Core{
         operator bool()const{
             return running;
         }
+        double fps(){return this->fpsCounter.getFPS();}
         Clock(Clock& other)=delete;
         Clock(Clock&& other)=delete;
         Clock operator=(Clock& other)=delete;

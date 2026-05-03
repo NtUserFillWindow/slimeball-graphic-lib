@@ -174,17 +174,17 @@ ZmultiplierLib/fast:
 .PHONY : ZmultiplierLib/fast
 
 #=============================================================================
-# Target rules for targets named eg13_text.exe
+# Target rules for targets named tmp.exe
 
 # Build rule for target.
-eg13_text.exe: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 eg13_text.exe
-.PHONY : eg13_text.exe
+tmp.exe: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 tmp.exe
+.PHONY : tmp.exe
 
 # fast build rule for target.
-eg13_text.exe/fast:
-	$(MAKE) $(MAKESILENT) -f examples\CMakeFiles\eg13_text.exe.dir\build.make examples/CMakeFiles/eg13_text.exe.dir/build
-.PHONY : eg13_text.exe/fast
+tmp.exe/fast:
+	$(MAKE) $(MAKESILENT) -f examples\CMakeFiles\tmp.exe.dir\build.make examples/CMakeFiles/tmp.exe.dir/build
+.PHONY : tmp.exe/fast
 
 src/UI/basicUI.obj: src/UI/basicUI.cpp.obj
 .PHONY : src/UI/basicUI.obj
@@ -631,7 +631,7 @@ help:
 	@echo ... list_install_components
 	@echo ... rebuild_cache
 	@echo ... ZmultiplierLib
-	@echo ... eg13_text.exe
+	@echo ... tmp.exe
 	@echo ... src/UI/basicUI.obj
 	@echo ... src/UI/basicUI.i
 	@echo ... src/UI/basicUI.s

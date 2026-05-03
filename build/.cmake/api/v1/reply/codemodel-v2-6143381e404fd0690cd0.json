@@ -67,9 +67,9 @@
 				},
 				{
 					"directoryIndex" : 1,
-					"id" : "eg13_text.exe::@714eac15f71a94114fdf",
-					"jsonFile" : "target-eg13_text.exe-Debug-f41bf862ae320b0137c6.json",
-					"name" : "eg13_text.exe",
+					"id" : "tmp.exe::@714eac15f71a94114fdf",
+					"jsonFile" : "target-tmp.exe-Debug-4d6cd5d56106581397d8.json",
+					"name" : "tmp.exe",
 					"projectIndex" : 0
 				}
 			]
