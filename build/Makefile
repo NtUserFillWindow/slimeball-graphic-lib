@@ -522,54 +522,6 @@ src/painter/Painter.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZmultiplierLib.dir\build.make CMakeFiles/ZmultiplierLib.dir/src/painter/Painter.cpp.s
 .PHONY : src/painter/Painter.cpp.s
 
-src/physics/Collision.obj: src/physics/Collision.cpp.obj
-.PHONY : src/physics/Collision.obj
-
-# target to build an object file
-src/physics/Collision.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZmultiplierLib.dir\build.make CMakeFiles/ZmultiplierLib.dir/src/physics/Collision.cpp.obj
-.PHONY : src/physics/Collision.cpp.obj
-
-src/physics/Collision.i: src/physics/Collision.cpp.i
-.PHONY : src/physics/Collision.i
-
-# target to preprocess a source file
-src/physics/Collision.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZmultiplierLib.dir\build.make CMakeFiles/ZmultiplierLib.dir/src/physics/Collision.cpp.i
-.PHONY : src/physics/Collision.cpp.i
-
-src/physics/Collision.s: src/physics/Collision.cpp.s
-.PHONY : src/physics/Collision.s
-
-# target to generate assembly for a file
-src/physics/Collision.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZmultiplierLib.dir\build.make CMakeFiles/ZmultiplierLib.dir/src/physics/Collision.cpp.s
-.PHONY : src/physics/Collision.cpp.s
-
-src/physics/PhysicObject.obj: src/physics/PhysicObject.cpp.obj
-.PHONY : src/physics/PhysicObject.obj
-
-# target to build an object file
-src/physics/PhysicObject.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZmultiplierLib.dir\build.make CMakeFiles/ZmultiplierLib.dir/src/physics/PhysicObject.cpp.obj
-.PHONY : src/physics/PhysicObject.cpp.obj
-
-src/physics/PhysicObject.i: src/physics/PhysicObject.cpp.i
-.PHONY : src/physics/PhysicObject.i
-
-# target to preprocess a source file
-src/physics/PhysicObject.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZmultiplierLib.dir\build.make CMakeFiles/ZmultiplierLib.dir/src/physics/PhysicObject.cpp.i
-.PHONY : src/physics/PhysicObject.cpp.i
-
-src/physics/PhysicObject.s: src/physics/PhysicObject.cpp.s
-.PHONY : src/physics/PhysicObject.s
-
-# target to generate assembly for a file
-src/physics/PhysicObject.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZmultiplierLib.dir\build.make CMakeFiles/ZmultiplierLib.dir/src/physics/PhysicObject.cpp.s
-.PHONY : src/physics/PhysicObject.cpp.s
-
 src/utils/Utils.obj: src/utils/Utils.cpp.obj
 .PHONY : src/utils/Utils.obj
 
@@ -674,12 +626,6 @@ help:
 	@echo ... src/painter/Painter.obj
 	@echo ... src/painter/Painter.i
 	@echo ... src/painter/Painter.s
-	@echo ... src/physics/Collision.obj
-	@echo ... src/physics/Collision.i
-	@echo ... src/physics/Collision.s
-	@echo ... src/physics/PhysicObject.obj
-	@echo ... src/physics/PhysicObject.i
-	@echo ... src/physics/PhysicObject.s
 	@echo ... src/utils/Utils.obj
 	@echo ... src/utils/Utils.i
 	@echo ... src/utils/Utils.s

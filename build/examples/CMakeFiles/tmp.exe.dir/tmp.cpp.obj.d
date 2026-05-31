@@ -473,5 +473,4 @@ examples/CMakeFiles/tmp.exe.dir/tmp.cpp.obj: \
  F:/VSCodeWorkspace/Z-MultiplierLib/include/Clock.hpp \
  F:/msys64/ucrt64/include/c++/15.2.0/thread \
  F:/msys64/ucrt64/include/c++/15.2.0/bits/std_thread.h \
- F:/msys64/ucrt64/include/c++/15.2.0/bits/this_thread_sleep.h \
- F:/VSCodeWorkspace/Z-MultiplierLib/include/Color.hpp
+ F:/msys64/ucrt64/include/c++/15.2.0/bits/this_thread_sleep.h

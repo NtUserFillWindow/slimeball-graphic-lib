@@ -10,6 +10,7 @@
 #include "Painter.hpp"
 #include <limits>
 #include <mutex>
+#include <optional>
 #include "Logger.hpp"
 namespace Physics{
     extern Core::logger physicsLogger;
@@ -61,8 +62,55 @@ namespace Physics{
                        const std::tuple<Window::Point,Window::Point,Window::Point>& triA,
                        const std::tuple<Window::Point,Window::Point,Window::Point>& triB);
     inline bool triangleIntersect(const std::tuple<Window::Point,Window::Point,Window::Point>& triA,
-                           const std::tuple<Window::Point,Window::Point,Window::Point>& triB);
-    inline std::pair<bool,Window::Vec2> triangleIntersectWithMTV(
+                                  const std::tuple<Window::Point,Window::Point,Window::Point>& triB);
+    inline std::vector<Window::Point> findContactPoints(const std::tuple<Window::Point,Window::Point,Window::Point>& triA,
+                                                        const std::tuple<Window::Point,Window::Point,Window::Point>& triB){
+        std::vector<Window::Point> points;
+        auto [a1,a2,a3]=triA;
+        auto [b1,b2,b3]=triB;
+        auto pointInTriangle=[](const Window::Point& p,
+                                const Window::Point& t1,
+                                const Window::Point& t2,
+                                const Window::Point& t3)->bool {
+            double sign1=cross(sub(t2,t1),sub(p,t1));
+            double sign2=cross(sub(t3,t2),sub(p,t2));
+            double sign3=cross(sub(t1,t3),sub(p,t3));
+            bool hasNeg=(sign1<0)||(sign2<0)||(sign3<0);
+            bool hasPos=(sign1>0)||(sign2>0)||(sign3>0);
+            return !(hasNeg&&hasPos);
+        };
+        if(pointInTriangle(a1,b1,b2,b3)) points.push_back(a1);
+        if(pointInTriangle(a2,b1,b2,b3)) points.push_back(a2);
+        if(pointInTriangle(a3,b1,b2,b3)) points.push_back(a3);
+        if(pointInTriangle(b1,a1,a2,a3)) points.push_back(b1);
+        if(pointInTriangle(b2,a1,a2,a3)) points.push_back(b2);
+        if(pointInTriangle(b3,a1,a2,a3)) points.push_back(b3);
+        auto edgeIntersection=[](const Window::Point& p1,const Window::Point& p2,
+                                const Window::Point& q1,const Window::Point& q2)->std::optional<Window::Point> {
+            Window::Vec2 r=sub(p2,p1);
+            Window::Vec2 s=sub(q2,q1);
+            double rxs=cross(r,s);
+            if(std::abs(rxs)<1e-8) return std::nullopt;
+            Window::Vec2 qp=sub(q1,p1);
+            double t=cross(qp,s)/rxs;
+            double u=cross(qp,r)/rxs;
+            if(t>=0.0&&t<=1.0&&u>=0.0&&u<=1.0){
+                return Window::Point{(int)std::round(p1.x+t*r.x),(int)std::round(p1.y+t*r.y)};
+            }
+            return std::nullopt;
+        };
+        std::vector<std::pair<Window::Point,Window::Point>> edgesA={{a1,a2},{a2,a3},{a3,a1}};
+        std::vector<std::pair<Window::Point,Window::Point>> edgesB={{b1,b2},{b2,b3},{b3,b1}};
+        for(auto& ea:edgesA){
+            for(auto& eb:edgesB){
+                if(auto ip=edgeIntersection(ea.first,ea.second,eb.first,eb.second)){
+                    points.push_back(*ip);
+                }
+            }
+        }
+        return points;
+    }
+    inline std::tuple<bool,Window::Vec2,Window::Point> triangleIntersectWithMTV(
         const std::tuple<Window::Point,Window::Point,Window::Point>& triA,
         const std::tuple<Window::Point,Window::Point,Window::Point>& triB) 
     {
@@ -90,7 +138,7 @@ namespace Physics{
             double maxB=std::max(projB1,std::max(projB2,projB3));
             double overlap=std::min(maxA,maxB)-std::max(minA,minB);
             if(overlap<0){
-                return {false,{0.0,0.0}};
+                return {false,{0.0,0.0},{0,0}};
             }
             double axisLen=std::sqrt(axis.x*axis.x+axis.y*axis.y);
             if(axisLen<1e-8) continue;
@@ -107,13 +155,27 @@ namespace Physics{
                 firstAxis=false;
             }
         }
-        Window::Vec2 centerA={ (a1.x+a2.x+a3.x)/3.0,(a1.y+a2.y+a3.y)/3.0 };
-        Window::Vec2 centerB={ (b1.x+b2.x+b3.x)/3.0,(b1.y+b2.y+b3.y)/3.0 };
-        Window::Vec2 centerDiff={ centerB.x-centerA.x,centerB.y-centerA.y };
+        Window::Vec2 centerA={(a1.x+a2.x+a3.x)/3.0,(a1.y+a2.y+a3.y)/3.0};
+        Window::Vec2 centerB={(b1.x+b2.x+b3.x)/3.0,(b1.y+b2.y+b3.y)/3.0};
+        Window::Vec2 centerDiff={centerB.x-centerA.x,centerB.y-centerA.y};
         if(bestMTV.x*centerDiff.x+bestMTV.y*centerDiff.y<0){
             bestMTV={-bestMTV.x,-bestMTV.y};
         }
-        return {true,bestMTV};
+        auto contactPoints=findContactPoints(triA,triB);
+        Window::Point contact{0,0};
+        if(!contactPoints.empty()){
+            for(const auto& p:contactPoints){
+                contact.x+=p.x;
+                contact.y+=p.y;
+            }
+            contact.x/=contactPoints.size();
+            contact.y/=contactPoints.size();
+        }
+        else{
+            contact.x=(a1.x+a2.x+a3.x+b1.x+b2.x+b3.x)/6;
+            contact.y=(a1.y+a2.y+a3.y+b1.y+b2.y+b3.y)/6;
+        }
+        return {true,bestMTV,contact};
     }
     struct PolygonBox{
         std::vector<std::tuple<Window::Point,Window::Point,Window::Point>> triangles;
@@ -246,9 +308,9 @@ namespace Physics{
                 }
             }
         };
-        std::vector<std::tuple<int,int,Window::Vec2>> collisions(){
+        std::vector<std::tuple<int,int,Window::Vec2,Window::Point>> collisions(){
             std::lock_guard<std::mutex> lg(boxesMutex);
-            std::vector<std::tuple<int,int,Window::Vec2>> result;
+            std::vector<std::tuple<int,int,Window::Vec2,Window::Point>> result;
             if(boxes.empty()) return result;
             int minX=0,minY=0,maxX=width,maxY=height;
             std::vector<AABB> worldBoxes(boxes.size());
@@ -293,6 +355,7 @@ namespace Physics{
                     if(j<=static_cast<int>(i)) continue;
                     if(!worldBoxes[i].collide(worldBoxes[j])) continue;
                     Window::Vec2 bestMTV={0,0};
+                    Window::Point bestContact={0,0};
                     double minDepthSq=std::numeric_limits<double>::max();
                     bool anyCollide=false;
                     const auto& boxA=boxes[i];
@@ -301,19 +364,20 @@ namespace Physics{
                         auto worldTriA=getWorldTriangle(triA,boxA.deltaX,boxA.deltaY,boxA.cachedCos,boxA.cachedSin);
                         for(const auto& triB:boxB.triangles){
                             auto worldTriB=getWorldTriangle(triB,boxB.deltaX,boxB.deltaY,boxB.cachedCos,boxB.cachedSin);
-                            auto [collide,mtv]=triangleIntersectWithMTV(worldTriA,worldTriB);
+                            auto [collide,mtv,contact]=triangleIntersectWithMTV(worldTriA,worldTriB);
                             if(collide){
                                 anyCollide=true;
                                 double depthSq=mtv.x*mtv.x+mtv.y*mtv.y;
                                 if(depthSq<minDepthSq){
                                     minDepthSq=depthSq;
                                     bestMTV=mtv;
+                                    bestContact=contact;
                                 }
                             }
                         }
                     }
                     if(anyCollide){
-                        result.emplace_back(static_cast<int>(i),j,bestMTV);
+                        result.emplace_back(static_cast<int>(i),j,bestMTV,bestContact);
                     }
                 }
             }

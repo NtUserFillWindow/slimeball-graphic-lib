@@ -58,10 +58,10 @@ namespace Utils{
     struct FenwickTree{
         vector<T> tree;
         int size;
-        void add(int index,int delta){
+        void add(int index,T delta){
             index++;
             while(index<=size){
-                tree[index]+=delta;
+                tree[index]=tree[index]+delta;
                 index+=lowbit(index);
             }
         }
@@ -179,6 +179,48 @@ namespace Utils{
             return lans+rans;
         }
     };
+    static inline std::wstring basicRoman(int n){
+        static const std::vector<std::pair<int,std::wstring>> valToSym={
+            {1000,L"M"},{900,L"CM"},{500,L"D"},{400,L"CD"},
+            {100,L"C"},{90,L"XC"},{50,L"L"},{40,L"XL"},
+            {10,L"X"},{9,L"IX"},{5,L"V"},{4,L"IV"},
+            {1,L"I"}
+        };
+        std::wstring result;
+        for(const auto& [val,sym]:valToSym){
+            while(n>=val){
+                result+=sym;
+                n-=val;
+            }
+        }
+        return result;
+    }
+    inline std::wstring intToRoman(int num){
+        if(num==0) return L"NULLA";
+        std::vector<int> groups;
+        while(num>0){
+            groups.push_back(num%1000);
+            num/=1000;
+        }
+        std::wstring result;
+        for(int i=groups.size()-1;i>=0;i--){
+            int val=groups[i];
+            if(val==0) continue;
+            std::wstring romanGroup=basicRoman(val);
+            if(i>0){
+                std::wstring overlined;
+                for(wchar_t ch:romanGroup){
+                    overlined+=ch;
+                    for(int k=0;k<i;++k){
+                        overlined+=L'\u0305';
+                    }
+                }
+                romanGroup=overlined;
+            }
+            result+=romanGroup;
+        }
+        return result;
+    }
 }
 
 #endif

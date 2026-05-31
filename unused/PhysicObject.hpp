@@ -109,6 +109,9 @@ namespace Physics{
             if(drag<0.0) drag=0.0;
             vel.x*=drag;
             vel.y*=drag;
+            double angularDrag=1.0-AirResistance*dt;
+            if(angularDrag<0.0) angularDrag=0.0;
+            anglevel*=angularDrag;
             anglevel+=torqueAcc*invinertia*dt;
             if(hasContact){
                 if(Gravity.x*contactNormal.x+Gravity.y*contactNormal.y>-1e-6){
@@ -161,8 +164,8 @@ namespace Physics{
             for(int iter=0;iter<iterations;iter++){
                 auto& manager=CollideBoxManager<WorldWidth,WorldHeight>::instance();
                 auto collisions=manager.collisions();
-                for(const auto& [i,j,mtv]:collisions){
-                    resolveCollision(bodies[i],bodies[j],mtv);
+                for(const auto& [i,j,mtv,ctt]:collisions){
+                    resolveCollision(bodies[i],bodies[j],mtv,ctt);
                     hadCollision[i]=true;
                     hadCollision[j]=true;
                 }
@@ -179,36 +182,9 @@ namespace Physics{
         }
     private:
         void resolveCollision(RigidBody<WorldWidth,WorldHeight>& a,
-                              RigidBody<WorldWidth,WorldHeight>& b,
-                              const Window::Vec2& mtv){
-            double depth=std::sqrt(mtv.x*mtv.x+mtv.y*mtv.y);
-            if(depth<1e-8) return;
-            Window::Vec2 n1={mtv.x/depth,mtv.y/depth};
-            Window::Vec2 n={-mtv.x/depth,-mtv.y/depth};
-            double totalInvMass=a.invmass+b.invmass;
-            if(totalInvMass>0.0){
-                double factorA=a.invmass/totalInvMass;
-                double factorB=b.invmass/totalInvMass;
-                a.pos.x-=n1.x*depth*factorA;
-                a.pos.y-=n1.y*depth*factorA;
-                b.pos.x+=n1.x*depth*factorB;
-                b.pos.y+=n1.y*depth*factorB;
-            }
-            double relVel=(a.vel.x-b.vel.x)*n.x+(a.vel.y-b.vel.y)*n.y;
-            if(relVel<0){
-                double e=0.2;
-                double invMassSum=a.invmass+b.invmass;
-                if(invMassSum>0.0){
-                    double j=-(1.0+e)*relVel/invMassSum;
-                    a.vel.x+=j*n.x*a.invmass;
-                    a.vel.y+=j*n.y*a.invmass;
-                    b.vel.x-=j*n.x*b.invmass;
-                    b.vel.y-=j*n.y*b.invmass;
-                }
-            }
-            a.sync();
-            b.sync();
-        }
+                      RigidBody<WorldWidth,WorldHeight>& b,
+                      const Window::Vec2& mtv,
+                      const Window::Point& /*ctt*/){
     };
 }
 #endif

@@ -311,36 +311,6 @@ CMakeFiles/ZmultiplierLib.dir/src/assets/Animation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ZmultiplierLib.dir/src/assets/Animation.cpp.s"
 	F:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S F:\VSCodeWorkspace\Z-MultiplierLib\src\assets\Animation.cpp -o CMakeFiles\ZmultiplierLib.dir\src\assets\Animation.cpp.s
 
-CMakeFiles/ZmultiplierLib.dir/src/physics/Collision.cpp.obj: CMakeFiles/ZmultiplierLib.dir/flags.make
-CMakeFiles/ZmultiplierLib.dir/src/physics/Collision.cpp.obj: CMakeFiles/ZmultiplierLib.dir/includes_CXX.rsp
-CMakeFiles/ZmultiplierLib.dir/src/physics/Collision.cpp.obj: F:/VSCodeWorkspace/Z-MultiplierLib/src/physics/Collision.cpp
-CMakeFiles/ZmultiplierLib.dir/src/physics/Collision.cpp.obj: CMakeFiles/ZmultiplierLib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=F:\VSCodeWorkspace\Z-MultiplierLib\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/ZmultiplierLib.dir/src/physics/Collision.cpp.obj"
-	F:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ZmultiplierLib.dir/src/physics/Collision.cpp.obj -MF CMakeFiles\ZmultiplierLib.dir\src\physics\Collision.cpp.obj.d -o CMakeFiles\ZmultiplierLib.dir\src\physics\Collision.cpp.obj -c F:\VSCodeWorkspace\Z-MultiplierLib\src\physics\Collision.cpp
-
-CMakeFiles/ZmultiplierLib.dir/src/physics/Collision.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ZmultiplierLib.dir/src/physics/Collision.cpp.i"
-	F:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E F:\VSCodeWorkspace\Z-MultiplierLib\src\physics\Collision.cpp > CMakeFiles\ZmultiplierLib.dir\src\physics\Collision.cpp.i
-
-CMakeFiles/ZmultiplierLib.dir/src/physics/Collision.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ZmultiplierLib.dir/src/physics/Collision.cpp.s"
-	F:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S F:\VSCodeWorkspace\Z-MultiplierLib\src\physics\Collision.cpp -o CMakeFiles\ZmultiplierLib.dir\src\physics\Collision.cpp.s
-
-CMakeFiles/ZmultiplierLib.dir/src/physics/PhysicObject.cpp.obj: CMakeFiles/ZmultiplierLib.dir/flags.make
-CMakeFiles/ZmultiplierLib.dir/src/physics/PhysicObject.cpp.obj: CMakeFiles/ZmultiplierLib.dir/includes_CXX.rsp
-CMakeFiles/ZmultiplierLib.dir/src/physics/PhysicObject.cpp.obj: F:/VSCodeWorkspace/Z-MultiplierLib/src/physics/PhysicObject.cpp
-CMakeFiles/ZmultiplierLib.dir/src/physics/PhysicObject.cpp.obj: CMakeFiles/ZmultiplierLib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=F:\VSCodeWorkspace\Z-MultiplierLib\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/ZmultiplierLib.dir/src/physics/PhysicObject.cpp.obj"
-	F:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ZmultiplierLib.dir/src/physics/PhysicObject.cpp.obj -MF CMakeFiles\ZmultiplierLib.dir\src\physics\PhysicObject.cpp.obj.d -o CMakeFiles\ZmultiplierLib.dir\src\physics\PhysicObject.cpp.obj -c F:\VSCodeWorkspace\Z-MultiplierLib\src\physics\PhysicObject.cpp
-
-CMakeFiles/ZmultiplierLib.dir/src/physics/PhysicObject.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ZmultiplierLib.dir/src/physics/PhysicObject.cpp.i"
-	F:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E F:\VSCodeWorkspace\Z-MultiplierLib\src\physics\PhysicObject.cpp > CMakeFiles\ZmultiplierLib.dir\src\physics\PhysicObject.cpp.i
-
-CMakeFiles/ZmultiplierLib.dir/src/physics/PhysicObject.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ZmultiplierLib.dir/src/physics/PhysicObject.cpp.s"
-	F:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S F:\VSCodeWorkspace\Z-MultiplierLib\src\physics\PhysicObject.cpp -o CMakeFiles\ZmultiplierLib.dir\src\physics\PhysicObject.cpp.s
-
 # Object files for target ZmultiplierLib
 ZmultiplierLib_OBJECTS = \
 "CMakeFiles/ZmultiplierLib.dir/src/core/Color.cpp.obj" \
@@ -358,9 +328,7 @@ ZmultiplierLib_OBJECTS = \
 "CMakeFiles/ZmultiplierLib.dir/src/UI/basicUI.cpp.obj" \
 "CMakeFiles/ZmultiplierLib.dir/src/core/Clock.cpp.obj" \
 "CMakeFiles/ZmultiplierLib.dir/src/game/Algos.cpp.obj" \
-"CMakeFiles/ZmultiplierLib.dir/src/assets/Animation.cpp.obj" \
-"CMakeFiles/ZmultiplierLib.dir/src/physics/Collision.cpp.obj" \
-"CMakeFiles/ZmultiplierLib.dir/src/physics/PhysicObject.cpp.obj"
+"CMakeFiles/ZmultiplierLib.dir/src/assets/Animation.cpp.obj"
 
 # External object files for target ZmultiplierLib
 ZmultiplierLib_EXTERNAL_OBJECTS =
@@ -381,11 +349,9 @@ lib/libZmultiplierLib.a: CMakeFiles/ZmultiplierLib.dir/src/UI/basicUI.cpp.obj
 lib/libZmultiplierLib.a: CMakeFiles/ZmultiplierLib.dir/src/core/Clock.cpp.obj
 lib/libZmultiplierLib.a: CMakeFiles/ZmultiplierLib.dir/src/game/Algos.cpp.obj
 lib/libZmultiplierLib.a: CMakeFiles/ZmultiplierLib.dir/src/assets/Animation.cpp.obj
-lib/libZmultiplierLib.a: CMakeFiles/ZmultiplierLib.dir/src/physics/Collision.cpp.obj
-lib/libZmultiplierLib.a: CMakeFiles/ZmultiplierLib.dir/src/physics/PhysicObject.cpp.obj
 lib/libZmultiplierLib.a: CMakeFiles/ZmultiplierLib.dir/build.make
 lib/libZmultiplierLib.a: CMakeFiles/ZmultiplierLib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=F:\VSCodeWorkspace\Z-MultiplierLib\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Linking CXX static library lib\libZmultiplierLib.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=F:\VSCodeWorkspace\Z-MultiplierLib\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX static library lib\libZmultiplierLib.a"
 	$(CMAKE_COMMAND) -P CMakeFiles\ZmultiplierLib.dir\cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\ZmultiplierLib.dir\link.txt --verbose=$(VERBOSE)
 

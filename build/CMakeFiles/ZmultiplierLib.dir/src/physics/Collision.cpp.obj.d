@@ -458,4 +458,5 @@ CMakeFiles/ZmultiplierLib.dir/src/physics/Collision.cpp.obj: \
  F:/msys64/ucrt64/include/gdiplus/gdipluslinecaps.h \
  F:/msys64/ucrt64/include/gdiplus/gdiplusimpl.h \
  F:/VSCodeWorkspace/Z-MultiplierLib/include/Font.hpp \
+ F:/msys64/ucrt64/include/c++/15.2.0/optional \
  F:/VSCodeWorkspace/Z-MultiplierLib/include/Logger.hpp

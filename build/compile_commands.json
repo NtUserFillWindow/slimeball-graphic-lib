@@ -96,18 +96,6 @@
   "output": "CMakeFiles/ZmultiplierLib.dir/src/assets/Animation.cpp.obj"
 },
 {
-  "directory": "F:/VSCodeWorkspace/Z-MultiplierLib/build",
-  "command": "F:\\msys64\\ucrt64\\bin\\g++.exe -DNOMINMAX @CMakeFiles/ZmultiplierLib.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -pedantic -o CMakeFiles\\ZmultiplierLib.dir\\src\\physics\\Collision.cpp.obj -c F:\\VSCodeWorkspace\\Z-MultiplierLib\\src\\physics\\Collision.cpp",
-  "file": "F:/VSCodeWorkspace/Z-MultiplierLib/src/physics/Collision.cpp",
-  "output": "CMakeFiles/ZmultiplierLib.dir/src/physics/Collision.cpp.obj"
-},
-{
-  "directory": "F:/VSCodeWorkspace/Z-MultiplierLib/build",
-  "command": "F:\\msys64\\ucrt64\\bin\\g++.exe -DNOMINMAX @CMakeFiles/ZmultiplierLib.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -pedantic -o CMakeFiles\\ZmultiplierLib.dir\\src\\physics\\PhysicObject.cpp.obj -c F:\\VSCodeWorkspace\\Z-MultiplierLib\\src\\physics\\PhysicObject.cpp",
-  "file": "F:/VSCodeWorkspace/Z-MultiplierLib/src/physics/PhysicObject.cpp",
-  "output": "CMakeFiles/ZmultiplierLib.dir/src/physics/PhysicObject.cpp.obj"
-},
-{
   "directory": "F:/VSCodeWorkspace/Z-MultiplierLib/build/examples",
   "command": "F:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/tmp.exe.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wextra -pedantic -o CMakeFiles\\tmp.exe.dir\\tmp.cpp.obj -c F:\\VSCodeWorkspace\\Z-MultiplierLib\\examples\\tmp.cpp",
   "file": "F:/VSCodeWorkspace/Z-MultiplierLib/examples/tmp.cpp",
